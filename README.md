@@ -54,6 +54,14 @@ This scripts allows to :
 
 For each HOG with a HGT manually retained, two files named "HOG.sh" and "HOG.R" (example: [N5.HOG0001647.sh](N5.HOG0001647.sh) and [N5.HOG0001647.R](N5.HOG0001647.R)) can be used to further analyse the transfer, its region and neighboring TEs. 
 
+These script need a file called "non_actino_uniprot.fa" which correspond to the Uniprot protein database, with no representative fish sequences
+This can easily be generated using the taxid of ray-finned fishes https://www.ncbi.nlm.nih.gov/taxonomy/?term=txid7898[Subtree] and removing related sequences
+from uniprot (https://www.uniprot.org/uniprotkb?query=reviewed:true)
+
+Commands to run HyPhy can be found here ( [launch_absrel_cand.sh](launch_absrel_cand.sh) ; [launch_RELAX.sh](launch_RELAX.sh) ; [launch_fitMG4.sh](launch_fitMG4.sh) ). Selection of branches to test in aBSREL and RELAX were performed on https://phylotree.hyphy.org/
+FitMG94.bf can be found here : https://github.com/veg/hyphy-analyses/tree/master/FitMG94
+
+
 
 ## VI - Map the geographical distributions of species involved in HGTs
 
