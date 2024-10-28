@@ -55,5 +55,8 @@ This scripts allows to :
 For each HOG with a HGT manually retained, two files named "HOG.sh" and "HOG.R" (example: [N5.HOG0001647.sh](N5.HOG0001647.sh) and [N5.HOG0001647.R](N5.HOG0001647.R)) can be used to further analyse the transfer, its region and neighboring TEs. 
 
 
+## VI - Map the geographical distributions of species involved in HGTs
+
+[Geographical_distributions.R](Geographical_distributions.R) 
 
 
