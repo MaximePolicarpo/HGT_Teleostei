@@ -1,6 +1,6 @@
 # HGT_Teleostei
 
-All the files necessary to run the scripts below, as well as intermediate and resulting files, can be found in FigShare : XXXX
+All the files necessary to run the scripts below, as well as intermediate and resulting files, can be found in Zenodo : 10.5281/zenodo.14011660 + 10.5281/zenodo.14012814 + 10.5281/zenodo.14012963
 
 ## I - Ks pipeline to identify candidate HGTs
 
@@ -67,7 +67,7 @@ FitMG94.bf can be found here : https://github.com/veg/hyphy-analyses/tree/master
 
 Genome fasta files, to be found on RefSeq and GenBank, are also needed for these analysis.  
 
-All the other files needed to run these scripts are available on FigShare : XXXX
+All the other files needed to run these scripts are available on Zenodo.
 
 
 ## VI - Map the geographical distributions of species involved in HGTs
