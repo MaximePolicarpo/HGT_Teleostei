@@ -347,17 +347,14 @@ for curr_species in `cat teleost_annotated_species.txt` ; do tail -n+2 Candidate
 ##====================================================================================================================================
 
 
-
-#cp MicroSynteny_scores_table.csv coffre.MicroSynteny_scores_table.csv
-
 mkdir Gene_LogFiles
 mkdir Temp_dir_synt
 tail -n+2 HGT_candidates_dataframe.filtered.csv > HGT_candidates_dataframe.filtered.noheader.csv ##HGT_candidates_dataframe.filtered.csv > generated using the Rscript "HGT_analysis.R"
-split -l 10000 --numeric-suffixes HGT_candidates_dataframe.filtered.noheader.csv Temp_dir_synt/splitted.HGT_candidates_dataframe.filtered. ## 
+split -l 10000 --numeric-suffixes HGT_candidates_dataframe.filtered.noheader.csv Temp_dir_synt/splitted.HGT_candidates_dataframe.filtered. 
 ls -l Temp_dir_synt/ | sed 's/.* //g' | grep "splitted" > list_splitted_df.txt
 
 
-rm MicroSynteny_scores_table.csv
+rm MicroSynteny_scores_table.csv #remove file if exist
 
 
 sbatch submit_array_synt.sh
@@ -368,10 +365,6 @@ rm -rf Gene_LogFiles
 cat Temp_dir_synt/*.csv  > MicroSynteny_scores_table.csv
 
 
-
-
-
-## Add missing comparisons, absent for whatever reason
 
 
 ================== extract_synt.sh =====
@@ -426,7 +419,7 @@ done
 #SBATCH --mem=5G
 #SBATCH --error=Gene_LogFiles/error.%A_%a.out
 #SBATCH --output=Gene_LogFiles/slurm.%A_%a.out
-#SBATCH --array=1-1572%800
+#SBATCH --array=1-XXX%500 => replace X by the total number of lines in the file list_splitted_df.txt
 
 #Remove existing log files
 rm -f Gene_LogFiles/error.*.out
@@ -440,108 +433,6 @@ file=$(sed -n "${SLURM_ARRAY_TASK_ID}p" list_splitted_df.txt)
 
 
 
-
-
-=====> ARRETTER ICI LE 27
-
-
-
-##====================================================================================================================================
-##====================================================================================================================================
-################## Perform tree with HGT candidate orthogroups #######################################################################
-##====================================================================================================================================
-##====================================================================================================================================
-##====================================================================================================================================
-
-
-
-
-mkdir Verification_phylogenies
-
-
-for curr_OGG in `cat all_OGG_ksOGG.txt` ; do
-	cp Coding_sequences_alignments/$curr_OGG.prot.aln.treefile Verification_phylogenies/
-done
-
-ls -l Verification_phylogenies/ | grep ".treefile" | sed 's/.* //g' | sed 's/.prot.aln.treefile//g' | sort | uniq > done_OGG
-comm -23 <(sort all_OGG_ksOGG.txt) <(sort done_OGG) > tocompute_OGG
-
-for curr_OGG in `cat tocompute_OGG` ; do
-	sbatch --qos=6hours -c 8 --time=6:00:00 --mem=10G --job-name=Phylo_OGG --wrap="module load IQ-TREE/2.0-rc1-foss-2018b ; iqtree -s /scicore/home/salzburg/polica0000/Horizontal_transfer_project/BetweenActino_HGT/Coding_sequences_alignments/$curr_OGG.prot.aln -st AA -nt 8 -m TEST -mrate G4"
-done
-
-for curr_OGG in `cat tocompute_OGG` ; do
-	x=`grep -c "Maximum-likelihood tree:" /scicore/home/salzburg/polica0000/Horizontal_transfer_project/BetweenActino_HGT/Coding_sequences_alignments/$curr_OGG.prot.aln.log`
-	echo "$curr_OGG,$x"
-done | grep ",0"  | cut -f1 -d "," > tocompute_OGG_fasttree
-
-for curr_OGG in `cat tocompute_OGG_fasttree` ; do
-	sbatch --qos=6hours -c 8 --time=4:00:00 --mem=10G --job-name=Phylo_OGG --wrap="module load FastTree ; FastTree /scicore/home/salzburg/polica0000/Horizontal_transfer_project/BetweenActino_HGT/Coding_sequences_alignments/$curr_OGG.prot.aln > /scicore/home/salzburg/polica0000/Horizontal_transfer_project/BetweenActino_HGT/Coding_sequences_alignments/$curr_OGG.prot.aln.treefile"
-done
-
-for curr_OGG in `cat tocompute_OGG` ; do
-	cp /scicore/home/salzburg/polica0000/Horizontal_transfer_project/BetweenActino_HGT/Coding_sequences_alignments/$curr_OGG.prot.aln.treefile Verification_phylogenies/ 
-done
-
-
-
-
-
-#curr_OGG=N5.HOG0001647
-#sbatch --qos=1week -c 8 --mem=10G --job-name=Phylo_OGG --wrap="module load IQ-TREE/2.0-rc1-foss-2018b ; iqtree -s /scicore/home/salzburg/polica0000/Horizontal_transfer_project/BetweenActino_HGT/Coding_sequences_alignments/$curr_OGG.prot.aln -st AA -nt 8 -m TEST -mrate G4"
-
-#Now lets draw the phylogenies :D 
-
-
-rm -r PDF_ksOGG_newTE ; mkdir PDF_ksOGG_newTE
-for curr_OGG in `cat all_OGG_ksOGG.txt` ; do
-	sbatch --qos=6hours -c 4 --mem=8G --time=1:00:00 --job-name=Draw --wrap="module load R/4.1.2-foss-2018b-Python-3.6.6 ; Rscript Draw_tree_automatic_ksOGG.newTE.R $curr_OGG"
-done
-
-rm -r OGG_candidate_ks/ ; mkdir OGG_candidate_ks
-
-for curr_OGG in `cat good_OGG_list_phylo.txt` ; do 
-	cp PDF_ksOGG_newTE/$curr_OGG.gene.pdf OGG_candidate_ks/
-	cp PDF_ksOGG_newTE/$curr_OGG.species.pdf OGG_candidate_ks/
-done
-
-
-
-
-
-
-
-ulimit -n 10000
-pdfunite OGG_candidate_ks/*.gene.pdf Filtered_candidates.gene.ks.pdf
-pdfunite OGG_candidate_ks/*.species.pdf Filtered_candidates.species.ks.pdf
-
-rm -r OGG_candidate_ks_nomicro/ ; mkdir OGG_candidate_ks_nomicro
-
-for curr_OGG in `cat good_OGG_list_phylo.nomicro.txt` ; do 
-	cp PDF_ksOGG_newTE/$curr_OGG.gene.pdf OGG_candidate_ks_nomicro/
-	cp PDF_ksOGG_newTE/$curr_OGG.species.pdf OGG_candidate_ks_nomicro/
-done
-
-ulimit -n 10000
-pdfunite OGG_candidate_ks_nomicro/*.gene.pdf Filtered_candidates.gene.ks.nomicro.pdf
-pdfunite OGG_candidate_ks_nomicro/*.species.pdf Filtered_candidates.species.ks.nomicro.pdf
-
-
-
-
-### REDO JULY 10 AFTER MEETING
-
-
-rm -r PDF_OGG_candidate_ks_july ; mkdir PDF_OGG_candidate_ks_july
-for curr_OGG in `cat good_OGG_list_july.txt` ; do
-	sbatch --qos=6hours -c 4 --mem=8G --time=1:00:00 --job-name=Draw --wrap="module load R/4.1.2-foss-2018b-Python-3.6.6 ; Rscript Draw_tree_automatic_ksOGG.newTE.july.R $curr_OGG"
-done
-
-ulimit -n 10000
-
-
-pdfunite PDF_OGG_candidate_ks_july/*.gene.pdf KS_strategy.genes.pdf
-pdfunite PDF_OGG_candidate_ks_july/*.species.pdf KS_strategy.species.pdf
 
 
 
