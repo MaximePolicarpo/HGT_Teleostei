@@ -999,6 +999,13 @@ HGT_candidate_df_filtered <-
 HGT_candidate_df_filtered %>% pull(OGG) %>% unique()
 
 
+write.table(HGT_candidate_df_filtered,
+                 "HGT_candidates_dataframe.filtered.csv",
+                 sep=",",
+                 col.names=TRUE,
+                 row.names=FALSE,
+                 quote=FALSE)
+
 write(HGT_candidate_df_filtered %>% pull(OGG) %>% unique(), 
       "good_OGG_list.txt")
 
