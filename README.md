@@ -43,6 +43,7 @@ This scripts allows to :
 - Compute ENCprime values for all teleost species
 - Compute RSCU values for a subset of species
 - Compute GC3 distributions for a subset of species
+- Results of GO terms assignment to horizontally transfered genes. Four methods were used: eggNOG-mapper ; InterProScan ; Zfin and zebrafish representative sequence in the same orthogroup ; GeneCards annotations of the human orthologous genes
 
 
 ## IV - Compute maximum likelihood phylogenies
