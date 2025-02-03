@@ -2526,3 +2526,202 @@ ALL_omega_df %>%
 
 
 
+
+
+#### Review P1 - Go term analysis  ---------------------------------
+
+#Load HOG where there are HGTs
+
+HGT_HOG <- 
+  c("N5.HOG0047987",
+    "N5.HOG0001647",
+    "N5.HOG0013514",
+    "N5.HOG0018901",
+    "N5.HOG0008885",
+    "N5.HOG0004480",
+    "N5.HOG0028899",
+    "N5.HOG0004450",
+    "N5.HOG0029633",
+    "N5.HOG0010622",
+    "N5.HOG0013500",
+    "N5.HOG0019032",
+    "N5.HOG0004451",
+    "N5.HOG0030200",
+    "N5.HOG0034670",
+    "N5.HOG0019111",
+    "N5.HOG0046344")
+
+#Load go term classes
+go_term_class_df <- 
+  read.table("GO_term_analysis/goterm_class.csv", sep="\t", header=FALSE)
+colnames(go_term_class_df) <- c("GO", "class")
+go_term_desc_df <- 
+  read.table("GO_term_analysis/goterm_desc.csv", sep="\t", header=FALSE)
+colnames(go_term_desc_df) <- c("GO", "desc")
+go_term_class_df <- left_join(go_term_class_df, go_term_desc_df, by="GO")
+  
+GO_BP <- 
+  go_term_class_df %>%
+  filter(class == "biological_process") %>%
+  pull(GO) %>% unique()
+
+
+#Load EggNogg results
+eggnog_df <- 
+  read.table("GO_term_analysis/out.emapper.final.annotations.simp",
+             header=FALSE,
+             sep="\t")
+colnames(eggnog_df) <- c("HOG", "name", "GO", "KEGG_Pathway", "KEGG_Reaction", "PFAMs")
+eggnog_df <- eggnog_df %>% mutate(across(everything(), ~ na_if(.x, "-")))
+
+
+
+
+GO_BP_HGT <- 
+  eggnog_df %>% 
+  filter(HOG %in% HGT_HOG) %>%
+  dplyr::select(HOG, GO) %>%
+  filter(! is.na(GO)) %>%
+  separate_rows(GO, sep = ",")  %>%
+  filter(GO %in% GO_BP) 
+
+GO_BP_HGT <- 
+  as.data.frame(
+  left_join(GO_BP_HGT, go_term_desc_df, by="GO")
+) %>%
+  filter(! is.na(desc))
+
+
+
+
+#Load Danio rerio gene names corresponding to each HOG
+HOG_dr_df <- read.table("GO_term_analysis/Danio_rerio_reprez_per_HOG.renamed.csv", sep=",", header=FALSE)
+colnames(HOG_dr_df) <- c("HOG", "Danio_rerio_ID")
+Dr_ID_name_df <- read.table("GO_term_analysis/Danio_rerio_GeneNames.stable.txt", sep=",", header=FALSE)
+colnames(Dr_ID_name_df) <- c("gene_name", "Danio_rerio_ID", "Danio_rerio_stable_ID")
+HOG_dr_df <- left_join(HOG_dr_df, Dr_ID_name_df, by="Danio_rerio_ID")
+
+
+#Import conversion table between NCBI and ENSEMBL
+NCBI_vs_ensembl_df <- read.table("GO_term_analysis/ALL_identifier_bioMART.txt", sep="\t", header=TRUE)
+colnames(NCBI_vs_ensembl_df) <- c("Ensembl_gene_ID", "Ensembl_gene_name", "Ensembl_transcript_ID",
+                                  "Danio_rerio_stable_ID", "Ensembl_protein_ID")
+NCBI_vs_ensembl_df <- 
+  NCBI_vs_ensembl_df %>%
+  filter(! is.na(Ensembl_gene_ID)) %>%
+  distinct(Danio_rerio_stable_ID, .keep_all = TRUE)
+
+HOG_dr_df <- left_join(HOG_dr_df, NCBI_vs_ensembl_df, by="Danio_rerio_stable_ID")
+
+HOG_dr_df_HGT <- 
+  HOG_dr_df %>%
+  filter(HOG %in% HGT_HOG) %>%
+  filter(! is.na(gene_name)) %>%
+  dplyr::select(HOG, Danio_rerio_ID, gene_name)
+
+
+
+
+#Now add human orthologous
+
+human_orthologues <- read.table("GO_term_analysis/Homo_sapiens_orthologous_table.txt", sep="\t", header=TRUE)
+colnames(human_orthologues) <- c("Ensembl_gene_ID", "Human_ensembl_ID", "Human_gene_name")
+
+human_orthologues <- 
+  human_orthologues %>% 
+  filter(! is.na(Human_ensembl_ID)) %>%
+  distinct(Ensembl_gene_ID, .keep_all = TRUE)
+
+
+HOG_dr_df <- 
+  left_join(HOG_dr_df, human_orthologues, by="Ensembl_gene_ID")
+
+
+HOG_hs_df_HGT <- 
+  HOG_dr_df %>%
+  filter(HOG %in% HGT_HOG) %>%
+  filter(! is.na(Human_gene_name)) %>%
+  filter(Human_gene_name != "") %>%
+  dplyr::select(HOG, Human_ensembl_ID, Human_gene_name)
+
+
+write.table(HOG_hs_df_HGT, "GO_term_analysis/HOG_hs_df_HGT.tsv",
+            sep="\t", col.names=TRUE, row.names=FALSE, quote=FALSE)
+
+
+
+#Import a Summary Table of the different methods
+
+Summary_GO_df <- 
+  read.table("GO_term_analysis/Summary_table.tsv",
+             sep="\t",
+             header=TRUE)
+
+
+Summary_GO_df %>%
+  filter(Method == "eggNOG") %>%
+  pull(HOG) %>% unique()
+
+Summary_GO_df %>%
+  filter(Method == "eggNOG") %>% 
+  filter(Immunity_related == "Yes")
+
+
+
+Summary_GO_df %>%
+  filter(Method == "InterProScan") %>%
+  pull(HOG) %>% unique()
+
+Summary_GO_df %>%
+  filter(Method == "InterProScan") %>% 
+  filter(Immunity_related == "Yes")
+
+
+
+Summary_GO_df %>%
+  filter(! Method %in% c("InterProScan", "eggNOG")) %>%
+  filter(grepl("Zebrafish representative", Method)) %>%
+  pull(HOG) %>% unique()
+
+
+Summary_GO_df %>%
+  filter(! Method %in% c("InterProScan", "eggNOG")) %>%
+  filter(grepl("Zebrafish representative", Method)) %>%
+  filter(! is.na(GO))
+
+
+
+
+Summary_GO_df %>%
+  filter(! Method %in% c("InterProScan", "eggNOG")) %>%
+  filter(grepl("Human ortholog", Method)) %>%
+  pull(HOG) %>% unique()
+
+
+Summary_GO_df %>%
+  filter(! Method %in% c("InterProScan", "eggNOG")) %>%
+  filter(grepl("Human ortholog", Method)) %>%
+  filter(! is.na(GO))
+
+
+Summary_GO_df %>%
+  filter(! Method %in% c("InterProScan", "eggNOG")) %>%
+  filter(grepl("Human ortholog", Method)) %>%
+  filter(! is.na(GO)) %>%
+  filter(Immunity_related == "Yes")
+
+
+Summary_GO_df %>%
+  filter(! is.na(GO)) %>%
+  pull(HOG) %>%
+  unique()
+
+
+Summary_GO_df %>%
+  filter(! is.na(GO)) %>%
+  filter(Immunity_related == "Yes") %>%
+  pull(HOG) %>%
+  unique()
+
+
+
