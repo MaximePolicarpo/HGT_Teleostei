@@ -1,0 +1,343 @@
+IQ-TREE 2.3.6 built Aug  4 2024
+
+Input file name: HGT_clade.cds.aln
+Type of analysis: ModelFinder + tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 219927
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Bui Quang Minh, Heiko A. Schmidt, Olga Chernomor, Dominik Schrempf,
+Michael D. Woodhams, Arndt von Haeseler, and Robert Lanfear (2020)
+IQ-TREE 2: New models and efficient methods for phylogenetic inference
+in the genomic era. Mol. Biol. Evol., in press.
+https://doi.org/10.1093/molbev/msaa015
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2018) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol. Biol. Evol., 35:518–522.
+https://doi.org/10.1093/molbev/msx281
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 29 sequences with 1881 nucleotide sites
+Number of constant sites: 943 (= 50.1329% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 943 (= 50.1329% of all sites)
+Number of parsimony informative sites: 767
+Number of distinct site patterns: 943
+
+ModelFinder
+-----------
+
+Best-fit model according to BIC: TPM2u+F+I+G4
+
+List of models sorted by BIC scores: 
+
+Model                  LogL         AIC      w-AIC        AICc     w-AICc         BIC      w-BIC
+TPM2u+F+I+G4     -13064.047   26252.095 +     0.34   26256.392 +    0.368   26595.547 +    0.889
+TPM2u+F+G4       -13070.579   26263.158 -  0.00135   26267.316 -  0.00156   26601.071 +   0.0562
+TPM2u+F+I+R2     -13063.660   26253.319 +    0.184   26257.757 +    0.186   26602.312 -   0.0302
+TIM2+F+I+G4      -13064.019   26254.037 +    0.129   26258.475 +     0.13   26603.030 -   0.0211
+TVM+F+I+G4       -13062.832   26253.665 +    0.155   26258.246 +    0.146   26608.197 -  0.00159
+TIM2+F+G4        -13070.533   26265.067 - 0.000518   26269.364 - 0.000561   26608.519 -  0.00136
+TIM2+F+I+R2      -13063.851   26255.702 +   0.0559   26260.284 +   0.0526   26610.234 - 0.000575
+TVM+F+G4         -13069.003   26264.007 -  0.00088   26268.445 - 0.000888   26612.999 - 0.000144
+TVM+F+I+R2       -13062.852   26255.703 +   0.0559   26260.431 -   0.0489   26615.775 -  3.6e-05
+GTR+F+I+G4       -13062.883   26255.766 +   0.0542   26260.493 -   0.0474   26615.837 - 3.49e-05
+HKY+F+I+G4       -13077.993   26277.987 -  8.1e-07   26282.145 - 9.41e-07   26615.900 - 3.38e-05
+GTR+F+G4         -13068.970   26265.941 - 0.000334   26270.522 - 0.000314   26620.473 - 3.44e-06
+TPM3u+F+I+G4     -13076.887   26277.773 - 9.01e-07   26282.071 - 9.77e-07   26621.226 - 2.36e-06
+HKY+F+I+R2       -13077.327   26278.655 -  5.8e-07   26282.952 - 6.29e-07   26622.107 - 1.52e-06
+HKY+F+G4         -13084.869   26289.738 - 2.27e-09   26293.760 - 2.83e-09   26622.112 - 1.51e-06
+K3Pu+F+I+G4      -13077.885   26279.770 - 3.32e-07   26284.067 -  3.6e-07   26623.223 - 8.69e-07
+TN+F+I+G4        -13077.922   26279.844 -  3.2e-07   26284.141 - 3.47e-07   26623.297 - 8.38e-07
+GTR+F+I+R2       -13063.095   26258.191 -   0.0161   26263.066 -   0.0131   26623.802 - 6.51e-07
+TPM3u+F+G4       -13083.462   26288.924 - 3.42e-09   26293.082 - 3.97e-09   26626.837 - 1.43e-07
+TPM3u+F+I+R2     -13076.431   26278.862 - 5.23e-07   26283.300 - 5.28e-07   26627.854 - 8.58e-08
+TIM3+F+I+G4      -13076.841   26279.682 - 3.47e-07   26284.120 - 3.51e-07   26628.674 -  5.7e-08
+K3Pu+F+G4        -13084.776   26291.551 - 9.19e-10   26295.709 - 1.07e-09   26629.464 - 3.84e-08
+TN+F+G4          -13084.788   26291.576 - 9.07e-10   26295.735 - 1.05e-09   26629.490 - 3.79e-08
+K3Pu+F+I+R2      -13077.318   26280.636 - 2.16e-07   26285.074 - 2.18e-07   26629.628 - 3.53e-08
+TN+F+I+R2        -13077.326   26280.653 - 2.14e-07   26285.091 - 2.16e-07   26629.645 -  3.5e-08
+TIM+F+I+G4       -13077.815   26281.629 - 1.31e-07   26286.067 - 1.32e-07   26630.621 - 2.15e-08
+TIM3+F+G4        -13083.396   26290.793 - 1.34e-09   26295.090 - 1.45e-09   26634.246 - 3.51e-09
+TIM3+F+I+R2      -13076.645   26281.289 - 1.55e-07   26285.871 - 1.46e-07   26635.821 -  1.6e-09
+GTR+F+R3         -13065.449   26264.899 - 0.000563   26269.925 - 0.000424   26636.049 - 1.43e-09
+TPM2+I+G4        -13095.624   26309.248 - 1.32e-13   26313.136 - 1.75e-13   26636.082 -  1.4e-09
+GTR+F+I+R3       -13061.972   26259.944 -  0.00671   26265.123 -  0.00468   26636.634 - 1.06e-09
+TIM+F+G4         -13084.694   26293.389 - 3.67e-10   26297.686 - 3.97e-10   26636.841 - 9.59e-10
+TIM+F+I+R2       -13077.483   26282.967 - 6.72e-08   26287.548 - 6.32e-08   26637.498 - 6.91e-10
+GTR+F+R2         -13074.037   26278.075 - 7.75e-07   26282.802 - 6.78e-07   26638.146 -    5e-10
+TIM2e+I+G4       -13094.099   26308.197 - 2.23e-13   26312.219 - 2.77e-13   26640.571 - 1.49e-10
+TPM2+G4          -13102.079   26320.159 - 5.64e-16   26323.915 - 8.01e-16   26641.453 - 9.56e-11
+TPM2+I+R2        -13095.475   26310.950 - 5.63e-14   26314.972 -    7e-14   26643.324 - 3.75e-11
+TIM2e+G4         -13100.413   26318.826 -  1.1e-15   26322.714 - 1.46e-15   26645.660 - 1.17e-11
+TIM2e+I+R2       -13094.255   26310.511 - 7.02e-14   26314.669 - 8.15e-14   26648.424 - 2.93e-12
+GTR+F+R4         -13064.124   26266.248 - 0.000287   26271.582 - 0.000185   26648.478 - 2.85e-12
+TVMe+I+G4        -13095.251   26312.501 - 2.59e-14   26316.660 - 3.01e-14   26650.415 - 1.08e-12
+SYM+I+G4         -13093.776   26311.553 - 4.17e-14   26315.850 - 4.52e-14   26655.005 - 1.09e-13
+TVMe+G4          -13101.773   26323.547 - 1.04e-16   26327.569 - 1.29e-16   26655.921 -  6.9e-14
+TVMe+I+R2        -13095.442   26314.884 - 7.88e-15   26319.181 - 8.54e-15   26658.337 - 2.06e-14
+SYM+G4           -13100.112   26322.223 - 2.01e-16   26326.381 - 2.33e-16   26660.136 - 8.39e-15
+SYM+I+R2         -13094.181   26314.363 - 1.02e-14   26318.801 - 1.03e-14   26663.355 - 1.68e-15
+K2P+I+G4         -13122.777   26361.553 - 5.79e-25   26365.310 - 8.22e-25   26682.848 - 9.81e-20
+TNe+I+G4         -13121.315   26360.630 - 9.18e-25   26364.518 - 1.22e-24   26687.464 - 9.76e-21
+K2P+I+R2         -13122.198   26362.396 -  3.8e-25   26366.284 - 5.05e-25   26689.230 - 4.04e-21
+K2P+G4           -13129.976   26373.953 - 1.17e-27   26377.580 - 1.78e-27   26689.708 - 3.18e-21
+TPM3+I+G4        -13122.522   26363.043 - 2.75e-25   26366.931 - 3.65e-25   26689.877 - 2.92e-21
+K3P+I+G4         -13122.546   26363.092 - 2.68e-25   26366.980 - 3.56e-25   26689.926 - 2.85e-21
+TNe+G4           -13128.371   26372.741 - 2.15e-27   26376.498 - 3.06e-27   26694.036 - 3.65e-22
+TNe+I+R2         -13120.941   26361.882 - 4.91e-25   26365.904 -  6.1e-25   26694.256 - 3.27e-22
+TIM3e+I+G4       -13121.069   26362.139 - 4.32e-25   26366.161 - 5.37e-25   26694.512 - 2.88e-22
+TIMe+I+G4        -13121.077   26362.154 - 4.29e-25   26366.176 - 5.33e-25   26694.527 - 2.85e-22
+K3P+I+R2         -13122.045   26364.091 - 1.63e-25   26368.113 - 2.02e-25   26696.464 - 1.08e-22
+TPM3+I+R2        -13122.128   26364.256 -  1.5e-25   26368.278 - 1.86e-25   26696.630 - 9.98e-23
+K3P+G4           -13129.757   26375.515 - 5.38e-28   26379.271 - 7.64e-28   26696.809 - 9.12e-23
+TPM3+G4          -13129.821   26375.642 - 5.05e-28   26379.399 - 7.17e-28   26696.937 - 8.56e-23
+TIMe+G4          -13128.146   26374.293 - 9.91e-28   26378.181 - 1.32e-27   26701.127 - 1.05e-23
+TIM3e+G4         -13128.221   26374.442 -  9.2e-28   26378.330 - 1.22e-27   26701.276 - 9.77e-24
+TIMe+I+R2        -13120.889   26363.778 -  1.9e-25   26367.937 - 2.21e-25   26701.691 - 7.94e-24
+TIM3e+I+R2       -13121.037   26364.073 - 1.64e-25   26368.232 - 1.91e-25   26701.986 - 6.85e-24
+GTR+F+I          -13111.549   26351.098 - 1.08e-22   26355.680 - 1.01e-22   26705.630 - 1.11e-24
+F81+F+I+G4       -13330.289   26780.578 - 5.92e-116   26784.600 - 7.36e-116   27112.951 - 3.94e-113
+F81+F+G4         -13337.226   26792.453 - 1.56e-118   26796.340 - 2.08e-118   27119.286 - 1.66e-114
+F81+F+I+R2       -13329.885   26781.770 - 3.26e-116   26785.928 - 3.79e-116   27119.683 - 1.36e-114
+JC+I+G4          -13373.384   26860.768 - 2.29e-133   26864.395 - 3.46e-133   27176.523 - 6.19e-127
+JC+G4            -13380.421   26872.841 - 5.47e-136   26876.341 - 8.82e-136   27183.056 - 2.36e-128
+JC+I+R2          -13373.113   26862.226 - 1.1e-133   26865.982 - 1.57e-133   27183.520 - 1.87e-128
+GTR+F            -13386.142   26898.283 - 1.63e-141   26902.722 - 1.65e-141   27247.276 - 2.68e-142
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: TPM2u+F+I+G4
+
+Rate parameter R:
+
+  A-C: 1.5444
+  A-G: 3.7686
+  A-T: 1.5444
+  C-G: 1.0000
+  C-T: 3.7686
+  G-T: 1.0000
+
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.2889
+  pi(C) = 0.2135
+  pi(G) = 0.2328
+  pi(T) = 0.2649
+
+Rate matrix Q:
+
+  A    -1.021    0.2083    0.5543    0.2585
+  C    0.2819     -1.06    0.1471    0.6308
+  G    0.6879    0.1349   -0.9902    0.1674
+  T    0.2819    0.5083    0.1471   -0.9373
+
+Model of rate heterogeneity: Invar+Gamma with 4 categories
+Proportion of invariable sites: 0.2119
+Gamma shape alpha: 1.893
+
+ Category  Relative_rate  Proportion
+  0         0              0.2119
+  1         0.3555         0.197
+  2         0.816          0.197
+  3         1.354          0.197
+  4         2.55           0.197
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -13064.0818 (s.e. 271.6250)
+Unconstrained log-likelihood (without tree): -10600.1440
+Number of free parameters (#branches + #model parameters): 62
+Akaike information criterion (AIC) score: 26252.1636
+Corrected Akaike information criterion (AICc) score: 26256.4606
+Bayesian information criterion (BIC) score: 26595.6162
+
+Total tree length (sum of branch lengths): 2.1326
+Sum of internal branch lengths: 1.2496 (58.5942% of tree length)
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Sinocyclocheilus_anshuiensis_rna_XM_016459463_1' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++--Sinocyclocheilus_anshuiensis_rna_XM_016459463_1
+|
+|           +--Carassius_gibelio_rna_XM_052538799_1
+|        +--| (100)
+|        |  +--Carassius_auratus_rna_XM_026200108_1
+|     +--| (100)
+|     |  +--Carassius_carassius_rna_XM_059557239_1
+|  +--| (96)
+|  |  +--Cyprinus_carpio_rna_XM_042728143_1
++--| (100)
+|  |                 +--Pangasius_djambal_PDJAM_T00012360
+|  |           +-----| (100)
+|  |           |     +--Pangasius_djambal_PDJAM_T00103720
+|  |        +--| (100)
+|  |        |  +--Pangasianodon_hypophthalmus_rna_XM_026945431_3
+|  |     +--| (84)
+|  |     |  |  +-------Puntigrus_tetrazona_rna_XM_043229772_1
+|  |     |  +--| (96)
+|  |     |     |  +**Onychostoma_macrolepis_rna_XM_058770295_1
+|  |     |     +--| (100)
+|  |     |        +--Onychostoma_macrolepis_rna_XM_058768245_1
+|  |  +--| (56)
+|  |  |  |  +--Labeo_rohita_rna_XM_051103582_1
+|  |  |  +--| (100)
+|  |  |     +--Cirrhinus_molitorella_evm_model_Chr01_785
+|  +--| (100)
+|     |                                                    +--Xyrauchen_texanus_rna_XM_052119494_1
+|     |      +---------------------------------------------| (100)
+|     |      |                                             |  +--Myxocyprinus_asiaticus_rna_XM_051690292_1
+|     |      |                                             +--| (96)
+|     |      |                                                +--Myxocyprinus_asiaticus_rna_XM_051690293_1
+|     |   +--| (97)
+|     |   |  |           +--Myxocyprinus_asiaticus_rna_XM_051717578_1
+|     |   |  |        +--| (100)
+|     |   |  |        |  +-----Xyrauchen_texanus_rna_XM_052138467_1
+|     |   |  |  +-----| (100)
+|     |   |  |  |     |  +--Myxocyprinus_asiaticus_rna_XM_051715317_1
+|     |   |  |  |     +--| (100)
+|     |   |  |  |        +--Xyrauchen_texanus_rna_XM_052131238_1
+|     |   |  +--| (77)
+|     |   |     |                   +--Misgurnus_anguillicaudatus_rna_XM_055194518_1
+|     |   |     +-------------------| (100)
+|     |   |                         +--Misgurnus_anguillicaudatus_rna_XM_055194515_1
+|     +---| (100)
+|         |           +--Ctenopharyngodon_idella_rna_XM_051888784_1
+|         |        +--| (80)
+|         |        |  +--Anabarilius_grahami_mrna_DPX16_16220
+|         |     +--| (100)
+|         |     |  +--Megalobrama_amblycephala_rna_XM_048197940_1
+|         |  +--| (97)
+|         |  |  |  +--Pimephales_promelas_rna_XM_039687464_1
+|         |  |  +--| (100)
+|         |  |     +--Rhinichthys_klamathensis_goyatoka_rna_XM_056234689_1
+|         +--| (93)
+|            +---------------------------Danionella_translucida_DT02135_RA
+|
++--Sinocyclocheilus_grahami_rna_XM_016268950_1
+
+Tree in newick format:
+
+(Sinocyclocheilus_anshuiensis_rna_XM_016459463_1:0.0056842095,((((Carassius_gibelio_rna_XM_052538799_1:0.0035133802,Carassius_auratus_rna_XM_026200108_1:0.0006581006)100:0.0120208508,Carassius_carassius_rna_XM_059557239_1:0.0109163485)100:0.0234370817,Cyprinus_carpio_rna_XM_042728143_1:0.0131703394)96:0.0044342756,(((((Pangasius_djambal_PDJAM_T00012360:0.0042497463,Pangasius_djambal_PDJAM_T00103720:0.0023443440)100:0.0640901305,Pangasianodon_hypophthalmus_rna_XM_026945431_3:0.0107208553)100:0.0224759723,(Puntigrus_tetrazona_rna_XM_043229772_1:0.0845578174,(Onychostoma_macrolepis_rna_XM_058770295_1:0.0000026167,Onychostoma_macrolepis_rna_XM_058768245_1:0.0231376354)100:0.0267137719)96:0.0099505387)84:0.0049259689,(Labeo_rohita_rna_XM_051103582_1:0.0399153489,Cirrhinus_molitorella_evm_model_Chr01_785:0.0409156300)100:0.0273986645)56:0.0039867529,(((Xyrauchen_texanus_rna_XM_052119494_1:0.0386687848,(Myxocyprinus_asiaticus_rna_XM_051690292_1:0.0039849557,Myxocyprinus_asiaticus_rna_XM_051690293_1:0.0043269391)96:0.0301551222)100:0.4851461085,(((Myxocyprinus_asiaticus_rna_XM_051717578_1:0.0159603751,Xyrauchen_texanus_rna_XM_052138467_1:0.0695385860)100:0.0293011475,(Myxocyprinus_asiaticus_rna_XM_051715317_1:0.0165882708,Xyrauchen_texanus_rna_XM_052131238_1:0.0384705996)100:0.0259628350)100:0.0646730590,(Misgurnus_anguillicaudatus_rna_XM_055194518_1:0.0206569671,Misgurnus_anguillicaudatus_rna_XM_055194515_1:0.0265661605)100:0.2135479770)77:0.0095192980)97:0.0338603675,((((Ctenopharyngodon_idella_rna_XM_051888784_1:0.0171623777,Anabarilius_grahami_mrna_DPX16_16220:0.0111908497)80:0.0016951978,Megalobrama_amblycephala_rna_XM_048197940_1:0.0205508374)100:0.0359873236,(Pimephales_promelas_rna_XM_039687464_1:0.0334456432,Rhinichthys_klamathensis_goyatoka_rna_XM_056234689_1:0.0106665847)100:0.0293948082)97:0.0139342134,Danionella_translucida_DT02135_RA:0.2998770354)93:0.0120325728)100:0.0458454950)100:0.0123163285)100:0.0067609932,Sinocyclocheilus_grahami_rna_XM_016268950_1:0.0155712856);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -13064.081242
+Robinson-Foulds distance between ML tree and consensus tree: 0
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++--Sinocyclocheilus_anshuiensis_rna_XM_016459463_1
+|
+|           +--Carassius_gibelio_rna_XM_052538799_1
+|        +--| (100)
+|        |  +--Carassius_auratus_rna_XM_026200108_1
+|     +--| (100)
+|     |  +--Carassius_carassius_rna_XM_059557239_1
+|  +--| (96)
+|  |  +--Cyprinus_carpio_rna_XM_042728143_1
++--| (100)
+|  |                 +--Pangasius_djambal_PDJAM_T00012360
+|  |           +-----| (100)
+|  |           |     +--Pangasius_djambal_PDJAM_T00103720
+|  |        +--| (100)
+|  |        |  +--Pangasianodon_hypophthalmus_rna_XM_026945431_3
+|  |     +--| (84)
+|  |     |  |  +-------Puntigrus_tetrazona_rna_XM_043229772_1
+|  |     |  +--| (96)
+|  |     |     |  +--Onychostoma_macrolepis_rna_XM_058770295_1
+|  |     |     +--| (100)
+|  |     |        +--Onychostoma_macrolepis_rna_XM_058768245_1
+|  |  +--| (56)
+|  |  |  |  +--Labeo_rohita_rna_XM_051103582_1
+|  |  |  +--| (100)
+|  |  |     +--Cirrhinus_molitorella_evm_model_Chr01_785
+|  +--| (100)
+|     |                                                    +--Xyrauchen_texanus_rna_XM_052119494_1
+|     |      +---------------------------------------------| (100)
+|     |      |                                             |  +--Myxocyprinus_asiaticus_rna_XM_051690292_1
+|     |      |                                             +--| (96)
+|     |      |                                                +--Myxocyprinus_asiaticus_rna_XM_051690293_1
+|     |   +--| (97)
+|     |   |  |           +--Myxocyprinus_asiaticus_rna_XM_051717578_1
+|     |   |  |        +--| (100)
+|     |   |  |        |  +-----Xyrauchen_texanus_rna_XM_052138467_1
+|     |   |  |  +-----| (100)
+|     |   |  |  |     |  +--Myxocyprinus_asiaticus_rna_XM_051715317_1
+|     |   |  |  |     +--| (100)
+|     |   |  |  |        +--Xyrauchen_texanus_rna_XM_052131238_1
+|     |   |  +--| (77)
+|     |   |     |                   +--Misgurnus_anguillicaudatus_rna_XM_055194518_1
+|     |   |     +-------------------| (100)
+|     |   |                         +--Misgurnus_anguillicaudatus_rna_XM_055194515_1
+|     +---| (100)
+|         |           +--Ctenopharyngodon_idella_rna_XM_051888784_1
+|         |        +--| (80)
+|         |        |  +--Anabarilius_grahami_mrna_DPX16_16220
+|         |     +--| (100)
+|         |     |  +--Megalobrama_amblycephala_rna_XM_048197940_1
+|         |  +--| (97)
+|         |  |  |  +--Pimephales_promelas_rna_XM_039687464_1
+|         |  |  +--| (100)
+|         |  |     +--Rhinichthys_klamathensis_goyatoka_rna_XM_056234689_1
+|         +--| (93)
+|            +---------------------------Danionella_translucida_DT02135_RA
+|
++--Sinocyclocheilus_grahami_rna_XM_016268950_1
+
+
+Consensus tree in newick format: 
+
+(Sinocyclocheilus_anshuiensis_rna_XM_016459463_1:0.0056822715,((((Carassius_gibelio_rna_XM_052538799_1:0.0035121861,Carassius_auratus_rna_XM_026200108_1:0.0006569060)100:0.0120179599,Carassius_carassius_rna_XM_059557239_1:0.0109143479)100:0.0234314000,Cyprinus_carpio_rna_XM_042728143_1:0.0131670904)96:0.0044341182,(((((Pangasius_djambal_PDJAM_T00012360:0.0042477908,Pangasius_djambal_PDJAM_T00103720:0.0023431281)100:0.0640703795,Pangasianodon_hypophthalmus_rna_XM_026945431_3:0.0107149503)100:0.0224749064,(Puntigrus_tetrazona_rna_XM_043229772_1:0.0845312854,(Onychostoma_macrolepis_rna_XM_058770295_1:0.0000021736,Onychostoma_macrolepis_rna_XM_058768245_1:0.0231306634)100:0.0267049189)96:0.0099525337)84:0.0049262348,(Labeo_rohita_rna_XM_051103582_1:0.0399022827,Cirrhinus_molitorella_evm_model_Chr01_785:0.0409000625)100:0.0273928569)56:0.0039864592,(((Xyrauchen_texanus_rna_XM_052119494_1:0.0386964303,(Myxocyprinus_asiaticus_rna_XM_051690292_1:0.0039827880,Myxocyprinus_asiaticus_rna_XM_051690293_1:0.0043239934)96:0.0301090295)100:0.4847952745,(((Myxocyprinus_asiaticus_rna_XM_051717578_1:0.0159562805,Xyrauchen_texanus_rna_XM_052138467_1:0.0694825460)100:0.0292824806,(Myxocyprinus_asiaticus_rna_XM_051715317_1:0.0165790733,Xyrauchen_texanus_rna_XM_052131238_1:0.0384433839)100:0.0259474354)100:0.0646392611,(Misgurnus_anguillicaudatus_rna_XM_055194518_1:0.0206604056,Misgurnus_anguillicaudatus_rna_XM_055194515_1:0.0265424836)100:0.2133839690)77:0.0095971301)97:0.0337358273,((((Ctenopharyngodon_idella_rna_XM_051888784_1:0.0171547354,Anabarilius_grahami_mrna_DPX16_16220:0.0111846771)80:0.0016941916,Megalobrama_amblycephala_rna_XM_048197940_1:0.0205410069)100:0.0359707866,(Pimephales_promelas_rna_XM_039687464_1:0.0334286725,Rhinichthys_klamathensis_goyatoka_rna_XM_056234689_1:0.0106615778)100:0.0293816774)97:0.0139269256,Danionella_translucida_DT02135_RA:0.2996986882)93:0.0120406373)100:0.0458263908)100:0.0123135689)100:0.0067587214,Sinocyclocheilus_grahami_rna_XM_016268950_1:0.0155669915);
+
+ALISIM COMMAND
+--------------
+To simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis, you can use the following command:
+
+--alisim simulated_MSA -t HGT_clade.cds.aln.treefile -m "TPM2u{1.54443,3.76859}+F{0.288883,0.213453,0.232767,0.264897}+I{0.211869}+G4{1.89313}" --length 1881
+
+To mimic the alignment used to produce this analysis, i.e. simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis *and* copying the same gap positions as the original alignment, you can use the following command:
+
+iqtree -s HGT_clade.cds.aln --alisim mimicked_MSA
+
+To simulate any number of alignments in either of the two commandlines above, use the --num-alignments options, for example mimic 100 alignments you would use the command line:
+
+iqtree -s HGT_clade.cds.aln --alisim mimicked_MSA --num-alignments 100
+
+For more information on using AliSim, please visit: www.iqtree.org/doc/AliSim
+
+TIME STAMP
+----------
+
+Date and time: Mon Feb  3 09:12:12 2025
+Total CPU time used: 77.102123 seconds (0h:1m:17s)
+Total wall-clock time used: 10.20250727 seconds (0h:0m:10s)
+

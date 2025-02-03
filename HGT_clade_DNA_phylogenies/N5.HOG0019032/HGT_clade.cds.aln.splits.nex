@@ -1,0 +1,139 @@
+#nexus
+
+BEGIN Taxa;
+DIMENSIONS ntax=30;
+TAXLABELS
+[1] 'Chanos_chanos_rna_XM_030792951_1'
+[2] 'Misgurnus_anguillicaudatus_rna_XM_055220629_1'
+[3] 'Carassius_auratus_rna_XM_026232153_1'
+[4] 'Neoarius_graeffei_rna_XM_060938829_1'
+[5] 'Chanos_chanos_rna_XM_030788612_1'
+[6] 'Triplophysa_dalaica_rna_XM_056741343_1'
+[7] 'Triplophysa_tibetana_mrna_E1301_Tti016734'
+[8] 'Chanos_chanos_rna_XM_030788611_1'
+[9] 'Danio_rerio_rna_XM_021468209_1'
+[10] 'Myxocyprinus_asiaticus_rna_XM_051670420_1'
+[11] 'Sinocyclocheilus_rhinocerous_rna_XM_016551681_1'
+[12] 'Pimephales_promelas_rna_XM_039678947_1'
+[13] 'Rhinichthys_klamathensis_goyatoka_rna_XM_056264219_1'
+[14] 'Megalobrama_amblycephala_rna_XM_048202431_1'
+[15] 'Chanos_chanos_rna_XM_030788616_1'
+[16] 'Carassius_gibelio_rna_XM_052532612_1'
+[17] 'Megalobrama_amblycephala_rna_XM_048202428_1'
+[18] 'Sinocyclocheilus_anshuiensis_rna_XM_016444489_1'
+[19] 'Neoarius_graeffei_rna_XM_060938827_1'
+[20] 'Sinocyclocheilus_anshuiensis_rna_XM_016492581_1'
+[21] 'Triplophysa_rosa_rna_XM_057353938_1'
+[22] 'Xyrauchen_texanus_rna_XM_052092374_1'
+[23] 'Chanos_chanos_rna_XM_030788615_1'
+[24] 'Chanos_chanos_rna_XM_030788614_1'
+[25] 'Sinocyclocheilus_grahami_rna_XM_016291191_1'
+[26] 'Danio_aesculapii_rna_XM_056480074_1'
+[27] 'Carassius_carassius_rna_XM_059509322_1'
+[28] 'Neoarius_graeffei_rna_XM_060939486_1'
+[29] 'Anabarilius_grahami_mrna_DPX16_11507'
+[30] 'Ctenopharyngodon_idella_rna_XM_051872162_1'
+;
+END; [Taxa]
+
+BEGIN Splits;
+DIMENSIONS ntax=30 nsplits=94;
+FORMAT labels=no weights=yes confidences=no intervals=no;
+MATRIX
+	100	 2,
+	100	 6,
+	100	 7,
+	100	 6 7,
+	100	 21,
+	100	 6 7 21,
+	100	 2 6 7 21,
+	100	 10,
+	100	 22,
+	100	 10 22,
+	94	 2 6 7 10 21 22,
+	100	 3,
+	100	 16,
+	100	 3 16,
+	100	 27,
+	99	 3 16 27,
+	100	 11,
+	100	 18,
+	43	 11 18,
+	100	 25,
+	50	 11 18 25,
+	82	 3 11 16 18 25 27,
+	100	 20,
+	98	 3 11 16 18 20 25 27,
+	100	 9,
+	100	 26,
+	100	 9 26,
+	99	 3 9 11 16 18 20 25 26 27,
+	100	 12,
+	100	 13,
+	100	 12 13,
+	100	 14,
+	100	 29,
+	100	 30,
+	70	 29 30,
+	100	 14 29 30,
+	100	 17,
+	98	 14 17 29 30,
+	99	 12 13 14 17 29 30,
+	100	 1 2 4 5 6 7 8 10 15 19 21 22 23 24 28,
+	100	 1 4 5 8 15 19 23 24 28,
+	100	 8,
+	100	 24,
+	100	 8 24,
+	100	 1 4 5 15 19 23 28,
+	100	 15,
+	100	 1 4 5 19 23 28,
+	100	 5,
+	100	 23,
+	99	 5 23,
+	93	 1 4 19 28,
+	100	 4,
+	100	 19,
+	99	 4 19,
+	100	 28,
+	100	 4 19 28,
+	100	 1,
+	36	 3 16 25 27,
+	37	 3 11 16 25 27,
+	5	 1 4 5 8 10 15 19 22 23 24 28,
+	27	 14 29,
+	1	 4 28,
+	13	 18 20,
+	10	 11 18 20,
+	13	 11 18 20 25,
+	4	 18 25,
+	7	 4 5 19 23 28,
+	0	 1 4 5 19 28,
+	1	 20 27,
+	3	 3 16 20 27,
+	0	 20 25,
+	1	 12 13 14 29 30,
+	5	 11 25,
+	0	 9 12 13 14 17 26 29 30,
+	1	 3 11 12 13 14 16 17 18 20 25 27 29 30,
+	0	 19 28,
+	3	 14 30,
+	1	 12 13 17,
+	1	 3 9 11 16 18 25 26 27,
+	1	 3 9 11 12 13 16 18 20 25 26 27,
+	2	 18 20 25,
+	2	 3 11 16 27,
+	0	 3 11 16 18 20 27,
+	1	 3 11 16 20 25 27,
+	0	 1 4 19 23 28,
+	0	 1 5 23,
+	0	 3 16 18 25 27,
+	1	 9 20 26,
+	1	 1 2 4 5 6 7 8 15 19 21 23 24 28,
+	0	 3 16 20,
+	0	 3 16 20 25 27,
+	0	 1 4 5 8 19 23 24 28,
+	0	 1 5,
+	0	 11 20,
+;
+END; [Splits]
+

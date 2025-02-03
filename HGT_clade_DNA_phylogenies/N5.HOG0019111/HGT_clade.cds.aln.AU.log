@@ -1,0 +1,207 @@
+IQ-TREE multicore version 2.3.6 for Linux x86 64-bit built Aug  4 2024
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor, Heiko Schmidt,
+Dominik Schrempf, Michael Woodhams, Ly Trong Nhan, Thomas Wong
+
+Host:    sca38 (AVX2, FMA3, 503 GB RAM)
+Command: iqtree -s HGT_clade.cds.aln.AU -z example.treels -n 0 -zb 10000 -au --redo
+Seed:    518364 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon Feb  3 10:51:16 2025
+Kernel:  AVX+FMA - 1 threads (8 CPU cores detected)
+
+HINT: Use -nt option to specify number of threads because your CPU has 8 cores!
+HINT: -nt AUTO will automatically determine the best number of threads to use.
+
+Reading alignment file HGT_clade.cds.aln.AU ... Fasta format detected
+Reading fasta file: done in 0.000573254 secs
+Alignment most likely contains DNA/RNA sequences
+Alignment has 32 sequences with 501 columns, 430 distinct patterns
+347 parsimony-informative, 70 singleton sites, 84 constant sites
+                                                    Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 6.38391e-05 secs using 98.69% CPU
+   1  Thunnus_maccoyii_rna_XM_042435094_1                   0.00%    passed     83.11%
+   2  Osmerus_eperlanus_rna_XM_062448472_1                  0.60%    passed     81.45%
+   3  Clupea_harengus_rna_XM_031578285_2                    7.78%    passed     96.74%
+   4  Scomber_japonicus_rna_XM_053326797_1                  0.60%    passed     32.80%
+   5  Lampris_incognitus_rna_XM_056279878_1                 0.60%    passed     67.75%
+   6  Thunnus_maccoyii_rna_XM_042435120_1                   0.00%    passed     71.08%
+   7  Sardina_pilchardus_rna_XM_062535392_1                 9.58%    passed     87.68%
+   8  Clupea_harengus_rna_XM_031577666_1                    6.59%    passed     77.63%
+   9  Scomber_japonicus_rna_XM_053325433_1                  9.58%    passed     93.27%
+  10  Lampris_incognitus_rna_XM_056280337_1                 0.60%    passed     78.20%
+  11  Esox_lucius_rna_XM_010898588_4                        0.60%    passed     68.04%
+  12  Myripristis_murdjan_rna_XM_030046755_1                0.00%    passed     31.14%
+  13  Oncorhynchus_tshawytscha_rna_XM_042310653_1          46.71%    passed     98.84%
+  14  Scomber_japonicus_rna_XM_053325408_1                  9.58%    passed     98.13%
+  15  Thunnus_maccoyii_rna_XM_042435142_1                   7.78%    passed     96.23%
+  16  Clupea_harengus_rna_XM_031577667_2                    7.19%    passed     96.02%
+  17  Scomber_japonicus_rna_XM_053325414_1                  8.98%    passed     85.28%
+  18  Lampris_incognitus_rna_XM_056280341_1                 0.60%    passed     67.75%
+  19  Centroberyx_gerrardi_g36551_t1                        0.00%    failed      0.09%
+  20  Scomber_japonicus_rna_XM_053337026_1                  9.58%    passed     83.37%
+  21  Borostomias_antarcticus_g6122_t1                      0.60%    passed     97.76%
+  22  Alosa_sapidissima_rna_XM_042075309_1                  9.58%    passed     80.49%
+  23  Scomber_scombrus_rna_XM_062436683_1                   9.58%    passed     92.63%
+  24  Aplochiton_taeniatus_g15045_t1                        0.60%    failed      1.29%
+  25  Lucifuga_dentata_LDENT00156160_mrna                   0.00%    passed     38.11%
+  26  Alosa_alosa_rna_XM_048231371_1                        9.58%    passed     70.99%
+  27  Dallia_pectoralis_mrna_DPEC_T00177230                 0.60%    passed     62.29%
+  28  Salmo_salar_rna_XM_014131548_2                        1.20%    passed     92.80%
+  29  Scomber_scombrus_rna_XM_062436670_1                   9.58%    passed     93.52%
+  30  Hypomesus_transpacificus_rna_XM_047049897_1           6.59%    passed     84.73%
+  31  Thalassophryne_amazonica_rna_XM_034187378_1           1.20%    passed     91.41%
+  32  Coregonus_sp_balchen_gene_CSTEINMANNI_LOCUS3751678   62.28%    passed     30.45%
+WARNING: 1 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                                                 7.45%  2 sequences failed composition chi2 test (p-value<5%; df=3)
+NOTE: Lampris_incognitus_rna_XM_056280341_1 is identical to Lampris_incognitus_rna_XM_056279878_1 but kept for subsequent analysis
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.003 seconds
+Perform fast likelihood tree search using GTR+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -7456.149
+Optimal log-likelihood: -7455.979
+Rate parameters:  A-C: 1.74824  A-G: 2.46571  A-T: 1.16271  C-G: 1.11571  C-T: 3.17789  G-T: 1.00000
+Base frequencies:  A: 0.289  C: 0.223  G: 0.286  T: 0.202
+Proportion of invariable sites: 0.080
+Gamma shape alpha: 1.804
+Parameters optimization took 1 rounds (0.013 sec)
+Time for fast ML tree search: 0.096 seconds
+
+NOTE: ModelFinder requires 4 MB RAM!
+ModelFinder will test up to 484 DNA models (sample size: 501 epsilon: 0.100) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  GTR+F         7651.152     69  15440.303    15462.716    15731.249
+  2  GTR+F+I       7528.342     70  15196.683    15219.800    15491.846
+  3  GTR+F+G4      7460.183     70  15060.365    15083.481    15355.528
+  4  GTR+F+I+G4    7455.906     71  15053.812    15077.644    15353.191
+  5  GTR+F+R2      7463.247     71  15068.493    15092.326    15367.872
+  6  GTR+F+R3      7455.186     73  15056.371    15081.673    15364.183
+  7  GTR+F+R4      7454.840     75  15059.680    15086.503    15375.925
+ 14  GTR+F+I+R2    7457.559     72  15059.117    15083.678    15362.713
+ 15  GTR+F+I+R3    7455.223     74  15058.445    15084.502    15370.474
+ 25  SYM+G4        7470.642     67  15075.284    15096.328    15357.796
+ 26  SYM+I+G4      7465.825     68  15067.650    15089.372    15354.379
+ 36  SYM+I+R2      7467.114     69  15072.229    15094.642    15363.175
+ 47  TVM+F+G4      7464.032     69  15066.064    15088.477    15357.010
+ 48  TVM+F+I+G4    7459.365     70  15058.731    15081.847    15353.893
+ 58  TVM+F+I+R2    7460.665     71  15063.330    15087.162    15362.709
+ 69  TVMe+G4       7472.388     66  15076.776    15097.154    15355.072
+ 70  TVMe+I+G4     7467.759     67  15069.517    15090.561    15352.030
+ 80  TVMe+I+R2     7469.229     68  15074.457    15096.179    15361.186
+ 91  TIM3+F+G4     7467.322     68  15070.645    15092.367    15357.374
+ 92  TIM3+F+I+G4   7463.106     69  15064.212    15086.625    15355.158
+102  TIM3+F+I+R2   7464.843     70  15069.686    15092.803    15364.849
+113  TIM3e+G4      7477.995     65  15085.990    15105.714    15360.069
+114  TIM3e+I+G4    7473.265     66  15078.531    15098.909    15356.827
+124  TIM3e+I+R2    7474.654     67  15083.309    15104.353    15365.821
+135  TIM2+F+G4     7465.962     68  15067.923    15089.645    15354.652
+136  TIM2+F+I+G4   7461.267     69  15060.535    15082.948    15351.480
+146  TIM2+F+I+R2   7462.606     70  15065.212    15088.329    15360.375
+157  TIM2e+G4      7479.855     65  15089.711    15109.435    15363.790
+158  TIM2e+I+G4    7474.600     66  15081.201    15101.579    15359.497
+168  TIM2e+I+R2    7475.366     67  15084.732    15105.776    15367.245
+179  TIM+F+G4      7469.930     68  15075.860    15097.582    15362.589
+180  TIM+F+I+G4    7465.298     69  15068.596    15091.009    15359.542
+190  TIM+F+I+R2    7466.416     70  15072.832    15095.949    15367.995
+201  TIMe+G4       7483.697     65  15097.393    15117.118    15371.473
+202  TIMe+I+G4     7478.522     66  15089.044    15109.422    15367.340
+212  TIMe+I+R2     7479.009     67  15092.017    15113.061    15374.530
+223  TPM3u+F+G4    7471.168     67  15076.336    15097.379    15358.848
+224  TPM3u+F+I+G4  7466.611     68  15069.222    15090.944    15355.951
+234  TPM3u+F+I+R2  7468.015     69  15074.030    15096.443    15364.976
+245  TPM3+G4       7479.749     64  15087.498    15106.581    15357.361
+246  TPM3+I+G4     7475.245     65  15080.491    15100.215    15354.570
+256  TPM3+I+R2     7476.809     66  15085.618    15105.995    15363.914
+267  TPM2u+F+G4    7469.853     67  15073.706    15094.750    15356.219
+268  TPM2u+F+I+G4  7464.824     68  15065.647    15087.369    15352.376
+278  TPM2u+F+I+R2  7465.797     69  15069.593    15092.006    15360.539
+289  TPM2+G4       7481.698     64  15091.397    15110.479    15361.260
+290  TPM2+I+G4     7476.648     65  15083.295    15103.019    15357.374
+300  TPM2+I+R2     7477.602     66  15087.203    15107.581    15365.499
+311  K3Pu+F+G4     7473.743     67  15081.486    15102.530    15363.998
+312  K3Pu+F+I+G4   7468.786     68  15073.572    15095.294    15360.301
+322  K3Pu+F+I+R2   7469.523     69  15077.046    15099.459    15367.992
+333  K3P+G4        7485.603     64  15099.206    15118.288    15369.069
+334  K3P+I+G4      7480.634     65  15091.268    15110.992    15365.347
+344  K3P+I+R2      7481.322     66  15094.644    15115.022    15372.940
+355  TN+F+G4       7471.903     67  15077.806    15098.850    15360.319
+356  TN+F+I+G4     7467.314     68  15070.629    15092.351    15357.358
+366  TN+F+I+R2     7468.630     69  15075.259    15097.672    15366.205
+377  TNe+G4        7485.876     64  15099.752    15118.834    15369.615
+378  TNe+I+G4      7480.736     65  15091.472    15111.196    15365.551
+388  TNe+I+R2      7481.423     66  15094.846    15115.224    15373.142
+399  HKY+F+G4      7475.770     66  15083.539    15103.917    15361.835
+400  HKY+F+I+G4    7470.848     67  15075.697    15096.741    15358.210
+410  HKY+F+I+R2    7471.775     68  15079.551    15101.273    15366.280
+421  K2P+G4        7487.740     63  15101.481    15119.934    15367.127
+422  K2P+I+G4      7482.809     64  15093.617    15112.700    15363.480
+432  K2P+I+R2      7483.699     65  15097.398    15117.122    15371.478
+443  F81+F+G4      7562.058     65  15254.115    15273.839    15528.195
+444  F81+F+I+G4    7557.128     66  15246.256    15266.634    15524.552
+454  F81+F+I+R2    7557.796     67  15249.592    15270.636    15532.105
+465  JC+G4         7587.150     62  15298.300    15316.136    15559.730
+466  JC+I+G4       7581.854     63  15289.708    15308.161    15555.354
+476  JC+I+R2       7582.094     64  15292.187    15311.270    15562.050
+Akaike Information Criterion:           GTR+F+I+G4
+Corrected Akaike Information Criterion: GTR+F+I+G4
+Bayesian Information Criterion:         TIM2+F+I+G4
+Best-fit model: TIM2+F+I+G4 chosen according to BIC
+
+All model information printed to HGT_clade.cds.aln.AU.model.gz
+CPU time for ModelFinder: 2.131 seconds (0h:0m:2s)
+Wall-clock time for ModelFinder: 2.141 seconds (0h:0m:2s)
+
+NOTE: 1 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.010)
+Thoroughly optimizing +I+G parameters from 10 start values...
+Init pinv, alpha: 0.000, 2.096 / Estimate: 0.000, 1.248 / LogL: -7465.960
+Init pinv, alpha: 0.019, 2.096 / Estimate: 0.092, 1.933 / LogL: -7461.272
+Init pinv, alpha: 0.037, 2.096 / Estimate: 0.092, 1.931 / LogL: -7461.272
+Init pinv, alpha: 0.056, 2.096 / Estimate: 0.092, 1.929 / LogL: -7461.273
+Init pinv, alpha: 0.075, 2.096 / Estimate: 0.091, 1.926 / LogL: -7461.275
+Init pinv, alpha: 0.093, 2.096 / Estimate: 0.093, 1.948 / LogL: -7461.267
+Init pinv, alpha: 0.112, 2.096 / Estimate: 0.098, 2.003 / LogL: -7461.273
+Init pinv, alpha: 0.130, 2.096 / Estimate: 0.098, 2.001 / LogL: -7461.272
+Init pinv, alpha: 0.149, 2.096 / Estimate: 0.098, 1.998 / LogL: -7461.271
+Init pinv, alpha: 0.168, 2.096 / Estimate: 0.097, 1.993 / LogL: -7461.270
+Optimal pinv,alpha: 0.093, 1.948 / LogL: -7461.267
+
+Parameters optimization took 1.010 sec
+Wrote distance file to... 
+BEST SCORE FOUND : -7461.267
+Total tree length: 4.679
+
+Total number of iterations: 0
+CPU time used for tree search: 0.000 sec (0h:0m:0s)
+Wall-clock time used for tree search: 0.000 sec (0h:0m:0s)
+Total CPU time used: 3.144 sec (0h:0m:3s)
+Total wall-clock time used: 3.159 sec (0h:0m:3s)
+Reading trees in example.treels ...
+
+2 trees detected
+Note: 16.712 MB of RAM required!
+Creating 10000 bootstrap replicates...
+done
+Tree 1 / LogL: -7460.068
+Tree 2 / LogL: -7515.373
+Performing RELL-BP test...
+Performing KH and SH test...
+Performing ELW test...
+Performing approximately unbiased (AU) test...
+1 MB required for AU test
+Generating 10 x 10000 multiscale bootstrap replicates... 0.471 seconds
+TreeID	AU	RSS	d	c
+1	1.000	1.779	-4.002	-0.143
+2	0.000	1.779	4.002	0.143
+Time for AU test: 0.471 seconds
+Time for evaluating all trees: 0.574 sec.
+
+Analysis results written to: 
+  IQ-TREE report:                HGT_clade.cds.aln.AU.iqtree
+  Maximum-likelihood tree:       HGT_clade.cds.aln.AU.treefile
+  Evaluated user trees:          HGT_clade.cds.aln.AU.trees
+  Screen log file:               HGT_clade.cds.aln.AU.log
+
+Date and Time: Mon Feb  3 10:51:20 2025

@@ -1206,3 +1206,32 @@ sbatch --qos=1week -c 4 --mem=10G -e error.absrel.cand.out -o slurm.absrel.cand.
 sbatch --qos=1week -c 6 --mem=10G -e error.relax.out -o slurm.relax.out --job-name=HOG0034670 launch_RELAX.sh N5.HOG0034670
 
 
+
+
+
+##====================================================================================================================================
+##====================================================================================================================================
+#====================================================================================================================================
+##====================================================================================================================================
+##====================================================================================================================================
+##========================================== DNA phylogeny of the HGT clade ==========================================================
+##====================================================================================================================================
+##====================================================================================================================================
+#====================================================================================================================================
+##====================================================================================================================================
+##====================================================================================================================================
+
+
+
+grep ">" N5.HOG0034670.prot | grep "Carassius_gibelio_rna_XM_052550692_1\|Carassius_auratus_rna_XM_026265006_1\|Carassius_gibelio_rna_XM_052551953_1\|Cyprinus_carpio_rna_XM_042721001_1\|Carassius_carassius_rna_XM_059547622_1\|Cyprinus_carpio_rna_XM_042759291_1\|Carassius_gibelio_rna_XM_052551420_1\|Carassius_auratus_rna_XM_026243545_1\|Carassius_auratus_rna_XM_026243633_1\|Cyprinus_carpio_rna_XM_042721435_1\|Carassius_carassius_rna_XM_059510629_1\|Sinocyclocheilus_rhinocerous_rna_XM_016548717_1\|Sinocyclocheilus_grahami_rna_XM_016259813_1\|Sinocyclocheilus_anshuiensis_rna_XM_016459865_1\|Puntigrus_tetrazona_rna_XM_043237352_1\|Onychostoma_macrolepis_rna_XM_058769701_1\|Onychostoma_macrolepis_rna_XM_058768438_1\|Onychostoma_macrolepis_rna_XM_058769902_1\|Onychostoma_macrolepis_rna_XM_058771374_1\|Onychostoma_macrolepis_rna_XM_058771539_1\|Onychostoma_macrolepis_rna_XM_058772010_1\|Pangasianodon_hypophthalmus_rna_XM_053236680_1\|Pangasianodon_hypophthalmus_rna_XM_053237209_1\|Pangasianodon_hypophthalmus_rna_XM_053236679_1\|Pangasianodon_hypophthalmus_rna_XM_053237136_1\|Pangasius_djambal_PDJAM_T00258610\|Pangasianodon_gigas_PGIGA_T00260840\|Pangasianodon_gigas_PGIGA_T00260930\|Pangasianodon_gigas_PGIGA_T00102290\|Pangasianodon_gigas_PGIGA_T00260940\|Labeo_rohita_rna_XM_051102031_1\|Sinocyclocheilus_grahami_rna_XM_016261660_1\|Sinocyclocheilus_anshuiensis_rna_XM_016468474_1\|Megalobrama_amblycephala_rna_XM_048175521_1\|Anabarilius_grahami_mrna_DPX16_0591\|Anabarilius_grahami_mrna_DPX16_0592\|Megalobrama_amblycephala_rna_XM_048175522_1\|Megalobrama_amblycephala_rna_XM_048174907_1\|Megalobrama_amblycephala_rna_XM_048175501_1\|Megalobrama_amblycephala_rna_XM_048174899_1\|Megalobrama_amblycephala_rna_XM_048174900_1\|Megalobrama_amblycephala_rna_XM_048174940_1\|Megalobrama_amblycephala_rna_XM_048174922_1\|Anabarilius_grahami_mrna_DPX16_7172\|Megalobrama_amblycephala_rna_XM_048174889_1\|Anabarilius_grahami_mrna_DPX16_7169\|Megalobrama_amblycephala_rna_XM_048175468_1\|Megalobrama_amblycephala_rna_XM_048175158_1\|Megalobrama_amblycephala_rna_XM_048174898_1\|Megalobrama_amblycephala_rna_XM_048174918_1\|Megalobrama_amblycephala_rna_XM_048174914_1\|Megalobrama_amblycephala_rna_XM_048174943_1\|Anabarilius_grahami_mrna_DPX16_0417\|Megalobrama_amblycephala_rna_XM_048174909_1\|Pimephales_promelas_rna_XM_039662957_1\|Megalobrama_amblycephala_rna_XM_048174896_1"  | sed 's/>//g' > curr_ID.txt
+xargs samtools faidx N5.HOG0034670.prot  < curr_ID.txt > HGT_clade.prot
+xargs samtools faidx N5.HOG0034670.cds  < curr_ID.txt > HGT_clade.cds
+
+muscle5.1.linux_intel64 -align HGT_clade.prot -output HGT_clade.aln
+
+trimal -in HGT_clade.aln -gt 0.6 -cons 60 -backtrans HGT_clade.cds -out HGT_clade.cds.aln
+
+iqtree -s HGT_clade.cds.aln -st DNA -nt 8 -bb 1000 --redo
+
+
+

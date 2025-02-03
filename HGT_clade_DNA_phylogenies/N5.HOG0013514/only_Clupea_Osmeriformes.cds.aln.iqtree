@@ -1,0 +1,263 @@
+IQ-TREE 2.3.6 built Aug  4 2024
+
+Input file name: only_Clupea_Osmeriformes.cds.aln
+Type of analysis: ModelFinder + tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 189110
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Bui Quang Minh, Heiko A. Schmidt, Olga Chernomor, Dominik Schrempf,
+Michael D. Woodhams, Arndt von Haeseler, and Robert Lanfear (2020)
+IQ-TREE 2: New models and efficient methods for phylogenetic inference
+in the genomic era. Mol. Biol. Evol., in press.
+https://doi.org/10.1093/molbev/msaa015
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2018) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol. Biol. Evol., 35:518–522.
+https://doi.org/10.1093/molbev/msx281
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 15 sequences with 4461 nucleotide sites
+Number of constant sites: 2375 (= 53.2392% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 2375 (= 53.2392% of all sites)
+Number of parsimony informative sites: 1178
+Number of distinct site patterns: 1747
+
+ModelFinder
+-----------
+
+Best-fit model according to BIC: TPM3u+F+G4
+
+List of models sorted by BIC scores: 
+
+Model                  LogL         AIC      w-AIC        AICc     w-AICc         BIC      w-BIC
+TPM3u+F+G4       -20795.863   41657.725 +   0.0827   41658.232 +   0.0848   41869.028 +    0.801
+TIM3+F+G4        -20793.294   41654.587 +    0.397   41655.125 +    0.401   41872.294 +    0.157
+TPM3u+F+I+G4     -20794.848   41657.696 +   0.0839   41658.233 +   0.0848   41875.402 -   0.0331
+TIM3+F+I+G4      -20792.570   41655.140 +    0.301   41655.709 +    0.299   41879.249 -  0.00483
+HKY+F+G4         -20805.763   41675.525 - 1.13e-05   41676.002 - 1.17e-05   41880.425 -  0.00269
+TN+F+G4          -20803.187   41672.374 - 5.45e-05   41672.881 - 5.59e-05   41883.678 - 0.000528
+HKY+F+I+G4       -20803.501   41673.003 - 3.98e-05   41673.510 - 4.08e-05   41884.306 - 0.000386
+TVM+F+G4         -20795.853   41661.707 -   0.0113   41662.276 -   0.0112   41885.816 - 0.000181
+TN+F+I+G4        -20800.917   41669.834 - 0.000194   41670.372 - 0.000196   41887.540 - 7.66e-05
+K3Pu+F+G4        -20805.385   41676.771 - 6.05e-06   41677.278 - 6.21e-06   41888.074 - 5.86e-05
+TPM2u+F+G4       -20805.751   41677.502 -  4.2e-06   41678.009 - 4.31e-06   41888.805 - 4.07e-05
+GTR+F+G4         -20793.280   41658.561 +   0.0545   41659.163 +   0.0533   41889.073 - 3.56e-05
+TIM+F+G4         -20802.825   41673.649 - 2.88e-05   41674.187 - 2.91e-05   41891.356 - 1.14e-05
+K3Pu+F+I+G4      -20803.152   41674.304 - 2.08e-05   41674.842 -  2.1e-05   41892.011 - 8.19e-06
+TIM2+F+G4        -20803.172   41674.345 - 2.03e-05   41674.883 - 2.06e-05   41892.051 - 8.03e-06
+TPM2u+F+I+G4     -20803.522   41675.043 - 1.44e-05   41675.581 - 1.45e-05   41892.750 - 5.66e-06
+TVM+F+I+G4       -20795.235   41662.470 -  0.00771   41663.073 -  0.00754   41892.983 - 5.04e-06
+TIM+F+I+G4       -20800.625   41671.251 - 9.56e-05   41671.820 -  9.5e-05   41895.360 - 1.53e-06
+TIM2+F+I+G4      -20801.001   41672.003 - 6.56e-05   41672.572 - 6.53e-05   41896.112 - 1.05e-06
+GTR+F+I+G4       -20793.178   41660.356 -   0.0222   41660.991 -   0.0213   41897.271 -  5.9e-07
+GTR+F+I+R2       -20792.560   41661.121 -   0.0151   41661.791 -   0.0143   41904.440 - 1.64e-08
+GTR+F+R2         -20798.333   41670.667 - 0.000128   41671.303 - 0.000123   41907.583 -  3.4e-09
+GTR+F+I+R3       -20790.155   41660.310 -   0.0227   41661.052 -   0.0207   41916.435 - 4.07e-11
+GTR+F+R3         -20794.363   41666.727 - 0.000918   41667.433 - 0.000852   41916.449 - 4.04e-11
+GTR+F+I          -20829.965   41731.930 - 6.37e-18   41732.533 - 6.23e-18   41962.443 - 4.16e-21
+TIM2e+G4         -20881.878   41825.756 - 2.69e-38   41826.204 - 2.84e-38   42024.253 - 1.57e-34
+TIM3e+G4         -20882.392   41826.785 - 1.61e-38   41827.233 -  1.7e-38   42025.282 - 9.42e-35
+TNe+G4           -20887.264   41834.528 - 3.35e-40   41834.948 - 3.59e-40   42026.622 - 4.82e-35
+TIM2e+I+G4       -20881.151   41826.302 - 2.05e-38   41826.779 - 2.13e-38   42031.202 - 4.88e-36
+SYM+G4           -20877.030   41820.060 - 4.65e-37   41820.567 - 4.76e-37   42031.363 -  4.5e-36
+TPM2+G4          -20889.993   41839.986 - 2.19e-41   41840.406 - 2.34e-41   42032.080 - 3.15e-36
+TNe+I+G4         -20885.816   41833.631 - 5.25e-40   41834.079 - 5.54e-40   42032.128 - 3.07e-36
+TIM3e+I+G4       -20881.804   41827.608 - 1.07e-38   41828.085 - 1.11e-38   42032.508 - 2.54e-36
+TPM3+G4          -20890.487   41840.975 - 1.33e-41   41841.395 - 1.43e-41   42033.069 - 1.92e-36
+K2P+G4           -20895.281   41848.561 - 3.01e-43   41848.954 - 3.26e-43   42034.252 - 1.06e-36
+TIMe+G4          -20887.146   41836.291 - 1.39e-40   41836.739 - 1.47e-40   42034.788 - 8.12e-37
+TPM2+I+G4        -20888.725   41839.449 - 2.86e-41   41839.897 - 3.02e-41   42037.946 - 1.67e-37
+K2P+I+G4         -20893.458   41846.917 - 6.84e-43   41847.337 - 7.33e-43   42039.011 - 9.83e-38
+TPM3+I+G4        -20889.379   41840.757 - 1.49e-41   41841.205 - 1.57e-41   42039.254 -  8.7e-38
+TVMe+G4          -20885.225   41834.450 - 3.48e-40   41834.927 - 3.63e-40   42039.350 -  8.3e-38
+TIMe+I+G4        -20885.798   41835.596 - 1.96e-40   41836.073 - 2.05e-40   42040.496 - 4.68e-38
+SYM+I+G4         -20877.429   41822.857 - 1.15e-37   41823.395 - 1.16e-37   42040.563 - 4.52e-38
+K3P+G4           -20895.161   41850.322 - 1.25e-43   41850.742 - 1.33e-43   42042.416 - 1.79e-38
+K3P+I+G4         -20893.347   41848.693 - 2.81e-43   41849.141 - 2.97e-43   42047.190 - 1.65e-39
+TVMe+I+G4        -20885.013   41836.025 - 1.59e-40   41836.532 - 1.63e-40   42047.328 - 1.54e-39
+F81+F+G4         -20951.706   41965.412 - 1.27e-68   41965.860 - 1.34e-68   42163.909 - 7.44e-65
+F81+F+I+G4       -20948.986   41961.972 -  7.1e-68   41962.449 - 7.39e-68   42166.873 - 1.69e-65
+GTR+F            -20968.799   42007.598 - 8.78e-78   42008.167 - 8.73e-78   42231.707 - 1.41e-79
+JC+G4            -21065.126   42186.253 - 1.41e-116   42186.619 - 1.55e-116   42365.541 - 1.22e-108
+JC+I+G4          -21063.057   42184.115 - 4.11e-116   42184.507 - 4.46e-116   42369.805 - 1.45e-109
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: TPM3u+F+G4
+
+Rate parameter R:
+
+  A-C: 1.3329
+  A-G: 2.4134
+  A-T: 1.0000
+  C-G: 1.3329
+  C-T: 2.4134
+  G-T: 1.0000
+
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.3376
+  pi(C) = 0.198
+  pi(G) = 0.2445
+  pi(T) = 0.2199
+
+Rate matrix Q:
+
+  A   -0.9164    0.2252    0.5036    0.1876
+  C     0.384    -1.115    0.2781    0.4529
+  G    0.6953    0.2252    -1.108    0.1876
+  T    0.2881    0.4078    0.2087   -0.9045
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.303
+
+ Category  Relative_rate  Proportion
+  1         0.1932         0.25
+  2         0.5521         0.25
+  3         1.036          0.25
+  4         2.218          0.25
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -20795.8611 (s.e. 257.1871)
+Unconstrained log-likelihood (without tree): -25852.2054
+Number of free parameters (#branches + #model parameters): 33
+Akaike information criterion (AIC) score: 41657.7222
+Corrected Akaike information criterion (AICc) score: 41658.2290
+Bayesian information criterion (BIC) score: 41869.0254
+
+Total tree length (sum of branch lengths): 2.6092
+Sum of internal branch lengths: 0.8109 (31.0800% of tree length)
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Engraulis_encrasicolus_rna_XM_063198403_1' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++-------------Engraulis_encrasicolus_rna_XM_063198403_1
+|
+|          +-----------------------------------------------Sardina_pilchardus_rna_XM_062526471_1
+|  +-------| (100)
+|  |       |          +--Osmerus_eperlanus_rna_XM_062468699_1
+|  |       |       +--| (98)
+|  |       |       |  |  +--Osmerus_eperlanus_rna_XM_062468715_1
+|  |       |       |  +--| (97)
+|  |       |       |     +**Osmerus_eperlanus_rna_XM_062468701_1
+|  |       |    +--| (49)
+|  |       |    |  |  +--Hypomesus_transpacificus_rna_XM_047045786_1
+|  |       |    |  +--| (100)
+|  |       |    |     +--Hypomesus_transpacificus_rna_XM_047045767_1
+|  |       +----| (98)
+|  |            |     +--Clupea_harengus_rna_XM_031565905_1
+|  |            |  +--| (98)
+|  |            |  |  +--Clupea_harengus_rna_XM_031565911_2
+|  |            +--| (87)
+|  |               +--Clupea_harengus_rna_XM_042707511_1
++--| (96)
+|  |  +----Engraulis_encrasicolus_rna_XM_063208130_1
+|  +--| (100)
+|     |    +--Engraulis_encrasicolus_rna_XM_063194184_1
+|     +----| (100)
+|          +--Engraulis_encrasicolus_rna_XM_063208132_1
+|
+|       +--Engraulis_encrasicolus_rna_XM_063207824_1
++-------| (100)
+        +--Engraulis_encrasicolus_rna_XM_063208134_1
+
+Tree in newick format:
+
+(Engraulis_encrasicolus_rna_XM_063198403_1:0.3079621431,((Sardina_pilchardus_rna_XM_062526471_1:1.0717240078,(((Osmerus_eperlanus_rna_XM_062468699_1:0.0042525491,(Osmerus_eperlanus_rna_XM_062468715_1:0.0034316376,Osmerus_eperlanus_rna_XM_062468701_1:0.0000025591)97:0.0063679828)98:0.0223074237,(Hypomesus_transpacificus_rna_XM_047045786_1:0.0182403868,Hypomesus_transpacificus_rna_XM_047045767_1:0.0259908101)100:0.0206649994)49:0.0049228403,((Clupea_harengus_rna_XM_031565905_1:0.0232547455,Clupea_harengus_rna_XM_031565911_2:0.0534820380)98:0.0182226603,Clupea_harengus_rna_XM_042707511_1:0.0379114513)87:0.0111459607)98:0.1220464255)100:0.1901973527,(Engraulis_encrasicolus_rna_XM_063208130_1:0.1170221888,(Engraulis_encrasicolus_rna_XM_063194184_1:0.0132985397,Engraulis_encrasicolus_rna_XM_063208132_1:0.0076168586)100:0.1209670481)100:0.0615610420)96:0.0549625807,(Engraulis_encrasicolus_rna_XM_063207824_1:0.0752972549,Engraulis_encrasicolus_rna_XM_063208134_1:0.0387534987)100:0.1775622975);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -20795.860668
+Robinson-Foulds distance between ML tree and consensus tree: 0
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++-------------Engraulis_encrasicolus_rna_XM_063198403_1
+|
+|          +-----------------------------------------------Sardina_pilchardus_rna_XM_062526471_1
+|  +-------| (100)
+|  |       |          +--Osmerus_eperlanus_rna_XM_062468699_1
+|  |       |       +--| (98)
+|  |       |       |  |  +--Osmerus_eperlanus_rna_XM_062468715_1
+|  |       |       |  +--| (97)
+|  |       |       |     +--Osmerus_eperlanus_rna_XM_062468701_1
+|  |       |    +--| (49)
+|  |       |    |  |  +--Hypomesus_transpacificus_rna_XM_047045786_1
+|  |       |    |  +--| (100)
+|  |       |    |     +--Hypomesus_transpacificus_rna_XM_047045767_1
+|  |       +----| (98)
+|  |            |     +--Clupea_harengus_rna_XM_031565905_1
+|  |            |  +--| (98)
+|  |            |  |  +--Clupea_harengus_rna_XM_031565911_2
+|  |            +--| (87)
+|  |               +--Clupea_harengus_rna_XM_042707511_1
++--| (96)
+|  |  +----Engraulis_encrasicolus_rna_XM_063208130_1
+|  +--| (100)
+|     |    +--Engraulis_encrasicolus_rna_XM_063194184_1
+|     +----| (100)
+|          +--Engraulis_encrasicolus_rna_XM_063208132_1
+|
+|       +--Engraulis_encrasicolus_rna_XM_063207824_1
++-------| (100)
+        +--Engraulis_encrasicolus_rna_XM_063208134_1
+
+
+Consensus tree in newick format: 
+
+(Engraulis_encrasicolus_rna_XM_063198403_1:0.3079788483,((Sardina_pilchardus_rna_XM_062526471_1:1.0718635494,(((Osmerus_eperlanus_rna_XM_062468699_1:0.0042528411,(Osmerus_eperlanus_rna_XM_062468715_1:0.0034329827,Osmerus_eperlanus_rna_XM_062468701_1:0.0000023126)97:0.0063688619)98:0.0223105526,(Hypomesus_transpacificus_rna_XM_047045786_1:0.0182428941,Hypomesus_transpacificus_rna_XM_047045767_1:0.0259941398)100:0.0206689270)49:0.0049232051,((Clupea_harengus_rna_XM_031565905_1:0.0232587025,Clupea_harengus_rna_XM_031565911_2:0.0534909564)98:0.0182252723,Clupea_harengus_rna_XM_042707511_1:0.0379179554)87:0.0111474181)98:0.1219577074)100:0.1902870234,(Engraulis_encrasicolus_rna_XM_063208130_1:0.1170247067,(Engraulis_encrasicolus_rna_XM_063194184_1:0.0132994485,Engraulis_encrasicolus_rna_XM_063208132_1:0.0076178641)100:0.1209749137)100:0.0615586772)96:0.0549342954,(Engraulis_encrasicolus_rna_XM_063207824_1:0.0752991421,Engraulis_encrasicolus_rna_XM_063208134_1:0.0387544769)100:0.1775836893);
+
+ALISIM COMMAND
+--------------
+To simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis, you can use the following command:
+
+--alisim simulated_MSA -t only_Clupea_Osmeriformes.cds.aln.treefile -m "TPM3u{1.33288,2.41343}+F{0.337592,0.197993,0.244526,0.219889}+G4{1.30308}" --length 4461
+
+To mimic the alignment used to produce this analysis, i.e. simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis *and* copying the same gap positions as the original alignment, you can use the following command:
+
+iqtree -s only_Clupea_Osmeriformes.cds.aln --alisim mimicked_MSA
+
+To simulate any number of alignments in either of the two commandlines above, use the --num-alignments options, for example mimic 100 alignments you would use the command line:
+
+iqtree -s only_Clupea_Osmeriformes.cds.aln --alisim mimicked_MSA --num-alignments 100
+
+For more information on using AliSim, please visit: www.iqtree.org/doc/AliSim
+
+TIME STAMP
+----------
+
+Date and time: Thu Jan 30 20:14:05 2025
+Total CPU time used: 72.421154 seconds (0h:1m:12s)
+Total wall-clock time used: 9.447394943 seconds (0h:0m:9s)
+

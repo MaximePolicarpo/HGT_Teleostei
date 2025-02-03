@@ -1,0 +1,275 @@
+IQ-TREE multicore version 2.3.6 for Linux x86 64-bit built Aug  4 2024
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor, Heiko Schmidt,
+Dominik Schrempf, Michael Woodhams, Ly Trong Nhan, Thomas Wong
+
+Host:    sca38 (AVX2, FMA3, 503 GB RAM)
+Command: iqtree -s HGT_clade.cds.aln -st DNA -nt 8 -bb 1000 --redo
+Seed:    187572 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon Feb  3 09:19:59 2025
+Kernel:  AVX+FMA - 8 threads (8 CPU cores detected)
+
+Reading alignment file HGT_clade.cds.aln ... Fasta format detected
+Reading fasta file: done in 0.00231751 secs using 74.82% CPU
+Alignment most likely contains DNA/RNA sequences
+Alignment has 56 sequences with 1419 columns, 1196 distinct patterns
+744 parsimony-informative, 401 singleton sites, 274 constant sites
+                                                 Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 5.7739e-05 secs using 96.99% CPU
+   1  Megalobrama_amblycephala_rna_XM_048174900_1       17.12%    passed     82.90%
+   2  Megalobrama_amblycephala_rna_XM_048174914_1       31.50%    passed     85.95%
+   3  Sinocyclocheilus_anshuiensis_rna_XM_016459865_1   13.11%    passed     99.92%
+   4  Pangasianodon_hypophthalmus_rna_XM_053236679_1    12.90%    passed     85.38%
+   5  Onychostoma_macrolepis_rna_XM_058772010_1         13.11%    passed     96.78%
+   6  Megalobrama_amblycephala_rna_XM_048175158_1       16.28%    passed     90.47%
+   7  Onychostoma_macrolepis_rna_XM_058771374_1          3.38%    passed     39.90%
+   8  Megalobrama_amblycephala_rna_XM_048174909_1       28.33%    passed     84.92%
+   9  Onychostoma_macrolepis_rna_XM_058771539_1         20.08%    passed     91.07%
+  10  Carassius_auratus_rna_XM_026243545_1              18.18%    passed     80.18%
+  11  Carassius_gibelio_rna_XM_052551953_1              14.80%    passed     82.24%
+  12  Sinocyclocheilus_grahami_rna_XM_016261660_1       15.64%    passed     73.65%
+  13  Pangasianodon_hypophthalmus_rna_XM_053236680_1    12.90%    passed     86.63%
+  14  Carassius_carassius_rna_XM_059510629_1            36.15%    failed      3.02%
+  15  Megalobrama_amblycephala_rna_XM_048175522_1       19.66%    passed     82.47%
+  16  Carassius_carassius_rna_XM_059547622_1            14.16%    passed     99.83%
+  17  Carassius_gibelio_rna_XM_052550692_1              13.74%    passed     80.81%
+  18  Pangasius_djambal_PDJAM_T00258610                 72.30%    passed     19.21%
+  19  Pangasianodon_gigas_PGIGA_T00260840               82.24%    passed     24.62%
+  20  Megalobrama_amblycephala_rna_XM_048174943_1       40.80%    passed     75.08%
+  21  Megalobrama_amblycephala_rna_XM_048174907_1       18.60%    passed     81.94%
+  22  Megalobrama_amblycephala_rna_XM_048174940_1       16.07%    passed     70.84%
+  23  Cyprinus_carpio_rna_XM_042721435_1                28.75%    passed     98.86%
+  24  Onychostoma_macrolepis_rna_XM_058768438_1         12.05%    passed     96.14%
+  25  Puntigrus_tetrazona_rna_XM_043237352_1            14.16%    passed     73.68%
+  26  Onychostoma_macrolepis_rna_XM_058769701_1         29.81%    passed     41.92%
+  27  Megalobrama_amblycephala_rna_XM_048174899_1       16.91%    passed     78.36%
+  28  Pimephales_promelas_rna_XM_039662957_1            14.59%    passed     23.93%
+  29  Megalobrama_amblycephala_rna_XM_048175468_1       16.28%    passed     73.94%
+  30  Megalobrama_amblycephala_rna_XM_048175521_1       24.10%    passed     27.96%
+  31  Megalobrama_amblycephala_rna_XM_048174922_1       53.07%    passed     80.06%
+  32  Anabarilius_grahami_mrna_DPX16_7172               81.18%    passed     61.93%
+  33  Carassius_auratus_rna_XM_026265006_1              13.74%    passed     91.98%
+  34  Megalobrama_amblycephala_rna_XM_048174898_1       16.07%    passed     82.90%
+  35  Megalobrama_amblycephala_rna_XM_048175501_1       50.53%    passed     45.05%
+  36  Cyprinus_carpio_rna_XM_042721001_1                14.16%    passed     95.86%
+  37  Anabarilius_grahami_mrna_DPX16_0591               42.49%    passed      7.19%
+  38  Anabarilius_grahami_mrna_DPX16_0417               58.77%    passed     71.55%
+  39  Pangasianodon_gigas_PGIGA_T00102290               56.87%    failed      2.03%
+  40  Sinocyclocheilus_rhinocerous_rna_XM_016548717_1   30.23%    passed     66.28%
+  41  Labeo_rohita_rna_XM_051102031_1                   52.22%    passed     15.63%
+  42  Carassius_gibelio_rna_XM_052551420_1              15.43%    passed     91.67%
+  43  Pangasianodon_gigas_PGIGA_T00260940               50.32%    passed      5.97%
+  44  Anabarilius_grahami_mrna_DPX16_0592               14.16%    passed     95.16%
+  45  Megalobrama_amblycephala_rna_XM_048174896_1       14.16%    passed     82.09%
+  46  Cyprinus_carpio_rna_XM_042759291_1                14.16%    passed     72.17%
+  47  Sinocyclocheilus_anshuiensis_rna_XM_016468474_1   14.59%    passed     81.96%
+  48  Pangasianodon_hypophthalmus_rna_XM_053237136_1    12.90%    passed     84.47%
+  49  Onychostoma_macrolepis_rna_XM_058769902_1         37.42%    passed     32.81%
+  50  Anabarilius_grahami_mrna_DPX16_7169               41.65%    failed      1.53%
+  51  Carassius_auratus_rna_XM_026243633_1              13.11%    passed     85.73%
+  52  Sinocyclocheilus_grahami_rna_XM_016259813_1       13.53%    passed     97.40%
+  53  Megalobrama_amblycephala_rna_XM_048174918_1       39.53%    passed     95.06%
+  54  Pangasianodon_gigas_PGIGA_T00260930               84.99%    passed     11.98%
+  55  Megalobrama_amblycephala_rna_XM_048174889_1       11.42%    passed     89.74%
+  56  Pangasianodon_hypophthalmus_rna_XM_053237209_1    12.90%    passed     80.29%
+WARNING: 10 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                                             27.63%  3 sequences failed composition chi2 test (p-value<5%; df=3)
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.011 seconds
+Perform fast likelihood tree search using GTR+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -19733.122
+2. Current log-likelihood: -19731.895
+Optimal log-likelihood: -19730.966
+Rate parameters:  A-C: 1.60342  A-G: 2.08963  A-T: 1.14981  C-G: 1.18671  C-T: 2.25135  G-T: 1.00000
+Base frequencies:  A: 0.320  C: 0.199  G: 0.248  T: 0.233
+Proportion of invariable sites: 0.041
+Gamma shape alpha: 1.283
+Parameters optimization took 2 rounds (0.032 sec)
+Time for fast ML tree search: 0.218 seconds
+
+NOTE: ModelFinder requires 26 MB RAM!
+ModelFinder will test up to 484 DNA models (sample size: 1419 epsilon: 0.100) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  GTR+F         20305.671    117 40845.342    40866.566    41460.494
+  2  GTR+F+I       20092.291    118 40420.583    40442.186    41040.992
+  3  GTR+F+G4      19726.206    118 39688.413    39710.016    40308.822
+  4  GTR+F+I+G4    19727.289    119 39692.577    39714.563    40318.244
+  5  GTR+F+R2      19744.197    119 39726.393    39748.379    40352.060
+  6  GTR+F+R3      19717.979    121 39677.958    39700.721    40314.141
+  7  GTR+F+R4      19717.645    123 39681.290    39704.845    40327.988
+ 14  GTR+F+I+R2    19732.453    120 39704.907    39727.279    40335.831
+ 15  GTR+F+I+R3    19718.140    122 39680.281    39703.438    40321.721
+ 16  GTR+F+I+R4    19717.855    124 39683.709    39707.666    40335.665
+ 25  SYM+G4        19787.391    115 39804.783    39825.259    40409.419
+ 26  SYM+I+G4      19788.259    116 39808.518    39829.365    40418.412
+ 28  SYM+R3        19776.080    118 39788.160    39809.764    40408.570
+ 47  TVM+F+G4      19726.959    117 39687.918    39709.142    40303.070
+ 48  TVM+F+I+G4    19727.890    118 39691.780    39713.383    40312.190
+ 50  TVM+F+R3      19718.330    120 39676.660    39699.033    40307.585
+ 69  TVMe+G4       19800.548    114 39829.097    39849.204    40428.475
+ 70  TVMe+I+G4     19801.326    115 39832.653    39853.129    40437.289
+ 72  TVMe+R3       19790.145    117 39814.290    39835.514    40429.442
+ 91  TIM3+F+G4     19735.667    116 39703.333    39724.181    40313.227
+ 92  TIM3+F+I+G4   19736.482    117 39706.964    39728.188    40322.116
+ 94  TIM3+F+R3     19727.631    119 39693.261    39715.248    40318.929
+113  TIM3e+G4      19815.950    113 39857.900    39877.642    40452.021
+114  TIM3e+I+G4    19816.621    114 39861.243    39881.350    40460.621
+116  TIM3e+R3      19805.423    116 39842.846    39863.694    40452.740
+135  TIM2+F+G4     19740.070    116 39712.140    39732.988    40322.035
+136  TIM2+F+I+G4   19740.700    117 39715.400    39736.624    40330.552
+138  TIM2+F+R3     19731.168    119 39700.337    39722.323    40326.004
+157  TIM2e+G4      19792.272    113 39810.545    39830.288    40404.666
+158  TIM2e+I+G4    19792.794    114 39813.589    39833.696    40412.967
+160  TIM2e+R3      19780.659    116 39793.318    39814.166    40403.213
+179  TIM+F+G4      19745.656    116 39723.312    39744.159    40333.206
+180  TIM+F+I+G4    19746.217    117 39726.435    39747.658    40341.587
+182  TIM+F+R3      19737.254    119 39712.509    39734.495    40338.176
+201  TIMe+G4       19817.736    113 39861.471    39881.214    40455.592
+202  TIMe+I+G4     19818.210    114 39864.421    39884.528    40463.799
+204  TIMe+R3       19806.990    116 39845.980    39866.828    40455.874
+223  TPM3u+F+G4    19736.373    115 39702.746    39723.222    40307.382
+224  TPM3u+F+I+G4  19736.890    116 39705.780    39726.628    40315.674
+226  TPM3u+F+R3    19728.184    118 39692.367    39713.970    40312.777
+245  TPM3+G4       19828.554    112 39881.107    39900.488    40469.970
+246  TPM3+I+G4     19828.997    113 39883.994    39903.737    40478.115
+248  TPM3+R3       19818.971    115 39867.942    39888.418    40472.578
+267  TPM2u+F+G4    19740.814    115 39711.628    39732.104    40316.265
+268  TPM2u+F+I+G4  19741.246    116 39714.491    39735.339    40324.386
+270  TPM2u+F+R3    19731.661    118 39699.323    39720.926    40319.732
+289  TPM2+G4       19805.245    112 39834.491    39853.872    40423.354
+290  TPM2+I+G4     19805.616    113 39837.232    39856.975    40431.353
+292  TPM2+R3       19794.642    115 39819.285    39839.761    40423.921
+311  K3Pu+F+G4     19746.333    115 39722.666    39743.141    40327.302
+312  K3Pu+F+I+G4   19746.719    116 39725.437    39746.285    40335.332
+314  K3Pu+F+R3     19737.666    118 39711.331    39732.934    40331.741
+333  K3P+G4        19830.219    112 39884.438    39903.819    40473.301
+334  K3P+I+G4      19830.558    113 39887.116    39906.859    40481.237
+336  K3P+R3        19820.496    115 39870.992    39891.468    40475.629
+355  TN+F+G4       19748.364    115 39726.727    39747.203    40331.363
+356  TN+F+I+G4     19748.709    116 39729.419    39750.266    40339.313
+358  TN+F+R3       19739.821    118 39715.642    39737.245    40336.051
+377  TNe+G4        19819.688    112 39863.375    39882.757    40452.239
+378  TNe+I+G4      19819.980    113 39865.959    39885.702    40460.080
+380  TNe+R3        19808.951    115 39847.902    39868.378    40452.539
+399  HKY+F+G4      19749.051    114 39726.102    39746.209    40325.481
+400  HKY+F+I+G4    19749.357    115 39728.713    39749.189    40333.350
+402  HKY+F+R3      19740.324    117 39714.647    39735.871    40329.799
+421  K2P+G4        19832.134    111 39886.269    39905.292    40469.874
+422  K2P+I+G4      19832.404    112 39888.808    39908.189    40477.671
+424  K2P+R3        19822.385    114 39872.770    39892.878    40472.149
+443  F81+F+G4      19861.474    113 39948.948    39968.690    40543.069
+444  F81+F+I+G4    19861.747    114 39951.493    39971.601    40550.872
+446  F81+F+R3      19853.734    116 39939.467    39960.315    40549.361
+465  JC+G4         19964.281    110 40148.562    40167.232    40726.910
+466  JC+I+G4       19964.522    111 40151.044    40170.068    40734.650
+468  JC+R3         19955.255    113 40136.509    40156.252    40730.630
+Akaike Information Criterion:           TVM+F+R3
+Corrected Akaike Information Criterion: TVM+F+R3
+Bayesian Information Criterion:         TVM+F+G4
+Best-fit model: TVM+F+G4 chosen according to BIC
+
+All model information printed to HGT_clade.cds.aln.model.gz
+CPU time for ModelFinder: 34.839 seconds (0h:0m:34s)
+Wall-clock time for ModelFinder: 4.383 seconds (0h:0m:4s)
+Generating 1000 samples for ultrafast bootstrap (seed: 187572)...
+
+NOTE: 13 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -19862.749
+2. Current log-likelihood: -19727.376
+3. Current log-likelihood: -19726.972
+Optimal log-likelihood: -19726.961
+Rate parameters:  A-C: 1.59556  A-G: 2.13843  A-T: 1.14468  C-G: 1.18020  C-T: 2.13843  G-T: 1.00000
+Base frequencies:  A: 0.320  C: 0.199  G: 0.248  T: 0.233
+Gamma shape alpha: 1.116
+Parameters optimization took 3 rounds (0.073 sec)
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 0.00161486 secs using 1483% CPU
+Computing ML distances took 0.001769 sec (of wall-clock time) 0.024065 sec (of CPU time)
+WARNING: Some pairwise ML distances are too long (saturated)
+Setting up auxiliary I and S matrices: done in 0.00440492 secs using 198.8% CPU
+Computing RapidNJ tree took 0.069654 sec (of wall-clock time) 0.063208 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -20387.828
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 0.700 second
+Computing log-likelihood of 98 initial trees ... 0.690 seconds
+Current best score: -19726.961
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -19726.959
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 2: -19711.659
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 5: -19707.908
+Iteration 10 / LogL: -19711.713 / Time: 0h:0m:7s
+Iteration 20 / LogL: -19708.033 / Time: 0h:0m:8s
+Finish initializing candidate tree set (9)
+Current best tree score: -19707.908 / CPU time: 3.926
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+UPDATE BEST LOG-LIKELIHOOD: -19707.906
+Iteration 30 / LogL: -19711.728 / Time: 0h:0m:9s (0h:0m:14s left)
+Iteration 40 / LogL: -19707.949 / Time: 0h:0m:11s (0h:0m:11s left)
+UPDATE BEST LOG-LIKELIHOOD: -19707.905
+Iteration 50 / LogL: -19707.965 / Time: 0h:0m:12s (0h:0m:9s left)
+Log-likelihood cutoff on original alignment: -19744.263
+UPDATE BEST LOG-LIKELIHOOD: -19707.901
+Iteration 60 / LogL: -19713.555 / Time: 0h:0m:14s (0h:0m:7s left)
+UPDATE BEST LOG-LIKELIHOOD: -19707.901
+Iteration 70 / LogL: -19707.947 / Time: 0h:0m:15s (0h:0m:5s left)
+Iteration 80 / LogL: -19708.077 / Time: 0h:0m:17s (0h:0m:4s left)
+Iteration 90 / LogL: -19711.699 / Time: 0h:0m:18s (0h:0m:2s left)
+Iteration 100 / LogL: -19707.923 / Time: 0h:0m:20s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -19744.263
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.999
+TREE SEARCH COMPLETED AFTER 106 ITERATIONS / Time: 0h:0m:21s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -19707.901
+Optimal log-likelihood: -19707.897
+Rate parameters:  A-C: 1.60030  A-G: 2.14927  A-T: 1.14883  C-G: 1.16949  C-T: 2.14927  G-T: 1.00000
+Base frequencies:  A: 0.320  C: 0.199  G: 0.248  T: 0.233
+Gamma shape alpha: 1.112
+Parameters optimization took 1 rounds (0.015 sec)
+BEST SCORE FOUND : -19707.897
+Creating bootstrap support values...
+Split supports printed to NEXUS file HGT_clade.cds.aln.splits.nex
+Total tree length: 4.882
+
+Total number of iterations: 106
+CPU time used for tree search: 124.693 sec (0h:2m:4s)
+Wall-clock time used for tree search: 16.504 sec (0h:0m:16s)
+Total CPU time used: 161.020 sec (0h:2m:41s)
+Total wall-clock time used: 21.259 sec (0h:0m:21s)
+
+Computing bootstrap consensus tree...
+Reading input file HGT_clade.cds.aln.splits.nex...
+56 taxa and 257 splits.
+Consensus tree written to HGT_clade.cds.aln.contree
+Reading input trees file HGT_clade.cds.aln.contree
+Log-likelihood of consensus tree: -19707.902
+
+Analysis results written to: 
+  IQ-TREE report:                HGT_clade.cds.aln.iqtree
+  Maximum-likelihood tree:       HGT_clade.cds.aln.treefile
+  Likelihood distances:          HGT_clade.cds.aln.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          HGT_clade.cds.aln.splits.nex
+  Consensus tree:                HGT_clade.cds.aln.contree
+  Screen log file:               HGT_clade.cds.aln.log
+
+Date and Time: Mon Feb  3 09:20:20 2025

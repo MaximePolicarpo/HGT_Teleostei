@@ -748,6 +748,32 @@ sbatch --qos=1week -c 4 --mem=10G -e error.absrel.cand.out -o slurm.absrel.cand.
 
 
 
+##====================================================================================================================================
+##====================================================================================================================================
+#====================================================================================================================================
+##====================================================================================================================================
+##====================================================================================================================================
+##========================================== DNA phylogeny of the HGT clade ==========================================================
+##====================================================================================================================================
+##====================================================================================================================================
+#====================================================================================================================================
+##====================================================================================================================================
+##====================================================================================================================================
+
+
+
+
+grep ">" N5.HOG0004451.prot | grep "Synaphobranchus_kaupii_mrna_SKAU_T00116920\|Synaphobranchus_kaupii_mrna_SKAU_T00116880\|Synaphobranchus_kaupii_mrna_SKAU_T00116900\|Synaphobranchus_kaupii_mrna_SKAU_T00116860\|Synaphobranchus_kaupii_mrna_SKAU_T00116840\|Synaphobranchus_kaupii_mrna_SKAU_T00116910\|Synaphobranchus_kaupii_mrna_SKAU_T00116890\|Synaphobranchus_kaupii_mrna_SKAU_T00116870\|Synaphobranchus_kaupii_mrna_SKAU_T00116810\|Synaphobranchus_kaupii_mrna_SKAU_T00116790\|Synaphobranchus_kaupii_mrna_SKAU_T00116770\|Synaphobranchus_kaupii_mrna_SKAU_T00116800\|Anguilla_anguilla_rna_XM_035407033_1\|Anguilla_anguilla_rna_XM_035403412_1\|Anguilla_anguilla_rna_XM_035407034_1\|Conger_conger_rna_XM_061230614_1\|Conger_conger_rna_XM_061230611_1\|Conger_conger_rna_XM_061230613_1\|Conger_conger_rna_XM_061232904_1\|Conger_conger_rna_XM_061233141_1\|Conger_conger_rna_XM_061232361_1\|Conger_conger_rna_XM_061230610_1\|Conger_conger_rna_XM_061230612_1\|Albula_glossodonta_mRNA15989\|Albula_glossodonta_mRNA15988\|Albula_goreensis_AGOR_T00122240\|Albula_glossodonta_mRNA15990\|Albula_glossodonta_mRNA7121\|Aldrovandia_affinis_mrna_AAFF_T00314980\|Aldrovandia_affinis_mrna_AAFF_T00314970\|Aldrovandia_affinis_mrna_AAFF_T00102350\|Megalops_cyprinoides_rna_XM_036520634_1\|Centroberyx_gerrardi_g23848_t1"  | sed 's/>//g' > curr_ID.txt
+xargs samtools faidx N5.HOG0004451.prot  < curr_ID.txt > HGT_clade.prot
+xargs samtools faidx N5.HOG0004451.cds  < curr_ID.txt > HGT_clade.cds
+
+muscle5.1.linux_intel64 -align HGT_clade.prot -output HGT_clade.aln
+
+trimal -in HGT_clade.aln -gt 0.6 -cons 60 -backtrans HGT_clade.cds -out HGT_clade.cds.aln
+
+iqtree -s HGT_clade.cds.aln -st DNA -nt 8 -bb 1000 --redo
+
+
 
 
 

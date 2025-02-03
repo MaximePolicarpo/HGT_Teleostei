@@ -1,0 +1,259 @@
+IQ-TREE multicore version 2.3.6 for Linux x86 64-bit built Aug  4 2024
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor, Heiko Schmidt,
+Dominik Schrempf, Michael Woodhams, Ly Trong Nhan, Thomas Wong
+
+Host:    sca38 (AVX2, FMA3, 503 GB RAM)
+Command: iqtree -s HGT_clade.cds.aln -st DNA -nt 8 -bb 1000 --redo
+Seed:    847127 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon Feb  3 09:05:14 2025
+Kernel:  AVX+FMA - 8 threads (8 CPU cores detected)
+
+Reading alignment file HGT_clade.cds.aln ... Fasta format detected
+Reading fasta file: done in 0.00261345 secs using 99.94% CPU
+Alignment most likely contains DNA/RNA sequences
+Alignment has 33 sequences with 2769 columns, 1599 distinct patterns
+1053 parsimony-informative, 887 singleton sites, 829 constant sites
+                                            Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 6.36301e-05 secs using 91.15% CPU
+   1  Synaphobranchus_kaupii_mrna_SKAU_T00116860   40.85%    passed     61.97%
+   2  Conger_conger_rna_XM_061232904_1             39.98%    passed     11.25%
+   3  Anguilla_anguilla_rna_XM_035403412_1         45.50%    passed     81.09%
+   4  Conger_conger_rna_XM_061230613_1             44.20%    passed     92.24%
+   5  Albula_glossodonta_mRNA15989                 77.90%    passed     50.59%
+   6  Anguilla_anguilla_rna_XM_035407034_1         45.40%    passed     81.56%
+   7  Aldrovandia_affinis_mrna_AAFF_T00102350      40.74%    passed     67.48%
+   8  Anguilla_anguilla_rna_XM_035407033_1         45.40%    passed     90.36%
+   9  Synaphobranchus_kaupii_mrna_SKAU_T00116790   47.02%    passed     74.04%
+  10  Synaphobranchus_kaupii_mrna_SKAU_T00116900   53.30%    passed     74.66%
+  11  Albula_goreensis_AGOR_T00122240              22.21%    failed      1.16%
+  12  Synaphobranchus_kaupii_mrna_SKAU_T00116800   44.42%    passed     57.07%
+  13  Megalops_cyprinoides_rna_XM_036520634_1      48.00%    failed      4.34%
+  14  Conger_conger_rna_XM_061230612_1             45.40%    passed     37.94%
+  15  Albula_glossodonta_mRNA7121                  19.39%    failed      2.56%
+  16  Synaphobranchus_kaupii_mrna_SKAU_T00116880   53.30%    passed     74.66%
+  17  Centroberyx_gerrardi_g23848_t1               45.18%    passed     96.00%
+  18  Albula_glossodonta_mRNA15990                 13.33%    failed      0.93%
+  19  Synaphobranchus_kaupii_mrna_SKAU_T00116870   39.00%    passed     63.86%
+  20  Synaphobranchus_kaupii_mrna_SKAU_T00116920   53.30%    passed     74.66%
+  21  Conger_conger_rna_XM_061230611_1             56.01%    passed     79.21%
+  22  Synaphobranchus_kaupii_mrna_SKAU_T00116770   30.01%    failed      0.00%
+  23  Aldrovandia_affinis_mrna_AAFF_T00314970      34.34%    passed     83.30%
+  24  Synaphobranchus_kaupii_mrna_SKAU_T00116910   66.74%    passed     13.81%
+  25  Conger_conger_rna_XM_061232361_1             42.90%    passed     35.45%
+  26  Synaphobranchus_kaupii_mrna_SKAU_T00116890   66.74%    passed     13.81%
+  27  Albula_glossodonta_mRNA15988                 17.77%    failed      2.15%
+  28  Conger_conger_rna_XM_061230614_1             41.06%    passed     75.64%
+  29  Conger_conger_rna_XM_061233141_1             43.12%    passed     39.72%
+  30  Aldrovandia_affinis_mrna_AAFF_T00314980      41.39%    failed      2.78%
+  31  Synaphobranchus_kaupii_mrna_SKAU_T00116840   44.64%    passed     83.41%
+  32  Synaphobranchus_kaupii_mrna_SKAU_T00116810   40.09%    passed     52.54%
+  33  Conger_conger_rna_XM_061230610_1             58.61%    passed     96.46%
+WARNING: 8 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                                        43.86%  7 sequences failed composition chi2 test (p-value<5%; df=3)
+NOTE: Synaphobranchus_kaupii_mrna_SKAU_T00116880 is identical to Synaphobranchus_kaupii_mrna_SKAU_T00116900 but kept for subsequent analysis
+NOTE: Synaphobranchus_kaupii_mrna_SKAU_T00116890 is identical to Synaphobranchus_kaupii_mrna_SKAU_T00116910 but kept for subsequent analysis
+NOTE: 1 identical sequences (see below) will be ignored for subsequent analysis
+NOTE: Synaphobranchus_kaupii_mrna_SKAU_T00116920 (identical to Synaphobranchus_kaupii_mrna_SKAU_T00116900) is ignored but added at the end
+Alignment was printed to HGT_clade.cds.aln.uniqueseq.phy
+
+For your convenience alignment with unique sequences printed to HGT_clade.cds.aln.uniqueseq.phy
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.009 seconds
+Perform fast likelihood tree search using GTR+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -24885.281
+2. Current log-likelihood: -24881.149
+3. Current log-likelihood: -24878.955
+4. Current log-likelihood: -24877.369
+5. Current log-likelihood: -24876.165
+Optimal log-likelihood: -24875.233
+Rate parameters:  A-C: 1.48002  A-G: 2.23628  A-T: 1.16803  C-G: 0.98219  C-T: 2.51940  G-T: 1.00000
+Base frequencies:  A: 0.281  C: 0.236  G: 0.268  T: 0.215
+Proportion of invariable sites: 0.067
+Gamma shape alpha: 0.826
+Parameters optimization took 5 rounds (0.070 sec)
+Time for fast ML tree search: 0.203 seconds
+
+NOTE: ModelFinder requires 22 MB RAM!
+ModelFinder will test up to 484 DNA models (sample size: 2769 epsilon: 0.100) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  GTR+F         25985.550    69  52109.100    52112.679    52518.010
+  2  GTR+F+I       25466.800    70  51073.600    51077.284    51488.437
+  3  GTR+F+G4      24868.227    70  49876.453    49880.137    50291.290
+  4  GTR+F+I+G4    24870.241    71  49882.482    49886.273    50303.245
+  5  GTR+F+R2      25026.562    71  50195.123    50198.914    50615.886
+  6  GTR+F+R3      24815.024    73  49776.048    49780.057    50208.664
+  7  GTR+F+R4      24791.946    75  49733.893    49738.126    50178.361
+  8  GTR+F+R5      24790.232    77  49734.464    49738.928    50190.785
+ 14  GTR+F+I+R2    24882.148    72  49908.297    49912.196    50334.986
+ 15  GTR+F+I+R3    24797.307    74  49742.615    49746.735    50181.157
+ 16  GTR+F+I+R4    24789.116    76  49730.231    49734.579    50180.625
+ 17  GTR+F+I+R5    24789.025    78  49734.051    49738.632    50196.297
+ 29  SYM+R4        24809.755    72  49763.510    49767.409    50190.200
+ 37  SYM+I+R3      24817.686    71  49777.372    49781.163    50198.135
+ 38  SYM+I+R4      24807.584    73  49761.168    49765.177    50193.783
+ 51  TVM+F+R4      24792.860    74  49733.720    49737.840    50172.262
+ 59  TVM+F+I+R3    24799.679    73  49745.358    49749.367    50177.974
+ 60  TVM+F+I+R4    24790.308    75  49730.615    49734.849    50175.084
+ 73  TVMe+R4       24816.644    71  49775.288    49779.079    50196.051
+ 81  TVMe+I+R3     24822.580    70  49785.160    49788.845    50199.997
+ 82  TVMe+I+R4     24813.926    72  49771.852    49775.752    50198.542
+ 95  TIM3+F+R4     24804.908    73  49755.815    49759.824    50188.431
+103  TIM3+F+I+R3   24811.415    72  49766.829    49770.728    50193.519
+104  TIM3+F+I+R4   24802.306    74  49752.612    49756.733    50191.154
+117  TIM3e+R4      24826.264    70  49792.527    49796.212    50207.364
+125  TIM3e+I+R3    24835.349    69  49808.698    49812.277    50217.609
+126  TIM3e+I+R4    24824.296    71  49790.592    49794.383    50211.355
+139  TIM2+F+R4     24796.519    73  49739.037    49743.046    50171.653
+147  TIM2+F+I+R3   24802.619    72  49749.237    49753.136    50175.926
+148  TIM2+F+I+R4   24793.948    74  49735.895    49740.016    50174.437
+161  TIM2e+R4      24820.502    70  49781.005    49784.689    50195.842
+169  TIM2e+I+R3    24829.121    69  49796.242    49799.821    50205.152
+170  TIM2e+I+R4    24818.492    71  49778.984    49782.775    50199.747
+183  TIM+F+R4      24804.160    73  49754.321    49758.329    50186.936
+191  TIM+F+I+R3    24810.919    72  49765.838    49769.737    50192.528
+192  TIM+F+I+R4    24801.625    74  49751.250    49755.370    50189.792
+205  TIMe+R4       24830.746    70  49801.493    49805.177    50216.330
+213  TIMe+I+R3     24840.427    69  49818.854    49822.433    50227.764
+214  TIMe+I+R4     24828.877    71  49799.754    49803.545    50220.517
+227  TPM3u+F+R4    24806.161    72  49756.321    49760.220    50183.011
+235  TPM3u+F+I+R3  24813.813    71  49769.627    49773.418    50190.390
+236  TPM3u+F+I+R4  24803.809    73  49753.617    49757.626    50186.233
+249  TPM3+R4       24833.448    69  49804.896    49808.475    50213.806
+257  TPM3+I+R3     24840.401    68  49816.802    49820.278    50219.787
+258  TPM3+I+R4     24830.997    70  49801.993    49805.677    50216.830
+271  TPM2u+F+R4    24797.897    72  49739.794    49743.693    50166.483
+279  TPM2u+F+I+R3  24805.156    71  49752.311    49756.102    50173.074
+280  TPM2u+F+I+R4  24795.550    73  49737.099    49741.108    50169.715
+293  TPM2+R4       24827.464    69  49792.929    49796.508    50201.839
+301  TPM2+I+R3     24834.197    68  49804.394    49807.870    50207.378
+302  TPM2+I+R4     24825.114    70  49790.229    49793.913    50205.066
+315  K3Pu+F+R4     24805.390    72  49754.779    49758.678    50181.469
+323  K3Pu+F+I+R3   24813.393    71  49768.787    49772.578    50189.550
+324  K3Pu+F+I+R4   24803.141    73  49752.282    49756.291    50184.898
+337  K3P+R4        24837.893    69  49813.787    49817.366    50222.697
+345  K3P+I+R3      24845.603    68  49827.207    49830.682    50230.191
+346  K3P+I+R4      24835.649    70  49811.298    49814.983    50226.135
+359  TN+F+R4       24807.712    72  49759.424    49763.324    50186.114
+367  TN+F+I+R3     24814.602    71  49771.205    49774.996    50191.968
+368  TN+F+I+R4     24805.336    73  49756.672    49760.681    50189.287
+381  TNe+R4        24834.823    69  49807.647    49811.226    50216.558
+389  TNe+I+R3      24844.477    68  49824.954    49828.430    50227.938
+390  TNe+I+R4      24833.019    70  49806.039    49809.723    50220.876
+403  HKY+F+R4      24809.020    71  49760.041    49763.832    50180.804
+411  HKY+F+I+R3    24817.053    70  49774.106    49777.790    50188.943
+412  HKY+F+I+R4    24806.839    72  49757.678    49761.577    50184.367
+425  K2P+R4        24841.949    68  49819.898    49823.373    50222.882
+433  K2P+I+R3      24849.640    67  49833.280    49836.654    50230.338
+434  K2P+I+R4      24839.782    69  49817.565    49821.144    50226.475
+447  F81+F+R4      25015.610    70  50171.220    50174.904    50586.056
+455  F81+F+I+R3    25018.197    69  50174.394    50177.973    50583.304
+456  F81+F+I+R4    25013.577    71  50169.154    50172.945    50589.917
+469  JC+R4         25058.588    67  50251.176    50254.549    50648.234
+477  JC+I+R3       25061.797    66  50255.593    50258.866    50646.725
+478  JC+I+R4       25056.807    68  50249.615    50253.090    50652.599
+Akaike Information Criterion:           GTR+F+I+R4
+Corrected Akaike Information Criterion: GTR+F+I+R4
+Bayesian Information Criterion:         TPM2u+F+R4
+Best-fit model: TPM2u+F+R4 chosen according to BIC
+
+All model information printed to HGT_clade.cds.aln.model.gz
+CPU time for ModelFinder: 69.683 seconds (0h:1m:9s)
+Wall-clock time for ModelFinder: 8.757 seconds (0h:0m:8s)
+Generating 1000 samples for ultrafast bootstrap (seed: 847127)...
+
+NOTE: 12 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -25015.609
+2. Current log-likelihood: -24799.083
+3. Current log-likelihood: -24798.042
+4. Current log-likelihood: -24797.931
+Optimal log-likelihood: -24797.876
+Rate parameters:  A-C: 1.31334  A-G: 2.40872  A-T: 1.31334  C-G: 1.00000  C-T: 2.40872  G-T: 1.00000
+Base frequencies:  A: 0.281  C: 0.236  G: 0.268  T: 0.215
+Site proportion and rates:  (0.348,0.089) (0.452,0.539) (0.114,1.618) (0.086,6.272)
+Parameters optimization took 4 rounds (0.114 sec)
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 0.000717624 secs using 2958% CPU
+Computing ML distances took 0.000884 sec (of wall-clock time) 0.021349 sec (of CPU time)
+Setting up auxiliary I and S matrices: done in 0.000465316 secs using 287.1% CPU
+Computing RapidNJ tree took 0.025645 sec (of wall-clock time) 0.030618 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -24925.687
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 0.554 second
+Computing log-likelihood of 98 initial trees ... 0.473 seconds
+Current best score: -24797.876
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -24797.844
+Iteration 10 / LogL: -24800.127 / Time: 0h:0m:10s
+Iteration 20 / LogL: -24799.535 / Time: 0h:0m:11s
+Finish initializing candidate tree set (2)
+Current best tree score: -24797.844 / CPU time: 2.762
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -24798.010 / Time: 0h:0m:12s (0h:0m:9s left)
+Iteration 40 / LogL: -24798.046 / Time: 0h:0m:13s (0h:0m:7s left)
+Iteration 50 / LogL: -24797.984 / Time: 0h:0m:14s (0h:0m:5s left)
+Log-likelihood cutoff on original alignment: -24845.597
+Iteration 60 / LogL: -24798.061 / Time: 0h:0m:15s (0h:0m:4s left)
+Iteration 70 / LogL: -24798.097 / Time: 0h:0m:16s (0h:0m:3s left)
+Iteration 80 / LogL: -24810.491 / Time: 0h:0m:17s (0h:0m:2s left)
+Iteration 90 / LogL: -24798.105 / Time: 0h:0m:18s (0h:0m:1s left)
+Iteration 100 / LogL: -24797.971 / Time: 0h:0m:19s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -24845.597
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 1.000
+TREE SEARCH COMPLETED AFTER 102 ITERATIONS / Time: 0h:0m:19s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -24797.844
+2. Current log-likelihood: -24797.822
+3. Current log-likelihood: -24797.807
+4. Current log-likelihood: -24797.794
+Optimal log-likelihood: -24797.785
+Rate parameters:  A-C: 1.31307  A-G: 2.41220  A-T: 1.31307  C-G: 1.00000  C-T: 2.41220  G-T: 1.00000
+Base frequencies:  A: 0.281  C: 0.236  G: 0.268  T: 0.215
+Site proportion and rates:  (0.349,0.089) (0.455,0.541) (0.113,1.666) (0.083,6.446)
+Parameters optimization took 4 rounds (0.094 sec)
+BEST SCORE FOUND : -24797.785
+Creating bootstrap support values...
+Split supports printed to NEXUS file HGT_clade.cds.aln.splits.nex
+Total tree length: 7.986
+
+Total number of iterations: 102
+CPU time used for tree search: 76.550 sec (0h:1m:16s)
+Wall-clock time used for tree search: 10.203 sec (0h:0m:10s)
+Total CPU time used: 148.473 sec (0h:2m:28s)
+Total wall-clock time used: 19.369 sec (0h:0m:19s)
+
+Computing bootstrap consensus tree...
+Reading input file HGT_clade.cds.aln.splits.nex...
+32 taxa and 117 splits.
+Consensus tree written to HGT_clade.cds.aln.contree
+Reading input trees file HGT_clade.cds.aln.contree
+Log-likelihood of consensus tree: -24797.785
+
+Analysis results written to: 
+  IQ-TREE report:                HGT_clade.cds.aln.iqtree
+  Maximum-likelihood tree:       HGT_clade.cds.aln.treefile
+  Likelihood distances:          HGT_clade.cds.aln.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          HGT_clade.cds.aln.splits.nex
+  Consensus tree:                HGT_clade.cds.aln.contree
+  Screen log file:               HGT_clade.cds.aln.log
+
+Date and Time: Mon Feb  3 09:05:34 2025

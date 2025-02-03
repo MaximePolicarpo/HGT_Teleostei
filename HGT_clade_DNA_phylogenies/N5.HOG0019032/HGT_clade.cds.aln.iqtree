@@ -1,0 +1,305 @@
+IQ-TREE 2.3.6 built Aug  4 2024
+
+Input file name: HGT_clade.cds.aln
+Type of analysis: ModelFinder + tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 168588
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Bui Quang Minh, Heiko A. Schmidt, Olga Chernomor, Dominik Schrempf,
+Michael D. Woodhams, Arndt von Haeseler, and Robert Lanfear (2020)
+IQ-TREE 2: New models and efficient methods for phylogenetic inference
+in the genomic era. Mol. Biol. Evol., in press.
+https://doi.org/10.1093/molbev/msaa015
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2018) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol. Biol. Evol., 35:518–522.
+https://doi.org/10.1093/molbev/msx281
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 30 sequences with 2148 nucleotide sites
+Number of constant sites: 692 (= 32.216% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 692 (= 32.216% of all sites)
+Number of parsimony informative sites: 1093
+Number of distinct site patterns: 1472
+
+ModelFinder
+-----------
+
+Best-fit model according to BIC: TPM3u+F+I+G4
+
+List of models sorted by BIC scores: 
+
+Model                  LogL         AIC      w-AIC        AICc     w-AICc         BIC      w-BIC
+TPM3u+F+I+G4     -19861.610   39851.220 +    0.458   39855.214 +    0.488   40214.247 +     0.97
+TIM3+F+I+G4      -19861.303   39852.605 +    0.229   39856.726 +    0.229   40221.304 -   0.0285
+TVM+F+I+G4       -19860.492   39852.984 +     0.19   39857.234 +    0.178   40227.355 -  0.00138
+HKY+F+I+G4       -19873.800   39873.601 - 6.32e-06   39877.470 - 7.18e-06   40230.955 - 0.000228
+GTR+F+I+G4       -19860.191   39854.382 +   0.0942   39858.763 +   0.0828   40234.426 - 4.03e-05
+TPM2u+F+I+G4     -19872.783   39873.566 - 6.44e-06   39877.560 - 6.86e-06   40236.592 - 1.36e-05
+TN+F+I+G4        -19873.493   39874.986 - 3.16e-06   39878.980 - 3.37e-06   40238.013 -  6.7e-06
+K3Pu+F+I+G4      -19873.746   39875.492 - 2.46e-06   39879.486 - 2.62e-06   40238.519 -  5.2e-06
+TIM2+F+I+G4      -19872.458   39874.916 - 3.28e-06   39879.037 - 3.28e-06   40243.615 - 4.07e-07
+TIM+F+I+G4       -19873.449   39876.898 - 1.22e-06   39881.019 - 1.22e-06   40245.597 - 1.51e-07
+GTR+F+I+R2       -19862.052   39860.103 -  0.00539   39864.617 -  0.00444   40245.819 - 1.35e-07
+GTR+F+R3         -19860.164   39858.327 -   0.0131   39862.976 -   0.0101   40249.715 - 1.93e-08
+GTR+F+R2         -19868.966   39871.933 - 1.46e-05   39876.314 - 1.28e-05   40251.976 - 6.22e-09
+GTR+F+G4         -19875.597   39883.195 - 5.22e-08   39887.445 -  4.9e-08   40257.566 -  3.8e-10
+GTR+F+I+R3       -19860.401   39860.802 -   0.0038   39865.588 -  0.00273   40257.863 - 3.28e-10
+GTR+F+R4         -19858.838   39859.676 -  0.00668   39864.601 -  0.00447   40262.409 - 3.38e-11
+TIM2e+I+G4       -19910.727   39945.453 - 1.58e-21   39949.200 - 1.91e-21   40297.135 - 9.72e-19
+TPM2+I+G4        -19917.114   39956.228 - 7.22e-24   39959.854 - 9.26e-24   40302.238 - 7.58e-20
+SYM+I+G4         -19909.354   39946.707 - 8.44e-22   39950.701 - 8.99e-22   40309.734 - 1.79e-21
+TNe+I+G4         -19922.577   39967.155 - 3.06e-26   39970.781 - 3.92e-26   40313.164 - 3.21e-22
+TVMe+I+G4        -19915.827   39957.655 - 3.54e-24   39961.524 - 4.02e-24   40315.009 - 1.28e-22
+K2P+I+G4         -19928.825   39977.651 - 1.61e-28   39981.158 - 2.19e-28   40317.988 - 2.88e-23
+TIM3e+I+G4       -19921.261   39966.522 -  4.2e-26   39970.268 - 5.07e-26   40318.204 - 2.59e-23
+TIMe+I+G4        -19922.495   39968.989 - 1.22e-26   39972.736 - 1.48e-26   40320.671 - 7.53e-24
+TPM3+I+G4        -19927.627   39977.254 - 1.96e-28   39980.880 - 2.52e-28   40323.264 - 2.06e-24
+K3P+I+G4         -19928.748   39979.495 -  6.4e-29   39983.121 - 8.21e-29   40325.505 - 6.72e-25
+GTR+F+I          -19924.435   39980.869 - 3.22e-29   39985.119 - 3.02e-29   40355.241 - 2.35e-31
+F81+F+I+G4       -20152.131   40428.263 - 2.28e-126   40432.009 - 2.75e-126   40779.945 - 1.4e-123
+GTR+F            -20191.344   40512.688 - 1.06e-144   40516.809 - 1.06e-144   40881.387 - 1.32e-145
+JC+I+G4          -20214.373   40546.747 - 4.26e-152   40550.137 - 6.14e-152   40881.412 - 1.3e-145
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: TPM3u+F+I+G4
+
+Rate parameter R:
+
+  A-C: 1.3306
+  A-G: 2.7498
+  A-T: 1.0000
+  C-G: 1.3306
+  C-T: 2.7498
+  G-T: 1.0000
+
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.3166
+  pi(C) = 0.197
+  pi(G) = 0.2354
+  pi(T) = 0.251
+
+Rate matrix Q:
+
+  A   -0.9296      0.21    0.5186    0.2011
+  C    0.3375    -1.141     0.251    0.5529
+  G    0.6974      0.21    -1.108    0.2011
+  T    0.2536    0.4339    0.1886   -0.8762
+
+Model of rate heterogeneity: Invar+Gamma with 4 categories
+Proportion of invariable sites: 0.1373
+Gamma shape alpha: 2.784
+
+ Category  Relative_rate  Proportion
+  0         0              0.1373
+  1         0.431          0.2157
+  2         0.8332         0.2157
+  3         1.253          0.2157
+  4         2.119          0.2157
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -19861.6167 (s.e. 317.3320)
+Unconstrained log-likelihood (without tree): -14712.6231
+Number of free parameters (#branches + #model parameters): 64
+Akaike information criterion (AIC) score: 39851.2333
+Corrected Akaike information criterion (AICc) score: 39855.2276
+Bayesian information criterion (BIC) score: 40214.2600
+
+Total tree length (sum of branch lengths): 3.1346
+Sum of internal branch lengths: 1.6419 (52.3806% of tree length)
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Chanos_chanos_rna_XM_030792951_1' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++-----Chanos_chanos_rna_XM_030792951_1
+|
+|                                        +-----Misgurnus_anguillicaudatus_rna_XM_055220629_1
+|                                    +---| (100)
+|                                    |   |     +--Triplophysa_dalaica_rna_XM_056741343_1
+|                                    |   |  +--| (100)
+|                                    |   |  |  +--Triplophysa_tibetana_mrna_E1301_Tti016734
+|                                    |   +--| (100)
+|                                    |      +--Triplophysa_rosa_rna_XM_057353938_1
+|                                 +--| (94)
+|                                 |  |    +--Myxocyprinus_asiaticus_rna_XM_051670420_1
+|                                 |  +----| (100)
+|                                 |       +--Xyrauchen_texanus_rna_XM_052092374_1
+|         +-----------------------| (100)
+|         |                       |                   +--Carassius_auratus_rna_XM_026232153_1
+|         |                       |                +--| (100)
+|         |                       |                |  +--Carassius_gibelio_rna_XM_052532612_1
+|         |                       |             +--| (99)
+|         |                       |             |  +--Carassius_carassius_rna_XM_059509322_1
+|         |                       |          +--| (82)
+|         |                       |          |  |     +--Sinocyclocheilus_rhinocerous_rna_XM_016551681_1
+|         |                       |          |  |  +--| (43)
+|         |                       |          |  |  |  +--Sinocyclocheilus_anshuiensis_rna_XM_016444489_1
+|         |                       |          |  +--| (50)
+|         |                       |          |     +--Sinocyclocheilus_grahami_rna_XM_016291191_1
+|         |                       |       +--| (98)
+|         |                       |       |  +-------------Sinocyclocheilus_anshuiensis_rna_XM_016492581_1
+|         |                       |    +--| (99)
+|         |                       |    |  |       +--Danio_rerio_rna_XM_021468209_1
+|         |                       |    |  +-------| (100)
+|         |                       |    |          +--Danio_aesculapii_rna_XM_056480074_1
+|         |                       +----| (100)
+|         |                            |       +--------Pimephales_promelas_rna_XM_039678947_1
+|         |                            |  +----| (100)
+|         |                            |  |    +--Rhinichthys_klamathensis_goyatoka_rna_XM_056264219_1
+|         |                            +--| (99)
+|         |                               |     +--Megalobrama_amblycephala_rna_XM_048202431_1
+|         |                               |  +--| (100)
+|         |                               |  |  |  +---Anabarilius_grahami_mrna_DPX16_11507
+|         |                               |  |  +--| (70)
+|         |                               |  |     +--Ctenopharyngodon_idella_rna_XM_051872162_1
+|         |                               +--| (98)
+|         |                                  +--Megalobrama_amblycephala_rna_XM_048202428_1
+|     +---| (100)
+|     |   |   +--Chanos_chanos_rna_XM_030788611_1
+|     |   +---| (100)
+|     |       +-----Chanos_chanos_rna_XM_030788614_1
+|  +--| (100)
+|  |  +--------Chanos_chanos_rna_XM_030788616_1
++--| (93)
+|  |  +---Chanos_chanos_rna_XM_030788612_1
+|  +--| (99)
+|     +----Chanos_chanos_rna_XM_030788615_1
+|
+|        +--Neoarius_graeffei_rna_XM_060938829_1
+|     +--| (99)
+|     |  +--Neoarius_graeffei_rna_XM_060938827_1
++-----| (100)
+      +--Neoarius_graeffei_rna_XM_060939486_1
+
+Tree in newick format:
+
+(Chanos_chanos_rna_XM_030792951_1:0.0977891211,((((((Misgurnus_anguillicaudatus_rna_XM_055220629_1:0.1017029780,((Triplophysa_dalaica_rna_XM_056741343_1:0.0265478019,Triplophysa_tibetana_mrna_E1301_Tti016734:0.0323331873)100:0.0196957179,Triplophysa_rosa_rna_XM_057353938_1:0.0120510327)100:0.0589476273)100:0.0717183198,(Myxocyprinus_asiaticus_rna_XM_051670420_1:0.0179110346,Xyrauchen_texanus_rna_XM_052092374_1:0.0275205472)100:0.0885734106)94:0.0355728863,((((((Carassius_auratus_rna_XM_026232153_1:0.0036091173,Carassius_gibelio_rna_XM_052532612_1:0.0030224965)100:0.0170473455,Carassius_carassius_rna_XM_059509322_1:0.0087288384)99:0.0319365385,((Sinocyclocheilus_rhinocerous_rna_XM_016551681_1:0.0048563832,Sinocyclocheilus_anshuiensis_rna_XM_016444489_1:0.0024141000)43:0.0009809049,Sinocyclocheilus_grahami_rna_XM_016291191_1:0.0105808578)50:0.0097622640)82:0.0595928825,Sinocyclocheilus_anshuiensis_rna_XM_016492581_1:0.2334031826)98:0.0597954686,(Danio_rerio_rna_XM_021468209_1:0.0551288842,Danio_aesculapii_rna_XM_056480074_1:0.0231185412)100:0.1391865034)99:0.0325673530,((Pimephales_promelas_rna_XM_039678947_1:0.1573094768,Rhinichthys_klamathensis_goyatoka_rna_XM_056264219_1:0.0036295018)100:0.0821942515,((Megalobrama_amblycephala_rna_XM_048202431_1:0.0155835971,(Anabarilius_grahami_mrna_DPX16_11507:0.0774459761,Ctenopharyngodon_idella_rna_XM_051872162_1:0.0345080647)70:0.0035381357)100:0.0259952556,Megalobrama_amblycephala_rna_XM_048202428_1:0.0409896548)98:0.0285237677)99:0.0344332971)100:0.0939450444)100:0.3983870298,(Chanos_chanos_rna_XM_030788611_1:0.0529034783,Chanos_chanos_rna_XM_030788614_1:0.1000928181)100:0.0771181602)100:0.0721681119,Chanos_chanos_rna_XM_030788616_1:0.1458080294)100:0.0493111536,(Chanos_chanos_rna_XM_030788612_1:0.0640298335,Chanos_chanos_rna_XM_030788615_1:0.0946571925)99:0.0229721408)93:0.0194414122,((Neoarius_graeffei_rna_XM_060938829_1:0.0096297598,Neoarius_graeffei_rna_XM_060938827_1:0.0156596850)99:0.0109718749,Neoarius_graeffei_rna_XM_060939486_1:0.0197295842)100:0.0975671735);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -19861.617432
+Robinson-Foulds distance between ML tree and consensus tree: 0
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++-----Chanos_chanos_rna_XM_030792951_1
+|
+|                                        +-----Misgurnus_anguillicaudatus_rna_XM_055220629_1
+|                                    +---| (100)
+|                                    |   |     +--Triplophysa_dalaica_rna_XM_056741343_1
+|                                    |   |  +--| (100)
+|                                    |   |  |  +--Triplophysa_tibetana_mrna_E1301_Tti016734
+|                                    |   +--| (100)
+|                                    |      +--Triplophysa_rosa_rna_XM_057353938_1
+|                                 +--| (94)
+|                                 |  |    +--Myxocyprinus_asiaticus_rna_XM_051670420_1
+|                                 |  +----| (100)
+|                                 |       +--Xyrauchen_texanus_rna_XM_052092374_1
+|         +-----------------------| (100)
+|         |                       |                   +--Carassius_auratus_rna_XM_026232153_1
+|         |                       |                +--| (100)
+|         |                       |                |  +--Carassius_gibelio_rna_XM_052532612_1
+|         |                       |             +--| (99)
+|         |                       |             |  +--Carassius_carassius_rna_XM_059509322_1
+|         |                       |          +--| (82)
+|         |                       |          |  |     +--Sinocyclocheilus_rhinocerous_rna_XM_016551681_1
+|         |                       |          |  |  +--| (43)
+|         |                       |          |  |  |  +--Sinocyclocheilus_anshuiensis_rna_XM_016444489_1
+|         |                       |          |  +--| (50)
+|         |                       |          |     +--Sinocyclocheilus_grahami_rna_XM_016291191_1
+|         |                       |       +--| (98)
+|         |                       |       |  +-------------Sinocyclocheilus_anshuiensis_rna_XM_016492581_1
+|         |                       |    +--| (99)
+|         |                       |    |  |       +--Danio_rerio_rna_XM_021468209_1
+|         |                       |    |  +-------| (100)
+|         |                       |    |          +--Danio_aesculapii_rna_XM_056480074_1
+|         |                       +----| (100)
+|         |                            |       +--------Pimephales_promelas_rna_XM_039678947_1
+|         |                            |  +----| (100)
+|         |                            |  |    +--Rhinichthys_klamathensis_goyatoka_rna_XM_056264219_1
+|         |                            +--| (99)
+|         |                               |     +--Megalobrama_amblycephala_rna_XM_048202431_1
+|         |                               |  +--| (100)
+|         |                               |  |  |  +---Anabarilius_grahami_mrna_DPX16_11507
+|         |                               |  |  +--| (70)
+|         |                               |  |     +--Ctenopharyngodon_idella_rna_XM_051872162_1
+|         |                               +--| (98)
+|         |                                  +--Megalobrama_amblycephala_rna_XM_048202428_1
+|     +---| (100)
+|     |   |   +--Chanos_chanos_rna_XM_030788611_1
+|     |   +---| (100)
+|     |       +-----Chanos_chanos_rna_XM_030788614_1
+|  +--| (100)
+|  |  +--------Chanos_chanos_rna_XM_030788616_1
++--| (93)
+|  |  +---Chanos_chanos_rna_XM_030788612_1
+|  +--| (99)
+|     +----Chanos_chanos_rna_XM_030788615_1
+|
+|        +--Neoarius_graeffei_rna_XM_060938829_1
+|     +--| (99)
+|     |  +--Neoarius_graeffei_rna_XM_060938827_1
++-----| (100)
+      +--Neoarius_graeffei_rna_XM_060939486_1
+
+
+Consensus tree in newick format: 
+
+(Chanos_chanos_rna_XM_030792951_1:0.0977807939,((((((Misgurnus_anguillicaudatus_rna_XM_055220629_1:0.1016894013,((Triplophysa_dalaica_rna_XM_056741343_1:0.0265425509,Triplophysa_tibetana_mrna_E1301_Tti016734:0.0323275114)100:0.0196945870,Triplophysa_rosa_rna_XM_057353938_1:0.0120493386)100:0.0589387185)100:0.0717076918,(Myxocyprinus_asiaticus_rna_XM_051670420_1:0.0179093191,Xyrauchen_texanus_rna_XM_052092374_1:0.0275148663)100:0.0885613932)94:0.0355738360,((((((Carassius_auratus_rna_XM_026232153_1:0.0036074806,Carassius_gibelio_rna_XM_052532612_1:0.0030209729)100:0.0170424339,Carassius_carassius_rna_XM_059509322_1:0.0087262145)99:0.0319290498,((Sinocyclocheilus_rhinocerous_rna_XM_016551681_1:0.0048549949,Sinocyclocheilus_anshuiensis_rna_XM_016444489_1:0.0024132780)43:0.0009802821,Sinocyclocheilus_grahami_rna_XM_016291191_1:0.0105783107)50:0.0097621652)82:0.0590274425,Sinocyclocheilus_anshuiensis_rna_XM_016492581_1:0.2333706159)98:0.0602816487,(Danio_rerio_rna_XM_021468209_1:0.0551199200,Danio_aesculapii_rna_XM_056480074_1:0.0231112767)100:0.1391501292)99:0.0325644851,((Pimephales_promelas_rna_XM_039678947_1:0.1572739054,Rhinichthys_klamathensis_goyatoka_rna_XM_056264219_1:0.0036290127)100:0.0821744825,((Megalobrama_amblycephala_rna_XM_048202431_1:0.0155811539,(Anabarilius_grahami_mrna_DPX16_11507:0.0774291861,Ctenopharyngodon_idella_rna_XM_051872162_1:0.0345003848)70:0.0035386473)100:0.0259894976,Megalobrama_amblycephala_rna_XM_048202428_1:0.0409841626)98:0.0285207639)99:0.0344405351)100:0.0939274069)100:0.3983306841,(Chanos_chanos_rna_XM_030788611_1:0.0529027971,Chanos_chanos_rna_XM_030788614_1:0.1000772077)100:0.0771264731)100:0.0721577958,Chanos_chanos_rna_XM_030788616_1:0.1457976120)100:0.0493089702,(Chanos_chanos_rna_XM_030788612_1:0.0640232828,Chanos_chanos_rna_XM_030788615_1:0.0946464241)99:0.0229788136)93:0.0194439104,((Neoarius_graeffei_rna_XM_060938829_1:0.0096290107,Neoarius_graeffei_rna_XM_060938827_1:0.0156576059)99:0.0109719458,Neoarius_graeffei_rna_XM_060939486_1:0.0197297862)100:0.0975585212);
+
+ALISIM COMMAND
+--------------
+To simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis, you can use the following command:
+
+--alisim simulated_MSA -t HGT_clade.cds.aln.treefile -m "TPM3u{1.33061,2.74979}+F{0.316591,0.196997,0.235432,0.25098}+I{0.137289}+G4{2.78373}" --length 2148
+
+To mimic the alignment used to produce this analysis, i.e. simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis *and* copying the same gap positions as the original alignment, you can use the following command:
+
+iqtree -s HGT_clade.cds.aln --alisim mimicked_MSA
+
+To simulate any number of alignments in either of the two commandlines above, use the --num-alignments options, for example mimic 100 alignments you would use the command line:
+
+iqtree -s HGT_clade.cds.aln --alisim mimicked_MSA --num-alignments 100
+
+For more information on using AliSim, please visit: www.iqtree.org/doc/AliSim
+
+TIME STAMP
+----------
+
+Date and time: Mon Feb  3 09:01:56 2025
+Total CPU time used: 80.438819 seconds (0h:1m:20s)
+Total wall-clock time used: 10.69285955 seconds (0h:0m:10s)
+

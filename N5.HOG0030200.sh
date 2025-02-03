@@ -705,3 +705,32 @@ sbatch --qos=1week -c 6 --mem=10G -e error.relax.out -o slurm.relax.out --job-na
 
 
 
+##====================================================================================================================================
+##====================================================================================================================================
+#====================================================================================================================================
+##====================================================================================================================================
+##====================================================================================================================================
+##========================================== DNA phylogeny of the HGT clade ==========================================================
+##====================================================================================================================================
+##====================================================================================================================================
+#====================================================================================================================================
+##====================================================================================================================================
+##====================================================================================================================================
+
+
+
+
+grep ">" N5.HOG0030200.prot | grep "Myxocyprinus_asiaticus_rna_XM_051690293_1\|Myxocyprinus_asiaticus_rna_XM_051690292_1\|Xyrauchen_texanus_rna_XM_052119494_1\|Carassius_gibelio_rna_XM_052538799_1\|Carassius_auratus_rna_XM_026200108_1\|Carassius_carassius_rna_XM_059557239_1\|Cyprinus_carpio_rna_XM_042728143_1\|Sinocyclocheilus_grahami_rna_XM_016268950_1\|Sinocyclocheilus_anshuiensis_rna_XM_016459463_1\|Pangasius_djambal_PDJAM_T00103720\|Pangasius_djambal_PDJAM_T00012360\|Pangasianodon_hypophthalmus_rna_XM_026945431_3\|Onychostoma_macrolepis_rna_XM_058770295_1\|Onychostoma_macrolepis_rna_XM_058768245_1\|Puntigrus_tetrazona_rna_XM_043229772_1\|Cirrhinus_molitorella_evm_model_Chr01_785\|Labeo_rohita_rna_XM_051103582_1\|Ctenopharyngodon_idella_rna_XM_051888784_1\|Anabarilius_grahami_mrna_DPX16_16220\|Megalobrama_amblycephala_rna_XM_048197940_1\|Rhinichthys_klamathensis_goyatoka_rna_XM_056234689_1\|Pimephales_promelas_rna_XM_039687464_1\|Danionella_translucida_DT02135_RA\|Xyrauchen_texanus_rna_XM_052138467_1\|Myxocyprinus_asiaticus_rna_XM_051717578_1\|Xyrauchen_texanus_rna_XM_052131238_1\|Myxocyprinus_asiaticus_rna_XM_051715317_1\|Misgurnus_anguillicaudatus_rna_XM_055194518_1\|Misgurnus_anguillicaudatus_rna_XM_055194515_1"  | sed 's/>//g' > curr_ID.txt
+xargs samtools faidx N5.HOG0030200.prot  < curr_ID.txt > HGT_clade.prot
+xargs samtools faidx N5.HOG0030200.cds  < curr_ID.txt > HGT_clade.cds
+
+muscle5.1.linux_intel64 -align HGT_clade.prot -output HGT_clade.aln
+
+trimal -in HGT_clade.aln -gt 0.6 -cons 60 -backtrans HGT_clade.cds -out HGT_clade.cds.aln
+
+iqtree -s HGT_clade.cds.aln -st DNA -nt 8 -bb 1000 --redo
+
+
+
+
+

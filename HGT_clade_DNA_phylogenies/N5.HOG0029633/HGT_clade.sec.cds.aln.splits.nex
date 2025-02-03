@@ -1,0 +1,37 @@
+#nexus
+
+BEGIN Taxa;
+DIMENSIONS ntax=6;
+TAXLABELS
+[1] 'Ictalurus_furcatus_rna_XM_053640520_1'
+[2] 'Triplophysa_tibetana_mrna_E1301_Tti014253'
+[3] 'Paramormyrops_kingsleyae_rna_XM_023822671_1'
+[4] 'Pangasianodon_hypophthalmus_rna_XM_026914616_3'
+[5] 'Ictalurus_punctatus_rna_XM_017482962_3'
+[6] 'Ameiurus_melas_AMELA_T00109360'
+;
+END; [Taxa]
+
+BEGIN Splits;
+DIMENSIONS ntax=6 nsplits=16;
+FORMAT labels=no weights=yes confidences=no intervals=no;
+MATRIX
+	100	 2,
+	100	 3,
+	100	 4,
+	52	 3 4,
+	84	 1 5 6,
+	100	 6,
+	97	 1 5,
+	100	 5,
+	100	 1,
+	40	 2 3,
+	7	 2 6,
+	9	 2 4,
+	9	 1 2 5,
+	1	 1 2,
+	2	 5 6,
+	0	 1 6,
+;
+END; [Splits]
+

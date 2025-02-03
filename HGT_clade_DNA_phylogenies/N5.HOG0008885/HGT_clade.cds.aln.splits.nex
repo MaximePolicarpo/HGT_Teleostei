@@ -1,0 +1,78 @@
+#nexus
+
+BEGIN Taxa;
+DIMENSIONS ntax=17;
+TAXLABELS
+[1] 'Tachysurus_vachellii_rna_XM_060864660_1'
+[2] 'Sardina_pilchardus_rna_XM_062533666_1'
+[3] 'Clupea_harengus_rna_XM_031562957_1'
+[4] 'Engraulis_encrasicolus_rna_XM_063194453_1'
+[5] 'Silurus_asotus_mrna_C0J50_7608'
+[6] 'Bagarius_yarrelli_mrna_Baya_9812'
+[7] 'Engraulis_encrasicolus_rna_XM_063194454_1'
+[8] 'Pangasius_djambal_PDJAM_T00174590'
+[9] 'Hypomesus_transpacificus_rna_XM_047048755_1'
+[10] 'Alosa_alosa_rna_XM_048250614_1'
+[11] 'Hemibagrus_wyckioides_rna_XM_058384010_1'
+[12] 'Silurus_meridionalis_rna_XM_046843082_1'
+[13] 'Clarias_gariepinus_rna_XM_053479509_1'
+[14] 'Pangasianodon_hypophthalmus_rna_XM_053230873_1'
+[15] 'Pangasianodon_gigas_PGIGA_T00176410'
+[16] 'Sardina_pilchardus_rna_XM_062530721_1'
+[17] 'Trichomycterus_rosablanca_rna_XM_063009182_1'
+;
+END; [Taxa]
+
+BEGIN Splits;
+DIMENSIONS ntax=17 nsplits=46;
+FORMAT labels=no weights=yes confidences=no intervals=no;
+MATRIX
+	100	 2,
+	100	 3,
+	100	 9,
+	99	 3 9,
+	100	 10,
+	100	 16,
+	100	 10 16,
+	85	 3 9 10 16,
+	100	 2 3 9 10 16,
+	100	 4,
+	100	 7,
+	100	 4 7,
+	100	 2 3 4 7 9 10 16,
+	100	 17,
+	100	 2 3 4 7 9 10 16 17,
+	100	 5,
+	100	 12,
+	100	 5 12,
+	100	 13,
+	91	 5 12 13,
+	100	 8,
+	100	 14,
+	100	 15,
+	90	 14 15,
+	100	 8 14 15,
+	25	 5 8 12 13 14 15,
+	100	 1 6 11,
+	100	 6,
+	87	 1 11,
+	100	 11,
+	100	 1,
+	71	 1 6 8 11 14 15,
+	7	 1 6 8 11 13 14 15,
+	15	 2 10 16,
+	8	 8 14,
+	3	 1 6,
+	3	 8 13 14 15,
+	3	 8 15,
+	1	 2 3 10 16,
+	10	 6 11,
+	1	 1 6 11 13,
+	0	 1 6 11 14 15,
+	0	 2 9 10 16,
+	2	 1 5 6 11 12 13,
+	2	 1 5 6 8 11 12 14 15,
+	0	 1 6 8 11,
+;
+END; [Splits]
+

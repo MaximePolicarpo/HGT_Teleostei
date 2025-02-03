@@ -1,0 +1,205 @@
+IQ-TREE multicore version 2.3.6 for Linux x86 64-bit built Aug  4 2024
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor, Heiko Schmidt,
+Dominik Schrempf, Michael Woodhams, Ly Trong Nhan, Thomas Wong
+
+Host:    login12 (AVX2, FMA3, 503 GB RAM)
+Command: iqtree -s only_Clupea_Osmeriformes.cds.aln -st DNA -nt 8 -bb 1000 --redo
+Seed:    189110 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Thu Jan 30 20:13:56 2025
+Kernel:  AVX+FMA - 8 threads (128 CPU cores detected)
+
+Reading alignment file only_Clupea_Osmeriformes.cds.aln ... Fasta format detected
+Reading fasta file: done in 0.0014228 secs
+Alignment most likely contains DNA/RNA sequences
+Alignment has 15 sequences with 4461 columns, 1747 distinct patterns
+1178 parsimony-informative, 908 singleton sites, 2375 constant sites
+                                             Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 8.34791e-05 secs using 99.43% CPU
+   1  Engraulis_encrasicolus_rna_XM_063198403_1     25.15%    failed      0.00%
+   2  Sardina_pilchardus_rna_XM_062526471_1         48.42%    failed      2.52%
+   3  Engraulis_encrasicolus_rna_XM_063207824_1     56.83%    passed     96.03%
+   4  Osmerus_eperlanus_rna_XM_062468699_1          36.72%    passed     86.82%
+   5  Engraulis_encrasicolus_rna_XM_063208130_1     36.99%    passed     67.57%
+   6  Engraulis_encrasicolus_rna_XM_063208134_1     36.18%    passed     59.57%
+   7  Hypomesus_transpacificus_rna_XM_047045786_1   36.85%    passed     95.84%
+   8  Clupea_harengus_rna_XM_031565905_1            34.30%    passed     59.14%
+   9  Osmerus_eperlanus_rna_XM_062468715_1          80.90%    passed     66.55%
+  10  Engraulis_encrasicolus_rna_XM_063194184_1     68.86%    passed     74.62%
+  11  Osmerus_eperlanus_rna_XM_062468701_1          36.72%    passed     90.07%
+  12  Clupea_harengus_rna_XM_031565911_2            80.90%    passed     66.75%
+  13  Clupea_harengus_rna_XM_042707511_1            47.81%    passed     16.05%
+  14  Hypomesus_transpacificus_rna_XM_047045767_1   36.38%    passed     92.92%
+  15  Engraulis_encrasicolus_rna_XM_063208132_1     37.19%    passed     86.73%
+WARNING: 4 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                                         46.68%  2 sequences failed composition chi2 test (p-value<5%; df=3)
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.002 seconds
+Perform fast likelihood tree search using GTR+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -20805.500
+2. Current log-likelihood: -20802.501
+3. Current log-likelihood: -20800.447
+4. Current log-likelihood: -20798.969
+5. Current log-likelihood: -20797.871
+Optimal log-likelihood: -20797.001
+Rate parameters:  A-C: 1.26991  A-G: 2.19959  A-T: 0.97627  C-G: 1.25458  C-T: 2.54756  G-T: 1.00000
+Base frequencies:  A: 0.338  C: 0.198  G: 0.245  T: 0.220
+Proportion of invariable sites: 0.144
+Gamma shape alpha: 3.050
+Parameters optimization took 5 rounds (0.048 sec)
+Time for fast ML tree search: 0.148 seconds
+
+NOTE: ModelFinder requires 15 MB RAM!
+ModelFinder will test up to 484 DNA models (sample size: 4461 epsilon: 0.100) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  GTR+F         20968.799    35  42007.598    42008.167    42231.707
+  2  GTR+F+I       20829.965    36  41731.930    41732.533    41962.443
+  3  GTR+F+G4      20793.280    36  41658.561    41659.163    41889.073
+  4  GTR+F+I+G4    20793.178    37  41660.356    41660.991    41897.271
+  5  GTR+F+R2      20798.333    37  41670.667    41671.303    41907.583
+  6  GTR+F+R3      20794.363    39  41666.727    41667.433    41916.449
+ 14  GTR+F+I+R2    20792.560    38  41661.121    41661.791    41904.440
+ 15  GTR+F+I+R3    20790.155    40  41660.310    41661.052    41916.435
+ 25  SYM+G4        20877.030    33  41820.060    41820.567    42031.363
+ 26  SYM+I+G4      20877.429    34  41822.857    41823.395    42040.563
+ 47  TVM+F+G4      20795.853    35  41661.707    41662.276    41885.816
+ 48  TVM+F+I+G4    20795.235    36  41662.470    41663.073    41892.983
+ 69  TVMe+G4       20885.225    32  41834.450    41834.927    42039.350
+ 70  TVMe+I+G4     20885.013    33  41836.025    41836.532    42047.328
+ 91  TIM3+F+G4     20793.294    34  41654.587    41655.125    41872.294
+ 92  TIM3+F+I+G4   20792.570    35  41655.140    41655.709    41879.249
+113  TIM3e+G4      20882.392    31  41826.785    41827.233    42025.282
+114  TIM3e+I+G4    20881.804    32  41827.608    41828.085    42032.508
+135  TIM2+F+G4     20803.172    34  41674.345    41674.883    41892.051
+136  TIM2+F+I+G4   20801.001    35  41672.003    41672.572    41896.112
+157  TIM2e+G4      20881.878    31  41825.756    41826.204    42024.253
+158  TIM2e+I+G4    20881.151    32  41826.302    41826.779    42031.202
+179  TIM+F+G4      20802.825    34  41673.649    41674.187    41891.356
+180  TIM+F+I+G4    20800.625    35  41671.251    41671.820    41895.360
+201  TIMe+G4       20887.146    31  41836.291    41836.739    42034.788
+202  TIMe+I+G4     20885.798    32  41835.596    41836.073    42040.496
+223  TPM3u+F+G4    20795.863    33  41657.725    41658.232    41869.028
+224  TPM3u+F+I+G4  20794.848    34  41657.696    41658.233    41875.402
+245  TPM3+G4       20890.487    30  41840.975    41841.395    42033.069
+246  TPM3+I+G4     20889.379    31  41840.757    41841.205    42039.254
+267  TPM2u+F+G4    20805.751    33  41677.502    41678.009    41888.805
+268  TPM2u+F+I+G4  20803.522    34  41675.043    41675.581    41892.750
+289  TPM2+G4       20889.993    30  41839.986    41840.406    42032.080
+290  TPM2+I+G4     20888.725    31  41839.449    41839.897    42037.946
+311  K3Pu+F+G4     20805.385    33  41676.771    41677.278    41888.074
+312  K3Pu+F+I+G4   20803.152    34  41674.304    41674.842    41892.011
+333  K3P+G4        20895.161    30  41850.322    41850.742    42042.416
+334  K3P+I+G4      20893.347    31  41848.693    41849.141    42047.190
+355  TN+F+G4       20803.187    33  41672.374    41672.881    41883.678
+356  TN+F+I+G4     20800.917    34  41669.834    41670.372    41887.540
+377  TNe+G4        20887.264    30  41834.528    41834.948    42026.622
+378  TNe+I+G4      20885.816    31  41833.631    41834.079    42032.128
+399  HKY+F+G4      20805.763    32  41675.525    41676.002    41880.425
+400  HKY+F+I+G4    20803.501    33  41673.003    41673.510    41884.306
+421  K2P+G4        20895.281    29  41848.561    41848.954    42034.252
+422  K2P+I+G4      20893.458    30  41846.917    41847.337    42039.011
+443  F81+F+G4      20951.706    31  41965.412    41965.860    42163.909
+444  F81+F+I+G4    20948.986    32  41961.972    41962.449    42166.873
+465  JC+G4         21065.126    28  42186.253    42186.619    42365.541
+466  JC+I+G4       21063.057    29  42184.115    42184.507    42369.805
+Akaike Information Criterion:           TIM3+F+G4
+Corrected Akaike Information Criterion: TIM3+F+G4
+Bayesian Information Criterion:         TPM3u+F+G4
+Best-fit model: TPM3u+F+G4 chosen according to BIC
+
+All model information printed to only_Clupea_Osmeriformes.cds.aln.model.gz
+CPU time for ModelFinder: 14.178 seconds (0h:0m:14s)
+Wall-clock time for ModelFinder: 1.782 seconds (0h:0m:1s)
+Generating 1000 samples for ultrafast bootstrap (seed: 189110)...
+
+NOTE: 10 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -20952.831
+2. Current log-likelihood: -20796.738
+3. Current log-likelihood: -20795.985
+Optimal log-likelihood: -20795.875
+Rate parameters:  A-C: 1.33257  A-G: 2.41198  A-T: 1.00000  C-G: 1.33257  C-T: 2.41198  G-T: 1.00000
+Base frequencies:  A: 0.338  C: 0.198  G: 0.245  T: 0.220
+Gamma shape alpha: 1.313
+Parameters optimization took 3 rounds (0.036 sec)
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 0.000247348 secs using 946.8% CPU
+Computing ML distances took 0.000374 sec (of wall-clock time) 0.002474 sec (of CPU time)
+Setting up auxiliary I and S matrices: done in 0.00124758 secs
+Computing RapidNJ tree took 0.016668 sec (of wall-clock time) 0.047214 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -20797.712
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 0.215 second
+Computing log-likelihood of 98 initial trees ... 0.342 seconds
+Current best score: -20795.875
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -20795.863
+Iteration 10 / LogL: -20796.257 / Time: 0h:0m:3s
+Iteration 20 / LogL: -20796.607 / Time: 0h:0m:3s
+Finish initializing candidate tree set (2)
+Current best tree score: -20795.863 / CPU time: 1.669
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -20826.694 / Time: 0h:0m:4s (0h:0m:5s left)
+Iteration 40 / LogL: -20827.399 / Time: 0h:0m:4s (0h:0m:4s left)
+Iteration 50 / LogL: -20795.894 / Time: 0h:0m:5s (0h:0m:3s left)
+Log-likelihood cutoff on original alignment: -20834.607
+Iteration 60 / LogL: -20813.849 / Time: 0h:0m:6s (0h:0m:3s left)
+Iteration 70 / LogL: -20796.828 / Time: 0h:0m:6s (0h:0m:2s left)
+Iteration 80 / LogL: -20807.116 / Time: 0h:0m:7s (0h:0m:1s left)
+Iteration 90 / LogL: -20812.934 / Time: 0h:0m:8s (0h:0m:0s left)
+Iteration 100 / LogL: -20796.075 / Time: 0h:0m:9s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -20834.607
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 1.000
+TREE SEARCH COMPLETED AFTER 102 ITERATIONS / Time: 0h:0m:9s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -20795.863
+Optimal log-likelihood: -20795.861
+Rate parameters:  A-C: 1.33288  A-G: 2.41343  A-T: 1.00000  C-G: 1.33288  C-T: 2.41343  G-T: 1.00000
+Base frequencies:  A: 0.338  C: 0.198  G: 0.245  T: 0.220
+Gamma shape alpha: 1.303
+Parameters optimization took 1 rounds (0.008 sec)
+BEST SCORE FOUND : -20795.861
+Creating bootstrap support values...
+Split supports printed to NEXUS file only_Clupea_Osmeriformes.cds.aln.splits.nex
+Total tree length: 2.609
+
+Total number of iterations: 102
+CPU time used for tree search: 57.352 sec (0h:0m:57s)
+Wall-clock time used for tree search: 7.401 sec (0h:0m:7s)
+Total CPU time used: 72.421 sec (0h:1m:12s)
+Total wall-clock time used: 9.408 sec (0h:0m:9s)
+
+Computing bootstrap consensus tree...
+Reading input file only_Clupea_Osmeriformes.cds.aln.splits.nex...
+15 taxa and 51 splits.
+Consensus tree written to only_Clupea_Osmeriformes.cds.aln.contree
+Reading input trees file only_Clupea_Osmeriformes.cds.aln.contree
+Log-likelihood of consensus tree: -20795.861
+
+Analysis results written to: 
+  IQ-TREE report:                only_Clupea_Osmeriformes.cds.aln.iqtree
+  Maximum-likelihood tree:       only_Clupea_Osmeriformes.cds.aln.treefile
+  Likelihood distances:          only_Clupea_Osmeriformes.cds.aln.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          only_Clupea_Osmeriformes.cds.aln.splits.nex
+  Consensus tree:                only_Clupea_Osmeriformes.cds.aln.contree
+  Screen log file:               only_Clupea_Osmeriformes.cds.aln.log
+
+Date and Time: Thu Jan 30 20:14:05 2025

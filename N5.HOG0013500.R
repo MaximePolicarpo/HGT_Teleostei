@@ -352,6 +352,67 @@ ggsave(paste("N5.HOG0013500/",
        p2, width=8, height=6, 
        units="in", scale=2)
 
+
+#### DNA subtree  ---------------------------------
+
+
+current_tree <- 
+  read.tree("N5.HOG0013500/HGT_clade.cds.aln.treefile")
+
+current_tree_rooted <- midpoint.root(current_tree)
+
+tips_df <- as.data.frame(current_tree_rooted$tip.label)
+colnames(tips_df) <- c("label")
+
+
+list_teleost_sp[list_teleost_sp == "Salvelinus_sp_IW2-2015"] <- "Salvelinus_sp_IW2_2015"
+tips_df_species <- as.data.frame(NULL)
+for(curr_sp in list_teleost_sp){
+  
+  
+  curr_df <- 
+    as.data.frame(
+      tips_df %>%
+        rowwise() %>%
+        filter(grepl(curr_sp, label))
+    ) %>%
+    mutate(species = curr_sp)
+  
+  tips_df_species <-
+    rbind(tips_df_species, curr_df)
+}
+
+#add the order to the dataframe
+tips_df_species_order <- left_join(tips_df_species, species_order, by="species")
+
+
+DNA_tree <- 
+  ggtree(current_tree_rooted, size=1) %<+% tips_df_species_order +
+  geom_tiplab(size = 5) +
+  aes(color=as.character(order)) +
+  scale_color_manual(values = orders_colors) +
+  new_scale_color() + 
+  theme(legend.position = "none")  +
+  geom_text2(aes(subset = !isTip, label = label), hjust = 1.2, vjust = 1.6,size=2) +
+  xlim(0, 2) +
+  geom_treescale(x=0.02, y=12, width=0.2, color='black') 
+
+
+DNA_tree
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #### Draw  phylogenies with alignment -- Blastp   ---------------------------------
 
 

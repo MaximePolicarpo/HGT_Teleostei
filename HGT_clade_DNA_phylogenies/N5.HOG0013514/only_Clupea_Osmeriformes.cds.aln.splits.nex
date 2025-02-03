@@ -1,0 +1,81 @@
+#nexus
+
+BEGIN Taxa;
+DIMENSIONS ntax=15;
+TAXLABELS
+[1] 'Engraulis_encrasicolus_rna_XM_063198403_1'
+[2] 'Sardina_pilchardus_rna_XM_062526471_1'
+[3] 'Engraulis_encrasicolus_rna_XM_063207824_1'
+[4] 'Osmerus_eperlanus_rna_XM_062468699_1'
+[5] 'Engraulis_encrasicolus_rna_XM_063208130_1'
+[6] 'Engraulis_encrasicolus_rna_XM_063208134_1'
+[7] 'Hypomesus_transpacificus_rna_XM_047045786_1'
+[8] 'Clupea_harengus_rna_XM_031565905_1'
+[9] 'Osmerus_eperlanus_rna_XM_062468715_1'
+[10] 'Engraulis_encrasicolus_rna_XM_063194184_1'
+[11] 'Osmerus_eperlanus_rna_XM_062468701_1'
+[12] 'Clupea_harengus_rna_XM_031565911_2'
+[13] 'Clupea_harengus_rna_XM_042707511_1'
+[14] 'Hypomesus_transpacificus_rna_XM_047045767_1'
+[15] 'Engraulis_encrasicolus_rna_XM_063208132_1'
+;
+END; [Taxa]
+
+BEGIN Splits;
+DIMENSIONS ntax=15 nsplits=51;
+FORMAT labels=no weights=yes confidences=no intervals=no;
+MATRIX
+	100	 2,
+	100	 4,
+	100	 9,
+	100	 11,
+	97	 9 11,
+	98	 4 9 11,
+	100	 7,
+	100	 14,
+	100	 7 14,
+	100	 8,
+	100	 12,
+	98	 8 12,
+	100	 13,
+	87	 8 12 13,
+	35	 7 8 12 13 14,
+	98	 1 2 3 5 6 10 15,
+	100	 1 3 5 6 10 15,
+	100	 5,
+	100	 10,
+	100	 15,
+	100	 10 15,
+	100	 5 10 15,
+	96	 1 3 6,
+	100	 3,
+	100	 6,
+	100	 3 6,
+	100	 1,
+	49	 4 7 9 11 14,
+	11	 4 7 9 11 13 14,
+	14	 4 8 9 11 12 13,
+	0	 4 7 9 11 12 13 14,
+	4	 3 5 6 10 15,
+	1	 2 7,
+	1	 2 7 14,
+	2	 2 4 7 9 11 14,
+	1	 2 9,
+	2	 2 9 11,
+	2	 2 4 9 11,
+	0	 1 3 5 6 10 13 15,
+	1	 4 7 8 9 11 13 14,
+	1	 2 11,
+	0	 2 4 7 9 11 13 14,
+	1	 7 12 14,
+	0	 4 7 9 11 12 14,
+	1	 8 13,
+	1	 4 7 8 12 13 14,
+	1	 4 7 8 11 12 13 14,
+	1	 4 11,
+	0	 4 7 8 9 11 12 14,
+	1	 4 8 9 11 13,
+	0	 1 3 5 6,
+;
+END; [Splits]
+

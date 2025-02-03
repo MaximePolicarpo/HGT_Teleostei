@@ -1,0 +1,357 @@
+IQ-TREE 2.3.6 built Aug  4 2024
+
+Input file name: HGT_clade.cds.aln
+Type of analysis: ModelFinder + tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 847127
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Bui Quang Minh, Heiko A. Schmidt, Olga Chernomor, Dominik Schrempf,
+Michael D. Woodhams, Arndt von Haeseler, and Robert Lanfear (2020)
+IQ-TREE 2: New models and efficient methods for phylogenetic inference
+in the genomic era. Mol. Biol. Evol., in press.
+https://doi.org/10.1093/molbev/msaa015
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2018) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol. Biol. Evol., 35:518–522.
+https://doi.org/10.1093/molbev/msx281
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 33 sequences with 2769 nucleotide sites
+Number of constant sites: 829 (= 29.9386% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 829 (= 29.9386% of all sites)
+Number of parsimony informative sites: 1053
+Number of distinct site patterns: 1599
+
+ModelFinder
+-----------
+
+Best-fit model according to BIC: TPM2u+F+R4
+
+List of models sorted by BIC scores: 
+
+Model                  LogL         AIC      w-AIC        AICc     w-AICc         BIC      w-BIC
+TPM2u+F+R4       -24797.897   49739.794 -   0.0033   49743.693 -  0.00401   50166.483 +    0.706
+TPM2u+F+I+R4     -24795.550   49737.099 -   0.0127   49741.108 -   0.0146   50169.715 +     0.14
+TIM2+F+R4        -24796.519   49739.037 -  0.00481   49743.046 -  0.00554   50171.653 +   0.0532
+TVM+F+R4         -24792.860   49733.720 +   0.0687   49737.840 +   0.0748   50172.262 -   0.0392
+TPM2u+F+I+R3     -24805.156   49752.311 - 6.31e-06   49756.102 -  8.1e-06   50173.074 -   0.0261
+TIM2+F+I+R4      -24793.948   49735.895 -   0.0232   49740.016 -   0.0252   50174.437 -   0.0132
+TVM+F+I+R4       -24790.308   49730.615 +    0.324   49734.849 +    0.334   50175.083 -  0.00957
+TIM2+F+I+R3      -24802.619   49749.237 - 2.93e-05   49753.136 - 3.57e-05   50175.926 -  0.00628
+TVM+F+I+R3       -24799.679   49745.358 - 0.000204   49749.367 - 0.000235   50177.974 -  0.00226
+GTR+F+R4         -24791.946   49733.893 +    0.063   49738.126 +   0.0649   50178.361 -  0.00186
+GTR+F+I+R4       -24789.116   49730.231 +    0.393   49734.579 +    0.382   50180.625 - 0.000599
+HKY+F+R4         -24809.020   49760.041 - 1.32e-07   49763.832 -  1.7e-07   50180.804 - 0.000548
+GTR+F+I+R3       -24797.307   49742.615 - 0.000804   49746.735 - 0.000876   50181.157 - 0.000459
+K3Pu+F+R4        -24805.390   49754.779 - 1.84e-06   49758.678 - 2.23e-06   50181.469 - 0.000393
+TPM3u+F+R4       -24806.161   49756.321 -  8.5e-07   49760.220 - 1.03e-06   50183.011 - 0.000182
+HKY+F+I+R4       -24806.839   49757.678 - 4.31e-07   49761.577 - 5.24e-07   50184.367 - 9.23e-05
+K3Pu+F+I+R4      -24803.141   49752.282 -  6.4e-06   49756.291 - 7.37e-06   50184.898 - 7.08e-05
+TN+F+R4          -24807.712   49759.424 -  1.8e-07   49763.324 - 2.19e-07   50186.114 - 3.85e-05
+TPM3u+F+I+R4     -24803.809   49753.617 - 3.28e-06   49757.626 - 3.78e-06   50186.233 - 3.63e-05
+TIM+F+R4         -24804.160   49754.321 - 2.31e-06   49758.329 - 2.66e-06   50186.936 - 2.55e-05
+TIM3+F+R4        -24804.908   49755.815 - 1.09e-06   49759.824 - 1.26e-06   50188.431 - 1.21e-05
+HKY+F+I+R3       -24817.053   49774.106 - 1.17e-10   49777.790 - 1.58e-10   50188.943 - 9.36e-06
+TN+F+I+R4        -24805.336   49756.672 - 7.13e-07   49760.681 - 8.21e-07   50189.287 - 7.88e-06
+K3Pu+F+I+R3      -24813.393   49768.787 - 1.67e-09   49772.578 - 2.14e-09   50189.550 - 6.91e-06
+TIM+F+I+R4       -24801.625   49751.250 - 1.07e-05   49755.370 - 1.17e-05   50189.792 - 6.12e-06
+SYM+R4           -24809.755   49763.510 - 2.33e-08   49767.409 - 2.84e-08   50190.200 -    5e-06
+TPM3u+F+I+R3     -24813.813   49769.627 -  1.1e-09   49773.418 - 1.41e-09   50190.390 - 4.54e-06
+GTR+F+R5         -24790.232   49734.464 -   0.0474   49738.928 -   0.0434   50190.785 - 3.73e-06
+TIM3+F+I+R4      -24802.306   49752.612 - 5.43e-06   49756.733 - 5.91e-06   50191.154 -  3.1e-06
+TN+F+I+R3        -24814.602   49771.205 - 4.98e-10   49774.996 - 6.39e-10   50191.968 - 2.06e-06
+TIM+F+I+R3       -24810.919   49765.838 - 7.29e-09   49769.737 - 8.86e-09   50192.528 - 1.56e-06
+TIM3+F+I+R3      -24811.415   49766.829 - 4.44e-09   49770.728 -  5.4e-09   50193.519 -  9.5e-07
+SYM+I+R4         -24807.584   49761.168 - 7.53e-08   49765.177 - 8.67e-08   50193.783 - 8.33e-07
+TIM2e+R4         -24820.502   49781.005 - 3.71e-12   49784.689 - 5.02e-12   50195.842 - 2.97e-07
+TVMe+R4          -24816.644   49775.288 - 6.47e-11   49779.079 -  8.3e-11   50196.051 - 2.68e-07
+GTR+F+I+R5       -24789.025   49734.051 +   0.0582   49738.632 +   0.0504   50196.297 - 2.37e-07
+SYM+I+R3         -24817.686   49777.372 - 2.28e-11   49781.163 - 2.93e-11   50198.135 - 9.45e-08
+TVMe+I+R4        -24813.926   49771.852 -  3.6e-10   49775.752 - 4.38e-10   50198.542 - 7.71e-08
+TIM2e+I+R4       -24818.492   49778.984 - 1.02e-11   49782.775 - 1.31e-11   50199.747 - 4.22e-08
+TVMe+I+R3        -24822.580   49785.160 - 4.64e-13   49788.845 - 6.29e-13   50199.997 - 3.72e-08
+TPM2+R4          -24827.464   49792.929 - 9.55e-15   49796.508 - 1.36e-14   50201.839 - 1.48e-08
+TPM2+I+R4        -24825.114   49790.229 - 3.68e-14   49793.913 - 4.99e-14   50205.066 - 2.95e-09
+TIM2e+I+R3       -24829.121   49796.242 - 1.82e-15   49799.821 -  2.6e-15   50205.152 - 2.83e-09
+TIM3e+R4         -24826.264   49792.527 - 1.17e-14   49796.212 - 1.58e-14   50207.364 - 9.36e-10
+TPM2+I+R3        -24834.197   49804.394 - 3.09e-17   49807.870 - 4.65e-17   50207.378 -  9.3e-10
+GTR+F+R3         -24815.024   49776.048 - 4.42e-11   49780.057 - 5.09e-11   50208.664 - 4.89e-10
+TIM3e+I+R4       -24824.296   49790.592 - 3.07e-14   49794.383 - 3.94e-14   50211.355 - 1.27e-10
+TPM3+R4          -24833.448   49804.896 - 2.41e-17   49808.475 - 3.43e-17   50213.806 - 3.74e-11
+TIMe+R4          -24830.746   49801.493 - 1.32e-16   49805.177 - 1.79e-16   50216.330 - 1.06e-11
+TNe+R4           -24834.823   49807.647 - 6.08e-18   49811.226 - 8.68e-18   50216.558 - 9.44e-12
+TPM3+I+R4        -24830.997   49801.993 - 1.03e-16   49805.677 - 1.39e-16   50216.830 - 8.24e-12
+TIM3e+I+R3       -24835.349   49808.698 -  3.6e-18   49812.277 - 5.13e-18   50217.609 - 5.58e-12
+TPM3+I+R3        -24840.401   49816.802 - 6.25e-20   49820.278 - 9.39e-20   50219.787 - 1.88e-12
+TIMe+I+R4        -24828.877   49799.754 - 3.15e-16   49803.545 - 4.04e-16   50220.517 -  1.3e-12
+TNe+I+R4         -24833.019   49806.039 - 1.36e-17   49809.723 - 1.84e-17   50220.876 - 1.09e-12
+K3P+R4           -24837.893   49813.787 - 2.82e-19   49817.366 - 4.03e-19   50222.697 - 4.38e-13
+K2P+R4           -24841.949   49819.898 - 1.33e-20   49823.373 -    2e-20   50222.882 -    4e-13
+K3P+I+R4         -24835.649   49811.298 -  9.8e-19   49814.983 - 1.33e-18   50226.135 - 7.86e-14
+K2P+I+R4         -24839.782   49817.565 - 4.27e-20   49821.144 - 6.09e-20   50226.475 - 6.63e-14
+TIMe+I+R3        -24840.427   49818.854 - 2.24e-20   49822.433 -  3.2e-20   50227.764 - 3.48e-14
+TNe+I+R3         -24844.477   49824.954 - 1.06e-21   49828.430 - 1.59e-21   50227.939 - 3.19e-14
+K3P+I+R3         -24845.603   49827.207 - 3.44e-22   49830.682 - 5.17e-22   50230.191 - 1.03e-14
+K2P+I+R3         -24849.640   49833.280 - 1.65e-23   49836.654 - 2.61e-23   50230.338 - 9.61e-15
+GTR+F+G4         -24868.227   49876.453 - 6.96e-33   49880.137 - 9.43e-33   50291.290 - 5.59e-28
+GTR+F+I+G4       -24870.241   49882.482 - 3.42e-34   49886.273 - 4.39e-34   50303.245 - 1.42e-30
+GTR+F+I+R2       -24882.148   49908.297 - 8.47e-40   49912.196 - 1.03e-39   50334.986 - 1.81e-37
+F81+F+I+R3       -25018.197   50174.394 -  1.4e-97   50177.973 -    2e-97   50583.304 - 2.17e-91
+F81+F+R4         -25015.610   50171.220 - 6.84e-97   50174.904 - 9.26e-97   50586.056 - 5.49e-92
+F81+F+I+R4       -25013.577   50169.154 - 1.92e-96   50172.945 - 2.47e-96   50589.917 - 7.96e-93
+GTR+F+R2         -25026.562   50195.123 - 4.41e-102   50198.914 - 5.66e-102   50615.886 - 1.83e-98
+JC+I+R3          -25061.797   50255.593 - 3.26e-115   50258.866 - 5.43e-115   50646.725 - 3.68e-105
+JC+R4            -25058.588   50251.176 - 2.97e-114   50254.549 - 4.7e-114   50648.234 - 1.73e-105
+JC+I+R4          -25056.807   50249.615 - 6.48e-114   50253.090 - 9.75e-114   50652.599 - 1.95e-106
+GTR+F+I          -25466.800   51073.600 - 7.69e-293   51077.284 - 1.04e-292   51488.437 - 6.17e-288
+GTR+F            -25985.550   52109.100 -        0   52112.679 -        0   52518.010 -        0
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: TPM2u+F+R4
+
+Rate parameter R:
+
+  A-C: 1.3131
+  A-G: 2.4122
+  A-T: 1.3131
+  C-G: 1.0000
+  C-T: 2.4122
+  G-T: 1.0000
+
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.2811
+  pi(C) = 0.2362
+  pi(G) = 0.2676
+  pi(T) = 0.2152
+
+Rate matrix Q:
+
+  A    -1.047    0.2622    0.5458    0.2389
+  C     0.312   -0.9772    0.2263    0.4389
+  G    0.5732    0.1997   -0.9549    0.1819
+  T     0.312    0.4816    0.2263     -1.02
+
+Model of rate heterogeneity: FreeRate with 4 categories
+Site proportion and rates:  (0.349,0.08864) (0.4548,0.5407) (0.1133,1.666) (0.0829,6.446)
+
+ Category  Relative_rate  Proportion
+  1         0.08864        0.349
+  2         0.5407         0.4548
+  3         1.666          0.1133
+  4         6.446          0.0829
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -24797.7848 (s.e. 420.3097)
+Unconstrained log-likelihood (without tree): -18478.7310
+Number of free parameters (#branches + #model parameters): 72
+Akaike information criterion (AIC) score: 49739.5695
+Corrected Akaike information criterion (AICc) score: 49743.4686
+Bayesian information criterion (BIC) score: 50166.2589
+
+Total tree length (sum of branch lengths): 7.9860
+Sum of internal branch lengths: 3.0710 (38.4547% of tree length)
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Synaphobranchus_kaupii_mrna_SKAU_T00116860' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++----Synaphobranchus_kaupii_mrna_SKAU_T00116860
+|
+|                                                +--Conger_conger_rna_XM_061232904_1
+|                                             +--| (100)
+|                                             |  |   +----Conger_conger_rna_XM_061230613_1
+|                                             |  +---| (100)
+|                                             |      +---Conger_conger_rna_XM_061230614_1
+|                                          +--| (95)
+|                                          |  +--Conger_conger_rna_XM_061233141_1
+|                                       +--| (91)
+|                                       |  +-----------------------Conger_conger_rna_XM_061230611_1
+|                                    +--| (92)
+|                                    |  +-----------Conger_conger_rna_XM_061230610_1
+|                                 +--| (99)
+|                                 |  +--------Conger_conger_rna_XM_061232361_1
+|                +----------------| (100)
+|                |                +-------Conger_conger_rna_XM_061230612_1
+|             +--| (63)
+|             |  |       +---Anguilla_anguilla_rna_XM_035403412_1
+|             |  |   +---| (100)
+|             |  |   |   +---Anguilla_anguilla_rna_XM_035407033_1
+|             |  +---| (100)
+|             |      +------Anguilla_anguilla_rna_XM_035407034_1
+|        +----| (100)
+|        |    |                                                 +----Albula_glossodonta_mRNA15989
+|        |    |                                              +--| (98)
+|        |    |                                              |  +**Albula_glossodonta_mRNA15988
+|        |    |                                           +--| (96)
+|        |    |                                           |  +--Albula_glossodonta_mRNA15990
+|        |    |                  +------------------------| (100)
+|        |    |                  |                        +--Albula_goreensis_AGOR_T00122240
+|        |    |               +--| (52)
+|        |    |               |  +--------------------Albula_glossodonta_mRNA7121
+|        |    |            +--| (40)
+|        |    |            |  |   +-----------------Aldrovandia_affinis_mrna_AAFF_T00102350
+|        |    |            |  +---| (100)
+|        |    |            |      |        +--Aldrovandia_affinis_mrna_AAFF_T00314970
+|        |    |            |      +--------| (100)
+|        |    |            |               +---------Aldrovandia_affinis_mrna_AAFF_T00314980
+|        |    +------------| (100)
+|        |                 |                +------------Megalops_cyprinoides_rna_XM_036520634_1
+|        |                 +----------------| (100)
+|        |                                  +----------Centroberyx_gerrardi_g23848_t1
+|     +--| (96)
+|     |  |          +---Synaphobranchus_kaupii_mrna_SKAU_T00116790
+|     |  |  +-------| (100)
+|     |  |  |       +-------------Synaphobranchus_kaupii_mrna_SKAU_T00116770
+|     |  +--| (96)
+|     |     +--Synaphobranchus_kaupii_mrna_SKAU_T00116800
+|  +--| (72)
+|  |  |     +--Synaphobranchus_kaupii_mrna_SKAU_T00116870
+|  |  |  +--| (77)
+|  |  |  |  |  +**Synaphobranchus_kaupii_mrna_SKAU_T00116910
+|  |  |  |  +--| (100)
+|  |  |  |     +**Synaphobranchus_kaupii_mrna_SKAU_T00116890
+|  |  +--| (65)
+|  |     +----Synaphobranchus_kaupii_mrna_SKAU_T00116810
++--| (98)
+|  +---Synaphobranchus_kaupii_mrna_SKAU_T00116840
+|
+|         +**Synaphobranchus_kaupii_mrna_SKAU_T00116900
++---------| (100)
+          +**Synaphobranchus_kaupii_mrna_SKAU_T00116880
+
+Tree in newick format:
+
+(Synaphobranchus_kaupii_mrna_SKAU_T00116860:0.1139548228,(((((((((((Conger_conger_rna_XM_061232904_1:0.0226136887,(Conger_conger_rna_XM_061230613_1:0.1226276677,Conger_conger_rna_XM_061230614_1:0.1009724991)100:0.1066313840)100:0.0339778555,Conger_conger_rna_XM_061233141_1:0.0801025241)95:0.0357526644,Conger_conger_rna_XM_061230611_1:0.5444617079)91:0.0215527702,Conger_conger_rna_XM_061230610_1:0.2745105745)92:0.0354440160,Conger_conger_rna_XM_061232361_1:0.1985351362)99:0.0674413507,Conger_conger_rna_XM_061230612_1:0.1884278841)100:0.3879505374,((Anguilla_anguilla_rna_XM_035403412_1:0.0919623871,Anguilla_anguilla_rna_XM_035407033_1:0.1069534528)100:0.1069270961,Anguilla_anguilla_rna_XM_035407034_1:0.1675263106)100:0.1017344459)63:0.0334914567,((((((Albula_glossodonta_mRNA15989:0.1175805518,Albula_glossodonta_mRNA15988:0.0000026110)98:0.0254787957,Albula_glossodonta_mRNA15990:0.0390878727)96:0.0098627991,Albula_goreensis_AGOR_T00122240:0.0030592168)100:0.5597777130,Albula_glossodonta_mRNA7121:0.4634926618)52:0.0514327001,(Aldrovandia_affinis_mrna_AAFF_T00102350:0.4018883543,(Aldrovandia_affinis_mrna_AAFF_T00314970:0.0024212445,Aldrovandia_affinis_mrna_AAFF_T00314980:0.2188175939)100:0.2073410711)100:0.0999484199)40:0.0180531704,(Megalops_cyprinoides_rna_XM_036520634_1:0.2950423272,Centroberyx_gerrardi_g23848_t1:0.2529266673)100:0.3877203930)100:0.2939673839)100:0.1097213119,((Synaphobranchus_kaupii_mrna_SKAU_T00116790:0.1089802052,Synaphobranchus_kaupii_mrna_SKAU_T00116770:0.3169552220)100:0.1787624351,Synaphobranchus_kaupii_mrna_SKAU_T00116800:0.0847934664)96:0.0337296373)96:0.0356178949,((Synaphobranchus_kaupii_mrna_SKAU_T00116870:0.0851450512,(Synaphobranchus_kaupii_mrna_SKAU_T00116910:0.0000023243,Synaphobranchus_kaupii_mrna_SKAU_T00116890:0.0000023243)100:0.0846123464)77:0.0290933745,Synaphobranchus_kaupii_mrna_SKAU_T00116810:0.1098849916)65:0.0257673964)72:0.0347691964,Synaphobranchus_kaupii_mrna_SKAU_T00116840:0.0875825121)98:0.0390221747,(Synaphobranchus_kaupii_mrna_SKAU_T00116900:0.0000023243,Synaphobranchus_kaupii_mrna_SKAU_T00116880:0.0000023243)100:0.2300499676);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -24797.785013
+Robinson-Foulds distance between ML tree and consensus tree: 0
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++----Synaphobranchus_kaupii_mrna_SKAU_T00116860
+|
+|                                                +--Conger_conger_rna_XM_061232904_1
+|                                             +--| (100)
+|                                             |  |   +----Conger_conger_rna_XM_061230613_1
+|                                             |  +---| (100)
+|                                             |      +---Conger_conger_rna_XM_061230614_1
+|                                          +--| (95)
+|                                          |  +--Conger_conger_rna_XM_061233141_1
+|                                       +--| (91)
+|                                       |  +-----------------------Conger_conger_rna_XM_061230611_1
+|                                    +--| (92)
+|                                    |  +-----------Conger_conger_rna_XM_061230610_1
+|                                 +--| (99)
+|                                 |  +--------Conger_conger_rna_XM_061232361_1
+|                +----------------| (100)
+|                |                +-------Conger_conger_rna_XM_061230612_1
+|             +--| (63)
+|             |  |       +---Anguilla_anguilla_rna_XM_035403412_1
+|             |  |   +---| (100)
+|             |  |   |   +---Anguilla_anguilla_rna_XM_035407033_1
+|             |  +---| (100)
+|             |      +------Anguilla_anguilla_rna_XM_035407034_1
+|        +----| (100)
+|        |    |                                                 +----Albula_glossodonta_mRNA15989
+|        |    |                                              +--| (98)
+|        |    |                                              |  +--Albula_glossodonta_mRNA15988
+|        |    |                                           +--| (96)
+|        |    |                                           |  +--Albula_glossodonta_mRNA15990
+|        |    |                  +------------------------| (100)
+|        |    |                  |                        +--Albula_goreensis_AGOR_T00122240
+|        |    |               +--| (52)
+|        |    |               |  +--------------------Albula_glossodonta_mRNA7121
+|        |    |            +--| (40)
+|        |    |            |  |   +-----------------Aldrovandia_affinis_mrna_AAFF_T00102350
+|        |    |            |  +---| (100)
+|        |    |            |      |        +--Aldrovandia_affinis_mrna_AAFF_T00314970
+|        |    |            |      +--------| (100)
+|        |    |            |               +---------Aldrovandia_affinis_mrna_AAFF_T00314980
+|        |    +------------| (100)
+|        |                 |                +------------Megalops_cyprinoides_rna_XM_036520634_1
+|        |                 +----------------| (100)
+|        |                                  +----------Centroberyx_gerrardi_g23848_t1
+|     +--| (96)
+|     |  |          +---Synaphobranchus_kaupii_mrna_SKAU_T00116790
+|     |  |  +-------| (100)
+|     |  |  |       +-------------Synaphobranchus_kaupii_mrna_SKAU_T00116770
+|     |  +--| (96)
+|     |     +--Synaphobranchus_kaupii_mrna_SKAU_T00116800
+|  +--| (72)
+|  |  |     +--Synaphobranchus_kaupii_mrna_SKAU_T00116870
+|  |  |  +--| (77)
+|  |  |  |  |  +--Synaphobranchus_kaupii_mrna_SKAU_T00116910
+|  |  |  |  +--| (100)
+|  |  |  |     +--Synaphobranchus_kaupii_mrna_SKAU_T00116890
+|  |  +--| (65)
+|  |     +----Synaphobranchus_kaupii_mrna_SKAU_T00116810
++--| (98)
+|  +---Synaphobranchus_kaupii_mrna_SKAU_T00116840
+|
+|            +**Synaphobranchus_kaupii_mrna_SKAU_T00116900
+|         +--|
+|         |  +**Synaphobranchus_kaupii_mrna_SKAU_T00116920
++---------| (100)
+          +--Synaphobranchus_kaupii_mrna_SKAU_T00116880
+
+
+Consensus tree in newick format: 
+
+(Synaphobranchus_kaupii_mrna_SKAU_T00116860:0.1138942951,(((((((((((Conger_conger_rna_XM_061232904_1:0.0226015314,(Conger_conger_rna_XM_061230613_1:0.1225639593,Conger_conger_rna_XM_061230614_1:0.1009186266)100:0.1065515542)100:0.0339590966,Conger_conger_rna_XM_061233141_1:0.0800443211)95:0.0357389100,Conger_conger_rna_XM_061230611_1:0.5441122199)91:0.0215443788,Conger_conger_rna_XM_061230610_1:0.2743283404)92:0.0354283986,Conger_conger_rna_XM_061232361_1:0.1983994475)99:0.0674298431,Conger_conger_rna_XM_061230612_1:0.1882942887)100:0.3877282583,((Anguilla_anguilla_rna_XM_035403412_1:0.0919170025,Anguilla_anguilla_rna_XM_035407033_1:0.1068882431)100:0.1068663644,Anguilla_anguilla_rna_XM_035407034_1:0.1674270981)100:0.1016896313)63:0.0334843764,((((((Albula_glossodonta_mRNA15989:0.1175442137,Albula_glossodonta_mRNA15988:0.0000023752)98:0.0254739126,Albula_glossodonta_mRNA15990:0.0390790538)96:0.0098704140,Albula_goreensis_AGOR_T00122240:0.0030477072)100:0.5595916015,Albula_glossodonta_mRNA7121:0.4633929415)52:0.0514885300,(Aldrovandia_affinis_mrna_AAFF_T00102350:0.4017352353,(Aldrovandia_affinis_mrna_AAFF_T00314970:0.0024247865,Aldrovandia_affinis_mrna_AAFF_T00314980:0.2187312675)100:0.2072475762)100:0.0999456506)40:0.0180488427,(Megalops_cyprinoides_rna_XM_036520634_1:0.2949376302,Centroberyx_gerrardi_g23848_t1:0.2528230352)100:0.3875869388)100:0.2938597643)100:0.1096633665,((Synaphobranchus_kaupii_mrna_SKAU_T00116790:0.1089211790,Synaphobranchus_kaupii_mrna_SKAU_T00116770:0.3167765288)100:0.1787225654,Synaphobranchus_kaupii_mrna_SKAU_T00116800:0.0847592457)96:0.0337210936)96:0.0355978913,((Synaphobranchus_kaupii_mrna_SKAU_T00116870:0.0850996618,(Synaphobranchus_kaupii_mrna_SKAU_T00116910:0.0000024075,Synaphobranchus_kaupii_mrna_SKAU_T00116890:0.0000024075)100:0.0845718257)77:0.0290864595,Synaphobranchus_kaupii_mrna_SKAU_T00116810:0.1098316647)65:0.0257581365)72:0.0347583895,Synaphobranchus_kaupii_mrna_SKAU_T00116840:0.0875370518)98:0.0390171760,((Synaphobranchus_kaupii_mrna_SKAU_T00116900:0.0000000000,Synaphobranchus_kaupii_mrna_SKAU_T00116920:0.0000000000):0.0000024075,Synaphobranchus_kaupii_mrna_SKAU_T00116880:0.0000024075)100:0.2299396754);
+
+ALISIM COMMAND
+--------------
+To simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis, you can use the following command:
+
+--alisim simulated_MSA -t HGT_clade.cds.aln.treefile -m "TPM2u{1.31307,2.4122}+F{0.281063,0.236151,0.267604,0.215182}+R4{0.349014,0.0886385,0.454776,0.540728,0.11331,1.66631,0.0829004,6.44563}" --length 2769
+
+To mimic the alignment used to produce this analysis, i.e. simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis *and* copying the same gap positions as the original alignment, you can use the following command:
+
+iqtree -s HGT_clade.cds.aln --alisim mimicked_MSA
+
+To simulate any number of alignments in either of the two commandlines above, use the --num-alignments options, for example mimic 100 alignments you would use the command line:
+
+iqtree -s HGT_clade.cds.aln --alisim mimicked_MSA --num-alignments 100
+
+For more information on using AliSim, please visit: www.iqtree.org/doc/AliSim
+
+TIME STAMP
+----------
+
+Date and time: Mon Feb  3 09:05:34 2025
+Total CPU time used: 148.473481 seconds (0h:2m:28s)
+Total wall-clock time used: 19.44174098 seconds (0h:0m:19s)
+

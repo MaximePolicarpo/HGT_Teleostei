@@ -67,11 +67,17 @@ FitMG94.bf can be found here : https://github.com/veg/hyphy-analyses/tree/master
 
 Genome fasta files, to be found on RefSeq and GenBank, are also needed for these analysis.  
 
+
+Alignments of the genes in HGT clades (in DNA), and associated maximum likelihood phylogenies can be found in the repository "HGT_clade_DNA_phylogenies".
+
+
 All the other files needed to run these scripts are available on Zenodo.
 
 
 ## VI - Map the geographical distributions of species involved in HGTs
 
 [Geographical_distributions.R](Geographical_distributions.R) 
+
+
 
 

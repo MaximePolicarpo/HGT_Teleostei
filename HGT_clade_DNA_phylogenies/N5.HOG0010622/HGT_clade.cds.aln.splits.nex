@@ -1,0 +1,65 @@
+#nexus
+
+BEGIN Taxa;
+DIMENSIONS ntax=13;
+TAXLABELS
+[1] 'Ictalurus_punctatus_rna_XM_017463853_3'
+[2] 'Ameiurus_melas_AMELA_T00177240'
+[3] 'Silurus_asotus_mrna_C0J50_8883'
+[4] 'Paramormyrops_kingsleyae_rna_XM_023831520_1'
+[5] 'Pangasianodon_hypophthalmus_rna_XM_053232595_1'
+[6] 'Hemibagrus_wyckioides_rna_XM_058394735_1'
+[7] 'Tachysurus_vachellii_rna_XM_060873936_1'
+[8] 'Pygocentrus_nattereri_rna_XM_017714086_2'
+[9] 'Astyanax_mexicanus_rna_XM_007241775_4'
+[10] 'Trichomycterus_rosablanca_rna_XM_062995414_1'
+[11] 'Electrophorus_electricus_rna_XM_027006769_2'
+[12] 'Hemibagrus_guttatus_male_16671'
+[13] 'Colossoma_macropomum_rna_XM_036589671_1'
+;
+END; [Taxa]
+
+BEGIN Splits;
+DIMENSIONS ntax=13 nsplits=37;
+FORMAT labels=no weights=yes confidences=no intervals=no;
+MATRIX
+	100	 2,
+	100	 3,
+	100	 6,
+	100	 12,
+	100	 6 12,
+	100	 7,
+	100	 6 7 12,
+	47	 3 6 7 12,
+	100	 4,
+	57	 3 4 6 7 12,
+	100	 5,
+	100	 8,
+	100	 13,
+	100	 8 13,
+	100	 9,
+	100	 8 9 13,
+	100	 11,
+	100	 8 9 11 13,
+	100	 10,
+	100	 8 9 10 11 13,
+	61	 5 8 9 10 11 13,
+	100	 1 2,
+	100	 1,
+	20	 1 2 3 4,
+	13	 1 2 3,
+	14	 1 2 3 4 5,
+	35	 1 2 5,
+	21	 4 6 7 12,
+	7	 1 2 3 5,
+	2	 4 8 9 10 11 13,
+	5	 3 8 9 10 11 13,
+	5	 1 2 4 5,
+	4	 1 2 4,
+	6	 3 4,
+	1	 1 2 3 6 7 12,
+	1	 8 11 13,
+	0	 1 2 4 6 7 12,
+;
+END; [Splits]
+

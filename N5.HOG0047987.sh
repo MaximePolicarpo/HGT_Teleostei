@@ -836,6 +836,30 @@ paste -d "," curr_labels curr_LB_values.txt curr_MLE_values.txt curr_UB_values.t
 
 
 
+##====================================================================================================================================
+##====================================================================================================================================
+#====================================================================================================================================
+##====================================================================================================================================
+##====================================================================================================================================
+##========================================== DNA phylogeny of the HGT clade ==========================================================
+##====================================================================================================================================
+##====================================================================================================================================
+#====================================================================================================================================
+##====================================================================================================================================
+##====================================================================================================================================
+
+
+cd Horizontal_transfer_project/Candidates_analysis/N5.HOG0047987/
+
+grep ">" N5.HOG0047987.prot | grep "Hypomesus_transpacificus_rna_XM_047020147_1\|Osmerus_eperlanus_rna_XM_062485952_1\|Hypomesus_transpacificus_rna_XM_047033889_1\|Sardina_pilchardus_rna_XM_062523689_1\|Alosa_sapidissima_rna_XM_042067493_1\|Alosa_alosa_rna_XM_048266774_1\|Alosa_sapidissima_rna_XM_042072065_1\|Alosa_alosa_rna_XM_048227711_1\|Clupea_harengus_rna_XM_031580274_2\|Paramormyrops_kingsleyae_rna_XM_023806158_1\|Brienomyrus_brachyistius_rna_XM_049027056_1\|Megalobrama_amblycephala_rna_XM_048181295_1\|Megalobrama_amblycephala_rna_XM_048181298_1\|Megalobrama_amblycephala_rna_XM_048181296_1\|Megalobrama_amblycephala_rna_XM_048181285_1\|Megalobrama_amblycephala_rna_XM_048181284_1\|Ctenopharyngodon_idella_rna_XM_051907685_1\|Megalobrama_amblycephala_rna_XM_048181283_1\|Triplophysa_rosa_rna_XM_057347245_1\|Triplophysa_dalaica_rna_XM_056753738_1\|Sinocyclocheilus_grahami_rna_XM_016258674_1\|Misgurnus_anguillicaudatus_rna_XM_055176918_1\|Misgurnus_anguillicaudatus_rna_XM_055176200_1\|Misgurnus_anguillicaudatus_rna_XM_055176198_1\|Triplophysa_tibetana_mrna_E1301_Tti004706\|Xyrauchen_texanus_rna_XM_052149830_1\|Myxocyprinus_asiaticus_rna_XM_051650417_1\|Engraulis_encrasicolus_rna_XM_063224199_1\|Engraulis_encrasicolus_rna_XM_063224064_1\|Engraulis_encrasicolus_rna_XM_063224210_1\|Engraulis_encrasicolus_rna_XM_063200652_1\|Sardina_pilchardus_rna_XM_062525160_1\|Paramormyrops_kingsleyae_rna_XM_023806158_1\|Myxocyprinus_asiaticus_rna_XM_051680098_1"  | sed 's/>//g' > curr_ID.txt
+xargs samtools faidx N5.HOG0047987.prot  < curr_ID.txt > HGT_clade.prot
+xargs samtools faidx N5.HOG0047987.cds  < curr_ID.txt > HGT_clade.cds
+
+muscle5.1.linux_intel64 -align HGT_clade.prot -output HGT_clade.aln
+
+trimal -in HGT_clade.aln -gt 0.6 -cons 60 -backtrans HGT_clade.cds -out HGT_clade.cds.aln
+
+iqtree -s HGT_clade.cds.aln -st DNA -nt 8 -bb 1000 --redo
 
 
 

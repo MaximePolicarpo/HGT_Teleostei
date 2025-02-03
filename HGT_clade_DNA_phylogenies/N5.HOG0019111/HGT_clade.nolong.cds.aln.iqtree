@@ -1,0 +1,325 @@
+IQ-TREE 2.3.6 built Aug  4 2024
+
+Input file name: HGT_clade.nolong.cds.aln
+Type of analysis: ModelFinder + tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 581569
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Bui Quang Minh, Heiko A. Schmidt, Olga Chernomor, Dominik Schrempf,
+Michael D. Woodhams, Arndt von Haeseler, and Robert Lanfear (2020)
+IQ-TREE 2: New models and efficient methods for phylogenetic inference
+in the genomic era. Mol. Biol. Evol., in press.
+https://doi.org/10.1093/molbev/msaa015
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2018) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol. Biol. Evol., 35:518–522.
+https://doi.org/10.1093/molbev/msx281
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 31 sequences with 501 nucleotide sites
+Number of constant sites: 89 (= 17.7645% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 89 (= 17.7645% of all sites)
+Number of parsimony informative sites: 342
+Number of distinct site patterns: 426
+
+ModelFinder
+-----------
+
+Best-fit model according to BIC: TVMe+I+G4
+
+List of models sorted by BIC scores: 
+
+Model                  LogL         AIC      w-AIC        AICc     w-AICc         BIC      w-BIC
+TVMe+I+G4         -7099.254   14328.508 - 0.000325   14348.232 -  0.00122   14602.588 +      0.1
+TVMe+G4           -7102.482   14332.963 -  3.5e-05   14352.046 - 0.000182   14602.826 +   0.0888
+TVM+F+I+G4        -7090.301   14316.602 +    0.125   14338.325 +    0.173   14603.332 +   0.0689
+TPM3+I+G4         -7105.922   14337.844 - 3.05e-06   14356.297 - 2.17e-05   14603.490 +   0.0637
+TPM2u+F+I+G4      -7096.630   14325.260 -  0.00165   14345.638 -  0.00447   14603.556 +   0.0616
+TPM3+G4           -7109.158   14342.316 - 3.26e-07   14360.152 - 3.16e-06   14603.746 +    0.056
+SYM+I+G4          -7096.732   14325.463 -  0.00149   14345.841 -  0.00404   14603.759 +   0.0557
+TVM+F+G4          -7093.651   14321.301 -   0.0119   14342.345 -   0.0232   14603.814 +   0.0542
+TPM3u+F+I+G4      -7096.809   14325.619 -  0.00138   14345.997 -  0.00374   14603.915 +   0.0515
+SYM+G4            -7100.106   14330.212 - 0.000139   14349.936 - 0.000522   14604.292 -   0.0427
+TPM3u+F+G4        -7100.172   14330.345 -  0.00013   14350.069 - 0.000488   14604.424 -   0.0399
+GTR+F+I+G4        -7087.748   14313.496 +    0.591   14335.909 +     0.58   14604.441 -   0.0396
+TIM3e+I+G4        -7103.338   14334.676 - 1.49e-05   14353.759 - 7.72e-05   14604.539 -   0.0377
+GTR+F+G4          -7090.915   14317.830 +   0.0677   14339.552 +   0.0938   14604.559 -   0.0373
+TIM2+F+I+G4       -7094.057   14322.113 -  0.00795   14343.157 -   0.0155   14604.626 -   0.0361
+TPM2u+F+G4        -7100.471   14330.942 - 9.63e-05   14350.666 - 0.000362   14605.022 -   0.0296
+TIM3+F+I+G4       -7094.296   14322.592 -  0.00626   14343.636 -   0.0122   14605.105 -   0.0284
+TIM3e+G4          -7106.731   14339.461 - 1.36e-06   14357.914 - 9.66e-06   14605.108 -   0.0284
+TIM3+F+G4         -7097.474   14326.947 -  0.00071   14347.325 -  0.00193   14605.243 -   0.0265
+TIM2+F+G4         -7097.720   14327.440 - 0.000554   14347.818 -   0.0015   14605.736 -   0.0207
+HKY+F+I+G4        -7101.755   14333.509 - 2.67e-05   14353.233 -   0.0001   14607.589 -  0.00821
+TN+F+I+G4         -7099.207   14330.415 - 0.000125   14350.793 -  0.00034   14608.711 -  0.00468
+HKY+F+G4          -7105.568   14339.136 -  1.6e-06   14358.219 -  8.3e-06   14608.999 -  0.00405
+K3Pu+F+I+G4       -7099.548   14331.097 - 8.91e-05   14351.475 - 0.000242   14609.393 -  0.00333
+TN+F+G4           -7102.859   14335.718 - 8.84e-06   14355.442 - 3.33e-05   14609.797 -  0.00272
+TIM+F+I+G4        -7097.031   14328.063 - 0.000406   14349.107 -  0.00079   14610.576 -  0.00184
+TPM2+I+G4         -7109.572   14345.144 - 7.93e-08   14363.597 - 5.64e-07   14610.790 -  0.00166
+K3Pu+F+G4         -7103.361   14336.722 - 5.35e-06   14356.446 - 2.01e-05   14610.801 -  0.00165
+TIM+F+G4          -7100.683   14333.365 - 2.87e-05   14353.743 - 7.78e-05   14611.661 -  0.00107
+TIM2e+I+G4        -7106.926   14341.851 - 4.12e-07   14360.934 - 2.13e-06   14611.714 -  0.00104
+TPM2+G4           -7113.356   14350.712 -  4.9e-09   14368.547 - 4.74e-08   14612.141 - 0.000842
+TIM2e+G4          -7110.824   14347.649 - 2.27e-08   14366.102 - 1.61e-07   14613.295 - 0.000473
+K2P+I+G4          -7114.713   14353.427 - 1.26e-09   14371.262 - 1.22e-08   14614.856 - 0.000217
+GTR+F+I+R2        -7090.184   14320.369 -    0.019   14343.485 -   0.0131   14615.531 - 0.000155
+TNe+I+G4          -7111.993   14349.986 - 7.05e-09   14368.439 - 5.01e-08   14615.632 - 0.000147
+K2P+G4            -7118.473   14358.947 - 7.99e-11   14376.177 - 1.05e-09   14616.160 - 0.000113
+GTR+F+R3          -7087.452   14316.904 +    0.108   14340.736 +   0.0519   14616.283 - 0.000106
+K3P+I+G4          -7112.387   14350.773 - 4.76e-09   14369.226 - 3.38e-08   14616.419 - 9.92e-05
+TIMe+I+G4         -7109.643   14347.285 - 2.72e-08   14366.368 - 1.41e-07   14617.148 - 6.89e-05
+TNe+G4            -7115.889   14355.778 - 3.89e-10   14373.614 - 3.77e-09   14617.208 - 6.69e-05
+K3P+G4            -7116.149   14356.297 -    3e-10   14374.133 - 2.91e-09   14617.727 - 5.16e-05
+TIMe+G4           -7113.527   14353.054 - 1.52e-09   14371.507 - 1.08e-08   14618.700 - 3.17e-05
+GTR+F+R2          -7095.234   14328.469 - 0.000332   14350.882 - 0.000325   14619.414 - 2.22e-05
+GTR+F+I+R3        -7087.624   14319.249 -   0.0333   14343.809 -   0.0112   14622.844 - 3.99e-06
+GTR+F+R4          -7087.036   14320.072 -   0.0221   14345.374 -  0.00511   14627.884 - 3.21e-07
+GTR+F+I           -7156.363   14448.725 - 2.55e-30   14470.447 - 3.54e-30   14735.454 - 1.41e-30
+F81+F+I+G4        -7188.229   14504.458 - 2.02e-42   14523.541 - 1.05e-41   14774.321 - 5.11e-39
+F81+F+G4          -7192.184   14510.368 - 1.05e-43   14528.822 - 7.46e-43   14776.015 - 2.19e-39
+JC+I+G4           -7213.716   14549.431 - 3.46e-52   14566.661 - 4.53e-51   14806.644 - 4.89e-46
+JC+G4             -7217.871   14555.742 - 1.47e-53   14572.379 -  2.6e-52   14808.739 - 1.72e-46
+GTR+F             -7272.420   14678.840 - 2.74e-80   14699.884 - 5.34e-80   14961.352 - 1.25e-79
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: TVMe+I+G4
+
+Rate parameter R:
+
+  A-C: 2.0315
+  A-G: 3.2104
+  A-T: 1.1450
+  C-G: 1.2950
+  C-T: 3.2104
+  G-T: 1.0000
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A    -1.074    0.3416    0.5399    0.1926
+  C    0.3416    -1.099    0.2178    0.5399
+  G    0.5399    0.2178   -0.9259    0.1682
+  T    0.1926    0.5399    0.1682   -0.9006
+
+Model of rate heterogeneity: Invar+Gamma with 4 categories
+Proportion of invariable sites: 0.08952
+Gamma shape alpha: 1.828
+
+ Category  Relative_rate  Proportion
+  0         0              0.08952
+  1         0.2985         0.2276
+  2         0.6978         0.2276
+  3         1.17           0.2276
+  4         2.227          0.2276
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -7097.7252 (s.e. 182.2518)
+Unconstrained log-likelihood (without tree): -2944.1755
+Number of free parameters (#branches + #model parameters): 65
+Akaike information criterion (AIC) score: 14325.4503
+Corrected Akaike information criterion (AICc) score: 14345.1744
+Bayesian information criterion (BIC) score: 14599.5297
+
+Total tree length (sum of branch lengths): 4.4242
+Sum of internal branch lengths: 1.6557 (37.4250% of tree length)
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Thunnus_maccoyii_rna_XM_042435094_1' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++--Thunnus_maccoyii_rna_XM_042435094_1
+|
+|                                      +-----------Osmerus_eperlanus_rna_XM_062448472_1
+|                                   +--| (95)
+|                                   |  +--------------Borostomias_antarcticus_g6122_t1
+|                            +------| (100)
+|                            |      |              +--Esox_lucius_rna_XM_010898588_4
+|                            |      |   +----------| (100)
+|                            |      |   |          +-------Dallia_pectoralis_mrna_DPEC_T00177230
+|                            |      +---| (97)
+|                            |          +-------------Aplochiton_taeniatus_g15045_t1
+|                    +-------| (100)
+|                    |       |        +------------Oncorhynchus_tshawytscha_rna_XM_042310653_1
+|                    |       +--------| (100)
+|                    |                |  +--Salmo_salar_rna_XM_014131548_2
+|                    |                +--| (73)
+|                    |                   +-----------------------Coregonus_sp_balchen_gene_CSTEINMANNI_LOCUS3751678
+|                 +--| (82)
+|                 |  |             +**Lampris_incognitus_rna_XM_056279878_1
+|                 |  |          +--| (99)
+|                 |  |          |  +**Lampris_incognitus_rna_XM_056280341_1
+|                 |  +----------| (100)
+|                 |             +**Lampris_incognitus_rna_XM_056280337_1
+|              +--| (65)
+|              |  +--------Centroberyx_gerrardi_g36551_t1
+|           +--| (46)
+|           |  +-----------Thalassophryne_amazonica_rna_XM_034187378_1
+|        +--| (53)
+|        |  +------------Myripristis_murdjan_rna_XM_030046755_1
+|  +-----| (100)
+|  |     +------Lucifuga_dentata_LDENT00156160_mrna
++--| (92)
+|  |         +--Clupea_harengus_rna_XM_031578285_2
+|  |  +------| (100)
+|  |  |      |     +--Clupea_harengus_rna_XM_031577666_1
+|  |  |      |  +--| (62)
+|  |  |      |  |  +----Hypomesus_transpacificus_rna_XM_047049897_1
+|  |  |      +--| (60)
+|  |  |         +-------Clupea_harengus_rna_XM_031577667_2
+|  +--| (97)
+|     |              +--Sardina_pilchardus_rna_XM_062535392_1
+|     |           +--| (84)
+|     |           |  |  +**Alosa_sapidissima_rna_XM_042075309_1
+|     |           |  +--| (99)
+|     |           |     +--Alosa_alosa_rna_XM_048231371_1
+|     |        +--| (90)
+|     |        |  |  +**Scomber_scombrus_rna_XM_062436683_1
+|     |        |  +--| (94)
+|     |        |     +--Scomber_scombrus_rna_XM_062436670_1
+|     |     +--| (95)
+|     |     |  |     +--Scomber_japonicus_rna_XM_053325433_1
+|     |     |  |  +--| (81)
+|     |     |  |  |  +--Scomber_japonicus_rna_XM_053325408_1
+|     |     |  +--| (100)
+|     |     |     +--Scomber_japonicus_rna_XM_053325414_1
+|     +-----| (100)
+|           +--Scomber_japonicus_rna_XM_053337026_1
+|
+|  +--Thunnus_maccoyii_rna_XM_042435120_1
++--| (57)
+   +------Thunnus_maccoyii_rna_XM_042435142_1
+
+Tree in newick format:
+
+(Thunnus_maccoyii_rna_XM_042435094_1:0.0168607977,(((((((((Osmerus_eperlanus_rna_XM_062448472_1:0.2050686952,Borostomias_antarcticus_g6122_t1:0.2540616409)95:0.0581421473,((Esox_lucius_rna_XM_010898588_4:0.0485619217,Dallia_pectoralis_mrna_DPEC_T00177230:0.1312209466)100:0.1863223538,Aplochiton_taeniatus_g15045_t1:0.2351863971)97:0.0651266829)100:0.1249794137,(Oncorhynchus_tshawytscha_rna_XM_042310653_1:0.2144895325,(Salmo_salar_rna_XM_014131548_2:0.0229052979,Coregonus_sp_balchen_gene_CSTEINMANNI_LOCUS3751678:0.3891878796)73:0.0130354219)100:0.1479461430)100:0.1291101256,((Lampris_incognitus_rna_XM_056279878_1:0.0000010024,Lampris_incognitus_rna_XM_056280341_1:0.0000010024)99:0.0040029892,Lampris_incognitus_rna_XM_056280337_1:0.0000010024)100:0.1833675491)82:0.0547374982,Centroberyx_gerrardi_g36551_t1:0.1482514861)65:0.0211160714,Thalassophryne_amazonica_rna_XM_034187378_1:0.2074519817)46:0.0207157200,Myripristis_murdjan_rna_XM_030046755_1:0.2192573403)53:0.0248432592,Lucifuga_dentata_LDENT00156160_mrna:0.1274628859)100:0.1046842284,((Clupea_harengus_rna_XM_031578285_2:0.0342680630,((Clupea_harengus_rna_XM_031577666_1:0.0221433162,Hypomesus_transpacificus_rna_XM_047049897_1:0.0864777696)62:0.0194062313,Clupea_harengus_rna_XM_031577667_2:0.1310074437)60:0.0189658011)100:0.1225458690,((((Sardina_pilchardus_rna_XM_062535392_1:0.0268081018,(Alosa_sapidissima_rna_XM_042075309_1:0.0000010024,Alosa_alosa_rna_XM_048231371_1:0.0067185967)99:0.0158413289)84:0.0122693003,(Scomber_scombrus_rna_XM_062436683_1:0.0000029594,Scomber_scombrus_rna_XM_062436670_1:0.0090008752)94:0.0125921773)90:0.0286410417,((Scomber_japonicus_rna_XM_053325433_1:0.0074728536,Scomber_japonicus_rna_XM_053325408_1:0.0128787027)81:0.0116028857,Scomber_japonicus_rna_XM_053325414_1:0.0144212085)100:0.0354201676)95:0.0254631927,Scomber_japonicus_rna_XM_053337026_1:0.0589567628)100:0.1044818284)97:0.0370583525)92:0.0555332888,(Thunnus_maccoyii_rna_XM_042435120_1:0.0188443186,Thunnus_maccoyii_rna_XM_042435142_1:0.1154577173)57:0.0218001992);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -7097.728908
+Robinson-Foulds distance between ML tree and consensus tree: 0
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++--Thunnus_maccoyii_rna_XM_042435094_1
+|
+|                                      +-----------Osmerus_eperlanus_rna_XM_062448472_1
+|                                   +--| (95)
+|                                   |  +--------------Borostomias_antarcticus_g6122_t1
+|                            +------| (100)
+|                            |      |              +--Esox_lucius_rna_XM_010898588_4
+|                            |      |   +----------| (100)
+|                            |      |   |          +-------Dallia_pectoralis_mrna_DPEC_T00177230
+|                            |      +---| (97)
+|                            |          +-------------Aplochiton_taeniatus_g15045_t1
+|                    +-------| (100)
+|                    |       |        +------------Oncorhynchus_tshawytscha_rna_XM_042310653_1
+|                    |       +--------| (100)
+|                    |                |  +--Salmo_salar_rna_XM_014131548_2
+|                    |                +--| (73)
+|                    |                   +-----------------------Coregonus_sp_balchen_gene_CSTEINMANNI_LOCUS3751678
+|                 +--| (82)
+|                 |  |             +--Lampris_incognitus_rna_XM_056279878_1
+|                 |  |          +--| (99)
+|                 |  |          |  +--Lampris_incognitus_rna_XM_056280341_1
+|                 |  +----------| (100)
+|                 |             +--Lampris_incognitus_rna_XM_056280337_1
+|              +--| (65)
+|              |  +--------Centroberyx_gerrardi_g36551_t1
+|           +--| (46)
+|           |  +-----------Thalassophryne_amazonica_rna_XM_034187378_1
+|        +--| (53)
+|        |  +------------Myripristis_murdjan_rna_XM_030046755_1
+|  +-----| (100)
+|  |     +------Lucifuga_dentata_LDENT00156160_mrna
++--| (92)
+|  |         +--Clupea_harengus_rna_XM_031578285_2
+|  |  +------| (100)
+|  |  |      |     +--Clupea_harengus_rna_XM_031577666_1
+|  |  |      |  +--| (62)
+|  |  |      |  |  +----Hypomesus_transpacificus_rna_XM_047049897_1
+|  |  |      +--| (60)
+|  |  |         +-------Clupea_harengus_rna_XM_031577667_2
+|  +--| (97)
+|     |              +--Sardina_pilchardus_rna_XM_062535392_1
+|     |           +--| (84)
+|     |           |  |  +--Alosa_sapidissima_rna_XM_042075309_1
+|     |           |  +--| (99)
+|     |           |     +--Alosa_alosa_rna_XM_048231371_1
+|     |        +--| (90)
+|     |        |  |  +--Scomber_scombrus_rna_XM_062436683_1
+|     |        |  +--| (94)
+|     |        |     +--Scomber_scombrus_rna_XM_062436670_1
+|     |     +--| (95)
+|     |     |  |     +--Scomber_japonicus_rna_XM_053325433_1
+|     |     |  |  +--| (81)
+|     |     |  |  |  +--Scomber_japonicus_rna_XM_053325408_1
+|     |     |  +--| (100)
+|     |     |     +--Scomber_japonicus_rna_XM_053325414_1
+|     +-----| (100)
+|           +--Scomber_japonicus_rna_XM_053337026_1
+|
+|  +--Thunnus_maccoyii_rna_XM_042435120_1
++--| (57)
+   +------Thunnus_maccoyii_rna_XM_042435142_1
+
+
+Consensus tree in newick format: 
+
+(Thunnus_maccoyii_rna_XM_042435094_1:0.0168612593,(((((((((Osmerus_eperlanus_rna_XM_062448472_1:0.2050735521,Borostomias_antarcticus_g6122_t1:0.2539990409)95:0.0580929381,((Esox_lucius_rna_XM_010898588_4:0.0485712965,Dallia_pectoralis_mrna_DPEC_T00177230:0.1311943562)100:0.1863226501,Aplochiton_taeniatus_g15045_t1:0.2351409724)97:0.0651513718)100:0.1249235837,(Oncorhynchus_tshawytscha_rna_XM_042310653_1:0.2146926954,(Salmo_salar_rna_XM_014131548_2:0.0228838914,Coregonus_sp_balchen_gene_CSTEINMANNI_LOCUS3751678:0.3891160113)73:0.0129017325)100:0.1483429112)100:0.1290494777,((Lampris_incognitus_rna_XM_056279878_1:0.0000029523,Lampris_incognitus_rna_XM_056280341_1:0.0000029523)99:0.0040022727,Lampris_incognitus_rna_XM_056280337_1:0.0000029523)100:0.1833635150)82:0.0547338440,Centroberyx_gerrardi_g36551_t1:0.1482523954)65:0.0211159818,Thalassophryne_amazonica_rna_XM_034187378_1:0.2074281021)46:0.0207177133,Myripristis_murdjan_rna_XM_030046755_1:0.2192439861)53:0.0248429720,Lucifuga_dentata_LDENT00156160_mrna:0.1274540577)100:0.1046791779,((Clupea_harengus_rna_XM_031578285_2:0.0342713818,((Clupea_harengus_rna_XM_031577666_1:0.0221458396,Hypomesus_transpacificus_rna_XM_047049897_1:0.0864735481)62:0.0194074042,Clupea_harengus_rna_XM_031577667_2:0.1310016507)60:0.0189644177)100:0.1225409016,((((Sardina_pilchardus_rna_XM_062535392_1:0.0268082149,(Alosa_sapidissima_rna_XM_042075309_1:0.0000029523,Alosa_alosa_rna_XM_048231371_1:0.0067193736)99:0.0158411229)84:0.0122693314,(Scomber_scombrus_rna_XM_062436683_1:0.0000029568,Scomber_scombrus_rna_XM_062436670_1:0.0090007828)94:0.0125935528)90:0.0286409865,((Scomber_japonicus_rna_XM_053325433_1:0.0074731834,Scomber_japonicus_rna_XM_053325408_1:0.0128783325)81:0.0116035669,Scomber_japonicus_rna_XM_053325414_1:0.0144223684)100:0.0354209073)95:0.0254632431,Scomber_japonicus_rna_XM_053337026_1:0.0589588032)100:0.1044787069)97:0.0370625876)92:0.0555326975,(Thunnus_maccoyii_rna_XM_042435120_1:0.0188436668,Thunnus_maccoyii_rna_XM_042435142_1:0.1154496859)57:0.0217987706);
+
+ALISIM COMMAND
+--------------
+To simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis, you can use the following command:
+
+--alisim simulated_MSA -t HGT_clade.nolong.cds.aln.treefile -m "TVMe{2.03151,3.21044,1.14495,1.29502}+FQ+I{0.0895225}+G4{1.82762}" --length 501
+
+To mimic the alignment used to produce this analysis, i.e. simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis *and* copying the same gap positions as the original alignment, you can use the following command:
+
+iqtree -s HGT_clade.nolong.cds.aln --alisim mimicked_MSA
+
+To simulate any number of alignments in either of the two commandlines above, use the --num-alignments options, for example mimic 100 alignments you would use the command line:
+
+iqtree -s HGT_clade.nolong.cds.aln --alisim mimicked_MSA --num-alignments 100
+
+For more information on using AliSim, please visit: www.iqtree.org/doc/AliSim
+
+TIME STAMP
+----------
+
+Date and time: Mon Feb  3 09:46:11 2025
+Total CPU time used: 50.172231 seconds (0h:0m:50s)
+Total wall-clock time used: 6.713466355 seconds (0h:0m:6s)
+

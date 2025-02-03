@@ -1,0 +1,164 @@
+#nexus
+
+BEGIN Taxa;
+DIMENSIONS ntax=32;
+TAXLABELS
+[1] 'Synaphobranchus_kaupii_mrna_SKAU_T00116860'
+[2] 'Conger_conger_rna_XM_061232904_1'
+[3] 'Anguilla_anguilla_rna_XM_035403412_1'
+[4] 'Conger_conger_rna_XM_061230613_1'
+[5] 'Albula_glossodonta_mRNA15989'
+[6] 'Anguilla_anguilla_rna_XM_035407034_1'
+[7] 'Aldrovandia_affinis_mrna_AAFF_T00102350'
+[8] 'Anguilla_anguilla_rna_XM_035407033_1'
+[9] 'Synaphobranchus_kaupii_mrna_SKAU_T00116790'
+[10] 'Synaphobranchus_kaupii_mrna_SKAU_T00116900'
+[11] 'Albula_goreensis_AGOR_T00122240'
+[12] 'Synaphobranchus_kaupii_mrna_SKAU_T00116800'
+[13] 'Megalops_cyprinoides_rna_XM_036520634_1'
+[14] 'Conger_conger_rna_XM_061230612_1'
+[15] 'Albula_glossodonta_mRNA7121'
+[16] 'Synaphobranchus_kaupii_mrna_SKAU_T00116880'
+[17] 'Centroberyx_gerrardi_g23848_t1'
+[18] 'Albula_glossodonta_mRNA15990'
+[19] 'Synaphobranchus_kaupii_mrna_SKAU_T00116870'
+[20] 'Conger_conger_rna_XM_061230611_1'
+[21] 'Synaphobranchus_kaupii_mrna_SKAU_T00116770'
+[22] 'Aldrovandia_affinis_mrna_AAFF_T00314970'
+[23] 'Synaphobranchus_kaupii_mrna_SKAU_T00116910'
+[24] 'Conger_conger_rna_XM_061232361_1'
+[25] 'Synaphobranchus_kaupii_mrna_SKAU_T00116890'
+[26] 'Albula_glossodonta_mRNA15988'
+[27] 'Conger_conger_rna_XM_061230614_1'
+[28] 'Conger_conger_rna_XM_061233141_1'
+[29] 'Aldrovandia_affinis_mrna_AAFF_T00314980'
+[30] 'Synaphobranchus_kaupii_mrna_SKAU_T00116840'
+[31] 'Synaphobranchus_kaupii_mrna_SKAU_T00116810'
+[32] 'Conger_conger_rna_XM_061230610_1'
+;
+END; [Taxa]
+
+BEGIN Splits;
+DIMENSIONS ntax=32 nsplits=117;
+FORMAT labels=no weights=yes confidences=no intervals=no;
+MATRIX
+	100	 2,
+	100	 4,
+	100	 27,
+	100	 4 27,
+	100	 2 4 27,
+	100	 28,
+	95	 2 4 27 28,
+	100	 20,
+	100	 32,
+	6	 20 32,
+	92	 2 4 20 27 28 32,
+	100	 24,
+	99	 2 4 20 24 27 28 32,
+	100	 14,
+	100	 2 4 14 20 24 27 28 32,
+	100	 3,
+	100	 8,
+	100	 3 8,
+	100	 6,
+	100	 3 6 8,
+	63	 2 3 4 6 8 14 20 24 27 28 32,
+	100	 5,
+	100	 26,
+	98	 5 26,
+	100	 18,
+	96	 5 18 26,
+	100	 11,
+	100	 5 11 18 26,
+	100	 15,
+	52	 5 11 15 18 26,
+	100	 7,
+	100	 22,
+	100	 29,
+	100	 22 29,
+	100	 7 22 29,
+	40	 5 7 11 15 18 22 26 29,
+	100	 13,
+	100	 17,
+	100	 13 17,
+	100	 5 7 11 13 15 17 18 22 26 29,
+	100	 1 9 10 12 16 19 21 23 25 30 31,
+	100	 9,
+	100	 21,
+	100	 9 21,
+	100	 12,
+	96	 9 12 21,
+	96	 1 10 16 19 23 25 30 31,
+	100	 31,
+	17	 1 10 16 19 23 25 30,
+	100	 23,
+	100	 25,
+	100	 23 25,
+	2	 1 10 16 19 30,
+	100	 19,
+	72	 1 10 16 30,
+	100	 30,
+	98	 1 10 16,
+	100	 10,
+	100	 16,
+	100	 10 16,
+	100	 1,
+	91	 2 4 20 27 28,
+	35	 5 11 13 17 18 26,
+	45	 5 7 11 13 17 18 22 26 29,
+	10	 1 3 6 8 9 10 12 16 19 21 23 25 30 31,
+	77	 19 23 25,
+	65	 19 23 25 31,
+	19	 19 30,
+	20	 19 23 25 30,
+	2	 1 10 16 31,
+	1	 1 19 23 25 30 31,
+	21	 19 23 25 30 31,
+	27	 3 5 6 7 8 11 13 15 17 18 22 26 29,
+	10	 5 7 11 18 22 26 29,
+	8	 24 32,
+	12	 7 13 17 22 29,
+	0	 7 13 17,
+	2	 19 31,
+	2	 1 9 10 12 16 21 30,
+	4	 11 18,
+	1	 7 15 22 29,
+	1	 13 15 17,
+	0	 5 11 18,
+	1	 12 19 23 25 31,
+	1	 1 9 10 16 21 30,
+	1	 9 21 30,
+	3	 2 4 27 28 32,
+	1	 9 12 19 21 23 25 31,
+	5	 5 11 13 15 17 18 26,
+	5	 2 4 20 27,
+	1	 23 25 30,
+	1	 2 4 24 27 28 32,
+	2	 1 30,
+	2	 1 9 10 16 19 21 23 25 30 31,
+	0	 23 25 31,
+	0	 1 10 16 19 30 31,
+	0	 13 17 22 29,
+	1	 9 12 19 21 23 25 30 31,
+	0	 10 16 30,
+	0	 1 9 12 19 21 23 25 30 31,
+	0	 18 26,
+	0	 7 13 15 17 22 29,
+	0	 20 28,
+	1	 14 24,
+	0	 1 10 16 19 23 25 31,
+	0	 1 9 10 12 16 21,
+	0	 1 10 12 16 19 23 25 30 31,
+	0	 2 20,
+	1	 5 18,
+	0	 5 11 18 22 26 29,
+	0	 9 12 21 30,
+	0	 2 4 14 20 27 28 32,
+	0	 5 7 11 15 18 26,
+	0	 3 5 7 8 11 13 15 17 18 22 26 29,
+	0	 2 4 20 24 27 28,
+	0	 9 12 21 31,
+	0	 1 9 10 16 19 21 23 25 30,
+;
+END; [Splits]
+

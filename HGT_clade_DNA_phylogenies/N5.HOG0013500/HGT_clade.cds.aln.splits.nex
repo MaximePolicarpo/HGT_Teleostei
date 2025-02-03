@@ -1,0 +1,68 @@
+#nexus
+
+BEGIN Taxa;
+DIMENSIONS ntax=13;
+TAXLABELS
+[1] 'Clupea_harengus_rna_XM_042708011_1'
+[2] 'Clupea_harengus_rna_XM_042705999_1'
+[3] 'Clupea_harengus_rna_XM_031568919_1'
+[4] 'Sardina_pilchardus_rna_XM_062549765_1'
+[5] 'Sardina_pilchardus_rna_XM_062549788_1'
+[6] 'Thalassophryne_amazonica_rna_XM_034166331_1'
+[7] 'Clupea_harengus_rna_XM_042707968_1'
+[8] 'Clupea_harengus_rna_XM_042706001_1'
+[9] 'Scleropages_formosus_rna_XM_029259819_1'
+[10] 'Sardina_pilchardus_rna_XM_062549915_1'
+[11] 'Scleropages_formosus_rna_XM_018734537_1'
+[12] 'Thalassophryne_amazonica_rna_XM_034167571_1'
+[13] 'Clupea_harengus_rna_XM_031568920_2'
+;
+END; [Taxa]
+
+BEGIN Splits;
+DIMENSIONS ntax=13 nsplits=40;
+FORMAT labels=no weights=yes confidences=no intervals=no;
+MATRIX
+	100	 2,
+	100	 13,
+	21	 2 13,
+	100	 3,
+	100	 2 3 13,
+	100	 4,
+	100	 5,
+	15	 4 5,
+	100	 10,
+	100	 4 5 10,
+	100	 6,
+	100	 12,
+	100	 6 12,
+	100	 9,
+	100	 11,
+	100	 9 11,
+	39	 6 9 11 12,
+	97	 1 2 3 7 8 13,
+	100	 7,
+	54	 1 2 3 8 13,
+	100	 1 8,
+	100	 8,
+	100	 1,
+	69	 2 3,
+	8	 4 10,
+	2	 1 7 8,
+	77	 5 10,
+	26	 4 5 6 10 12,
+	2	 4 5 6 7 10 12,
+	1	 1 8 9 11,
+	0	 1 9 11,
+	11	 3 13,
+	35	 4 5 9 10 11,
+	43	 2 3 7 13,
+	0	 9 11 13,
+	0	 2 3 9 11 13,
+	0	 1 6 8 9 11 12,
+	0	 8 9 11,
+	0	 7 9 11,
+	0	 2 3 7 9 11 13,
+;
+END; [Splits]
+

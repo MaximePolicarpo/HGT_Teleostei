@@ -1206,6 +1206,47 @@ paste -d "," curr_labels curr_LB_values.txt curr_MLE_values.txt curr_UB_values.t
 
 
 
+##====================================================================================================================================
+##====================================================================================================================================
+#====================================================================================================================================
+##====================================================================================================================================
+##====================================================================================================================================
+##========================================== DNA phylogeny of the HGT clade ==========================================================
+##====================================================================================================================================
+##====================================================================================================================================
+#====================================================================================================================================
+##====================================================================================================================================
+##====================================================================================================================================
+
+
+grep ">" N5.HOG0029633.prot | grep "Hemibagrus_guttatus_male_29326\|Hemibagrus_guttatus_male_10065\|Hemibagrus_wyckioides_rna_XM_058406974_1\|Bagarius_yarrelli_mrna_Baya_14316\|Tachysurus_vachellii_rna_XM_060893493_1\|Tachysurus_vachellii_rna_XM_060889233_1\|Tachysurus_fulvidraco_rna_XM_027156892_2\|Neoarius_graeffei_rna_XM_060938711_1\|Neoarius_graeffei_rna_XM_060938710_1\|Neoarius_graeffei_rna_XM_060938712_1\|Neoarius_graeffei_rna_XM_060938709_1\|Pangasianodon_hypophthalmus_rna_XM_053238413_1\|Pangasianodon_hypophthalmus_rna_XM_034309567_2\|Clarias_gariepinus_rna_XM_053511172_1\|Clarias_gariepinus_rna_XM_053511169_1\|Clarias_magur_DAT39_016230_RA_mrna\|Silurus_asotus_mrna_C0J50_7541\|Silurus_meridionalis_rna_XM_046853148_1\|Paramormyrops_kingsleyae_rna_XM_023822687_1\|Ictalurus_furcatus_rna_XM_053640108_1\|Ictalurus_furcatus_rna_XM_053640521_1\|Ictalurus_furcatus_rna_XM_053640117_1\|Ictalurus_punctatus_rna_XM_053685012_1\|Ictalurus_punctatus_rna_XM_017482960_3"  | sed 's/>//g' > curr_ID.txt
+xargs samtools faidx N5.HOG0029633.prot  < curr_ID.txt > HGT_clade.prot
+xargs samtools faidx N5.HOG0029633.cds  < curr_ID.txt > HGT_clade.cds
+
+muscle5.1.linux_intel64 -align HGT_clade.prot -output HGT_clade.aln
+
+trimal -in HGT_clade.aln -gt 0.6 -cons 60 -backtrans HGT_clade.cds -out HGT_clade.cds.aln
+
+iqtree -s HGT_clade.cds.aln -st DNA -nt 8 -bb 1000 --redo
+
+
+
+
+
+
+
+grep ">" N5.HOG0046344.prot | grep "Triplophysa_tibetana_mrna_E1301_Tti014253\|Pangasianodon_hypophthalmus_rna_XM_026914616_3\|Paramormyrops_kingsleyae_rna_XM_023822671_1\|Ictalurus_furcatus_rna_XM_053640520_1\|Ictalurus_punctatus_rna_XM_017482962_3\|Ameiurus_melas_AMELA_T00109360"  | sed 's/>//g' > curr_ID.txt
+xargs samtools faidx N5.HOG0046344.prot  < curr_ID.txt > HGT_clade.sec.prot
+xargs samtools faidx N5.HOG0046344.cds  < curr_ID.txt > HGT_clade.sec.cds
+
+muscle5.1.linux_intel64 -align HGT_clade.sec.prot -output HGT_clade.sec.aln
+
+trimal -in HGT_clade.sec.aln -gt 0.6 -cons 60 -backtrans HGT_clade.sec.cds -out HGT_clade.sec.cds.aln
+
+iqtree -s HGT_clade.sec.cds.aln -st DNA -nt 8 -bb 1000 --redo
+
+
+
 
 
 

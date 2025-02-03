@@ -1,0 +1,280 @@
+IQ-TREE 2.3.6 built Aug  4 2024
+
+Input file name: HGT_clade.cds.aln
+Type of analysis: ModelFinder + tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 168777
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Bui Quang Minh, Heiko A. Schmidt, Olga Chernomor, Dominik Schrempf,
+Michael D. Woodhams, Arndt von Haeseler, and Robert Lanfear (2020)
+IQ-TREE 2: New models and efficient methods for phylogenetic inference
+in the genomic era. Mol. Biol. Evol., in press.
+https://doi.org/10.1093/molbev/msaa015
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2018) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol. Biol. Evol., 35:518–522.
+https://doi.org/10.1093/molbev/msx281
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 19 sequences with 3318 nucleotide sites
+Number of constant sites: 1033 (= 31.1332% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 1033 (= 31.1332% of all sites)
+Number of parsimony informative sites: 1590
+Number of distinct site patterns: 1713
+
+ModelFinder
+-----------
+
+Best-fit model according to BIC: TPM3u+F+G4
+
+List of models sorted by BIC scores: 
+
+Model                  LogL         AIC      w-AIC        AICc     w-AICc         BIC      w-BIC
+TPM3u+F+G4       -20755.455   41592.911 +   0.0785   41593.962 +   0.0885   41843.302 +    0.918
+TIM3+F+G4        -20754.203   41592.405 +    0.101   41593.508 +    0.111   41848.904 +   0.0558
+TPM3u+F+I+G4     -20755.081   41594.163 -    0.042   41595.266 -   0.0461   41850.662 -   0.0232
+TIM3+F+I+G4      -20753.826   41593.653 +   0.0541   41594.809 +    0.058   41856.259 -  0.00141
+TVM+F+G4         -20754.397   41594.793 -   0.0306   41595.949 -   0.0328   41857.399 - 0.000797
+HKY+F+G4         -20766.670   41613.340 - 2.87e-06   41614.340 - 3.33e-06   41857.624 - 0.000713
+GTR+F+G4         -20753.166   41594.332 -   0.0385   41595.542 -   0.0402   41863.045 - 4.74e-05
+TN+F+G4          -20765.466   41612.932 - 3.52e-06   41613.983 - 3.98e-06   41863.324 - 4.12e-05
+HKY+F+I+G4       -20765.886   41613.771 - 2.32e-06   41614.823 - 2.61e-06   41864.163 - 2.71e-05
+K3Pu+F+G4        -20766.528   41615.056 - 1.22e-06   41616.108 - 1.37e-06   41865.448 - 1.43e-05
+TPM2u+F+G4       -20766.578   41615.157 - 1.16e-06   41616.208 - 1.31e-06   41865.549 - 1.36e-05
+TVM+F+I+G4       -20754.459   41596.917 -   0.0106   41598.127 -    0.011   41865.630 -  1.3e-05
+TN+F+I+G4        -20764.487   41612.974 - 3.45e-06   41614.077 - 3.79e-06   41869.473 - 1.91e-06
+TIM+F+G4         -20765.320   41614.641 -  1.5e-06   41615.744 - 1.65e-06   41871.140 - 8.28e-07
+TIM2+F+G4        -20765.364   41614.729 - 1.44e-06   41615.832 - 1.58e-06   41871.228 - 7.92e-07
+GTR+F+I+G4       -20753.452   41596.903 -   0.0107   41598.169 -   0.0108   41871.724 - 6.18e-07
+K3Pu+F+I+G4      -20765.777   41615.554 -  9.5e-07   41616.656 - 1.04e-06   41872.053 - 5.25e-07
+TPM2u+F+I+G4     -20765.853   41615.706 - 8.81e-07   41616.809 - 9.68e-07   41872.205 - 4.86e-07
+GTR+F+R3         -20747.572   41589.145 +    0.516   41590.524 +    0.494   41876.179 - 6.66e-08
+TIM+F+I+G4       -20764.427   41614.854 - 1.35e-06   41616.009 - 1.44e-06   41877.460 - 3.51e-08
+TIM2+F+I+G4      -20764.522   41615.044 - 1.23e-06   41616.199 - 1.31e-06   41877.650 - 3.19e-08
+GTR+F+I+R2       -20752.904   41597.809 -  0.00678   41599.130 -  0.00668   41878.736 - 1.86e-08
+GTR+F+I+R3       -20749.935   41595.870 -   0.0179   41597.308 -   0.0166   41889.011 - 1.09e-10
+GTR+F+R2         -20762.908   41615.816 - 8.33e-07   41617.082 - 8.45e-07   41890.637 - 4.83e-11
+GTR+F+R4         -20747.278   41592.557 +   0.0937   41594.056 +   0.0845   41891.805 - 2.69e-11
+GTR+F+I          -20824.541   41737.083 - 3.87e-33   41738.293 - 4.04e-33   42005.796 - 4.76e-36
+SYM+G4           -20840.252   41762.504 - 1.17e-38   41763.556 - 1.32e-38   42012.896 - 1.37e-37
+TIM2e+G4         -20848.822   41775.644 - 1.64e-41   41776.596 - 1.94e-41   42013.822 - 8.61e-38
+TVMe+G4          -20845.120   41770.241 - 2.44e-40   41771.242 - 2.83e-40   42014.525 - 6.06e-38
+TPM2+G4          -20853.709   41783.417 - 3.36e-43   41784.321 - 4.08e-43   42015.487 - 3.74e-38
+TIM3e+G4         -20851.153   41780.307 - 1.59e-42   41781.258 - 1.89e-42   42018.484 - 8.37e-39
+TPM3+G4          -20855.801   41787.601 - 4.15e-44   41788.505 - 5.04e-44   42019.672 - 4.62e-39
+TIM2e+I+G4       -20849.004   41778.009 - 5.02e-42   41779.010 - 5.81e-42   42022.293 - 1.25e-39
+TPM2+I+G4        -20853.271   41784.542 - 1.92e-43   41785.494 - 2.27e-43   42022.719 - 1.01e-39
+SYM+I+G4         -20841.265   41766.529 - 1.56e-39   41767.632 - 1.72e-39   42023.028 - 8.63e-40
+TVMe+I+G4        -20845.372   41772.745 - 6.98e-41   41773.796 - 7.88e-41   42023.137 - 8.17e-40
+TNe+G4           -20858.677   41793.354 - 2.34e-45   41794.258 - 2.84e-45   42025.424 -  2.6e-40
+K2P+G4           -20863.346   41800.692 - 5.96e-47   41801.550 - 7.41e-47   42026.656 - 1.41e-40
+TPM3+I+G4        -20855.516   41789.033 - 2.03e-44   41789.985 - 2.41e-44   42027.211 - 1.07e-40
+TIM3e+I+G4       -20851.544   41783.087 - 3.97e-43   41784.088 - 4.59e-43   42027.372 - 9.83e-41
+TIMe+G4          -20858.405   41794.810 - 1.13e-45   41795.762 - 1.34e-45   42032.988 - 5.93e-42
+TNe+I+G4         -20858.478   41794.956 - 1.05e-45   41795.908 - 1.24e-45   42033.134 - 5.51e-42
+K2P+I+G4         -20862.721   41801.442 -  4.1e-47   41802.346 - 4.98e-47   42033.513 - 4.56e-42
+K3P+G4           -20863.070   41802.141 - 2.89e-47   41803.045 - 3.51e-47   42034.211 - 3.22e-42
+TIMe+I+G4        -20858.367   41796.733 - 4.32e-46   41797.734 - 4.99e-46   42041.018 - 1.07e-43
+K3P+I+G4         -20862.490   41802.979 -  1.9e-47   41803.931 - 2.25e-47   42041.157 - 9.98e-44
+F81+F+G4         -20899.616   41877.232 - 1.43e-63   41878.184 - 1.69e-63   42115.410 - 7.51e-60
+F81+F+I+G4       -20898.265   41876.529 - 2.03e-63   41877.530 - 2.35e-63   42120.814 - 5.03e-61
+JC+G4            -21001.399   42074.798 - 1.8e-106   42075.610 - 2.28e-106   42294.654 - 8.97e-99
+JC+I+G4          -21000.484   42074.969 - 1.65e-106   42075.826 - 2.05e-106   42300.932 - 3.89e-100
+GTR+F            -21015.118   42116.236 - 1.8e-115   42117.392 - 1.93e-115   42378.842 - 4.7e-117
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: TPM3u+F+G4
+
+Rate parameter R:
+
+  A-C: 1.3203
+  A-G: 2.1917
+  A-T: 1.0000
+  C-G: 1.3203
+  C-T: 2.1917
+  G-T: 1.0000
+
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.3223
+  pi(C) = 0.2152
+  pi(G) = 0.2342
+  pi(T) = 0.2284
+
+Rate matrix Q:
+
+  A   -0.9186    0.2544    0.4596    0.2045
+  C    0.3811    -1.106    0.2769    0.4483
+  G    0.6326    0.2544    -1.092    0.2045
+  T    0.2887    0.4224    0.2097   -0.9207
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.204
+
+ Category  Relative_rate  Proportion
+  1         0.1758         0.25
+  2         0.5305         0.25
+  3         1.027          0.25
+  4         2.267          0.25
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -20755.4545 (s.e. 236.8023)
+Unconstrained log-likelihood (without tree): -22229.3459
+Number of free parameters (#branches + #model parameters): 41
+Akaike information criterion (AIC) score: 41592.9089
+Corrected Akaike information criterion (AICc) score: 41593.9602
+Bayesian information criterion (BIC) score: 41843.3007
+
+Total tree length (sum of branch lengths): 2.9997
+Sum of internal branch lengths: 1.4962 (49.8773% of tree length)
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Alosa_alosa_rna_XM_048250590_1' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++--Alosa_alosa_rna_XM_048250590_1
+|
+|                  +-------Clupea_harengus_rna_XM_042704194_1
+|               +--| (75)
+|               |  |            +--Caranx_melampygus_mRNA27263
+|               |  |     +------| (100)
+|               |  |     |      +--Caranx_melampygus_mRNA11584
+|               |  |  +--| (93)
+|               |  |  |  +---Seriola_lalandi_dorsalis_rna_XM_023399112_1
+|               |  +--| (100)
+|               |     |            +--Lates_calcarifer_rna_XM_018688510_2
+|               |     |         +--| (100)
+|               |     |         |  +--Lates_calcarifer_rna_XM_018686387_2
+|               |     |  +------| (100)
+|               |     |  |      +--Lates_japonicus_gene_AKAME5_002034700
+|               |     +--| (81)
+|               |        +------------Caranx_melampygus_mRNA25461
+|            +--| (100)
+|            |  |             +----------Engraulis_encrasicolus_rna_XM_063193635_1
+|            |  |          +--| (82)
+|            |  |          |  +---------Engraulis_encrasicolus_rna_XM_063194025_1
+|            |  +----------| (100)
+|            |             |                              +---Engraulis_encrasicolus_rna_XM_063193637_1
+|            |             +------------------------------| (100)
+|            |                                            +---Engraulis_encrasicolus_rna_XM_063193640_1
+|         +--| (99)
+|         |  +------Alosa_alosa_rna_XM_048239489_1
+|      +--| (53)
+|      |  +------Sardina_pilchardus_rna_XM_062523290_1
+|   +--| (60)
+|   |  +-----------Sardina_pilchardus_rna_XM_062523630_1
++---| (100)
+|   |         +--Alosa_sapidissima_rna_XM_042093290_1
+|   +---------| (100)
+|             +--Alosa_alosa_rna_XM_048256059_1
+|
++--Alosa_sapidissima_rna_XM_042103484_1
+
+Tree in newick format:
+
+(Alosa_alosa_rna_XM_048250590_1:0.0066699588,((((((Clupea_harengus_rna_XM_042704194_1:0.1447097831,(((Caranx_melampygus_mRNA27263:0.0255585894,Caranx_melampygus_mRNA11584:0.0259450179)100:0.1278067672,Seriola_lalandi_dorsalis_rna_XM_023399112_1:0.0712536264)93:0.0318378019,(((Lates_calcarifer_rna_XM_018688510_2:0.0071582820,Lates_calcarifer_rna_XM_018686387_2:0.0077786593)100:0.0218629956,Lates_japonicus_gene_AKAME5_002034700:0.0176138536)100:0.1162960293,Caranx_melampygus_mRNA25461:0.2237232284)81:0.0246090657)100:0.0617720864)75:0.0269900864,((Engraulis_encrasicolus_rna_XM_063193635_1:0.1904816605,Engraulis_encrasicolus_rna_XM_063194025_1:0.1693132892)82:0.0320181122,(Engraulis_encrasicolus_rna_XM_063193637_1:0.0775446254,Engraulis_encrasicolus_rna_XM_063193640_1:0.0687422088)100:0.5161169452)100:0.1911006636)100:0.0533703891,Alosa_alosa_rna_XM_048239489_1:0.1157895080)99:0.0255279946,Sardina_pilchardus_rna_XM_062523290_1:0.1228278206)53:0.0240102117,Sardina_pilchardus_rna_XM_062523630_1:0.2085579009)60:0.0142300776,(Alosa_sapidissima_rna_XM_042093290_1:0.0043602304,Alosa_alosa_rna_XM_048256059_1:0.0032331955)100:0.1616765243)100:0.0669410837,Alosa_sapidissima_rna_XM_042103484_1:0.0122688896);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -20755.454473
+Robinson-Foulds distance between ML tree and consensus tree: 0
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++--Alosa_alosa_rna_XM_048250590_1
+|
+|                  +-------Clupea_harengus_rna_XM_042704194_1
+|               +--| (75)
+|               |  |            +--Caranx_melampygus_mRNA27263
+|               |  |     +------| (100)
+|               |  |     |      +--Caranx_melampygus_mRNA11584
+|               |  |  +--| (93)
+|               |  |  |  +---Seriola_lalandi_dorsalis_rna_XM_023399112_1
+|               |  +--| (100)
+|               |     |            +--Lates_calcarifer_rna_XM_018688510_2
+|               |     |         +--| (100)
+|               |     |         |  +--Lates_calcarifer_rna_XM_018686387_2
+|               |     |  +------| (100)
+|               |     |  |      +--Lates_japonicus_gene_AKAME5_002034700
+|               |     +--| (81)
+|               |        +------------Caranx_melampygus_mRNA25461
+|            +--| (100)
+|            |  |             +----------Engraulis_encrasicolus_rna_XM_063193635_1
+|            |  |          +--| (82)
+|            |  |          |  +---------Engraulis_encrasicolus_rna_XM_063194025_1
+|            |  +----------| (100)
+|            |             |                              +---Engraulis_encrasicolus_rna_XM_063193637_1
+|            |             +------------------------------| (100)
+|            |                                            +---Engraulis_encrasicolus_rna_XM_063193640_1
+|         +--| (99)
+|         |  +------Alosa_alosa_rna_XM_048239489_1
+|      +--| (53)
+|      |  +------Sardina_pilchardus_rna_XM_062523290_1
+|   +--| (60)
+|   |  +-----------Sardina_pilchardus_rna_XM_062523630_1
++---| (100)
+|   |         +--Alosa_sapidissima_rna_XM_042093290_1
+|   +---------| (100)
+|             +--Alosa_alosa_rna_XM_048256059_1
+|
++--Alosa_sapidissima_rna_XM_042103484_1
+
+
+Consensus tree in newick format: 
+
+(Alosa_alosa_rna_XM_048250590_1:0.0066702517,((((((Clupea_harengus_rna_XM_042704194_1:0.1447427949,(((Caranx_melampygus_mRNA27263:0.0255638943,Caranx_melampygus_mRNA11584:0.0259501412)100:0.1278486466,Seriola_lalandi_dorsalis_rna_XM_023399112_1:0.0712728222)93:0.0318187007,(((Lates_calcarifer_rna_XM_018688510_2:0.0071592689,Lates_calcarifer_rna_XM_018686387_2:0.0077806664)100:0.0218573211,Lates_japonicus_gene_AKAME5_002034700:0.0176202188)100:0.1163913687,Caranx_melampygus_mRNA25461:0.2237913228)81:0.0245880257)100:0.0617678656)75:0.0269895040,((Engraulis_encrasicolus_rna_XM_063193635_1:0.1905025329,Engraulis_encrasicolus_rna_XM_063194025_1:0.1693419827)82:0.0320001542,(Engraulis_encrasicolus_rna_XM_063193637_1:0.0775390193,Engraulis_encrasicolus_rna_XM_063193640_1:0.0687563670)100:0.5161934405)100:0.1911405699)100:0.0533656284,Alosa_alosa_rna_XM_048239489_1:0.1158034402)99:0.0255262258,Sardina_pilchardus_rna_XM_062523290_1:0.1228392049)53:0.0240094643,Sardina_pilchardus_rna_XM_062523630_1:0.2085774842)60:0.0142017136,(Alosa_sapidissima_rna_XM_042093290_1:0.0043605547,Alosa_alosa_rna_XM_048256059_1:0.0032343328)100:0.1617010918)100:0.0669512660,Alosa_sapidissima_rna_XM_042103484_1:0.0122701811);
+
+ALISIM COMMAND
+--------------
+To simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis, you can use the following command:
+
+--alisim simulated_MSA -t HGT_clade.cds.aln.treefile -m "TPM3u{1.32035,2.19169}+F{0.322294,0.215171,0.234165,0.22837}+G4{1.20413}" --length 3318
+
+To mimic the alignment used to produce this analysis, i.e. simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis *and* copying the same gap positions as the original alignment, you can use the following command:
+
+iqtree -s HGT_clade.cds.aln --alisim mimicked_MSA
+
+To simulate any number of alignments in either of the two commandlines above, use the --num-alignments options, for example mimic 100 alignments you would use the command line:
+
+iqtree -s HGT_clade.cds.aln --alisim mimicked_MSA --num-alignments 100
+
+For more information on using AliSim, please visit: www.iqtree.org/doc/AliSim
+
+TIME STAMP
+----------
+
+Date and time: Mon Feb  3 08:31:52 2025
+Total CPU time used: 62.940205 seconds (0h:1m:2s)
+Total wall-clock time used: 8.324681775 seconds (0h:0m:8s)
+

@@ -1821,6 +1821,29 @@ sbatch --qos=1week -c 6 --mem=10G -e error.relax.out -o slurm.relax.out --job-na
 
 
 
+##====================================================================================================================================
+##====================================================================================================================================
+#====================================================================================================================================
+##====================================================================================================================================
+##====================================================================================================================================
+##========================================== Remake a phylogeny with DNA ==============================================
+##====================================================================================================================================
+##====================================================================================================================================
+#====================================================================================================================================
+##====================================================================================================================================
+##====================================================================================================================================
+
+
+grep ">" N5.HOG0019111.prot | grep "Scomber_scombrus_rna_XM_062436683_1\|Scomber_scombrus_rna_XM_062436670_1\|Alosa_sapidissima_rna_XM_042075309_1\|Scomber_japonicus_rna_XM_053325408_1\|Alosa_alosa_rna_XM_048231371_1\|Sardina_pilchardus_rna_XM_062535392_1\|Scomber_japonicus_rna_XM_053325433_1\|Scomber_japonicus_rna_XM_053325414_1\|Scomber_japonicus_rna_XM_053337026_1\|Thunnus_maccoyii_rna_XM_042435142_1\|Thunnus_maccoyii_rna_XM_042435120_1\|Thunnus_maccoyii_rna_XM_042435094_1\|Scomber_japonicus_rna_XM_053326797_1\|Clupea_harengus_rna_XM_031577666_1\|Hypomesus_transpacificus_rna_XM_047049897_1\|Clupea_harengus_rna_XM_031578285_2\|Clupea_harengus_rna_XM_031577667_2\|Lucifuga_dentata_LDENT00156160_mrna\|Myripristis_murdjan_rna_XM_030046755_1\|Thalassophryne_amazonica_rna_XM_034187378_1\|Centroberyx_gerrardi_g36551_t1\|Lampris_incognitus_rna_XM_056280341_1\|Lampris_incognitus_rna_XM_056279878_1\|Lampris_incognitus_rna_XM_056280337_1\|Salmo_salar_rna_XM_014131548_2\|Coregonus_sp_balchen_gene_CSTEINMANNI_LOCUS3751678\|Oncorhynchus_tshawytscha_rna_XM_042310653_1\|Osmerus_eperlanus_rna_XM_062448472_1\|Borostomias_antarcticus_g6122_t1\|Aplochiton_taeniatus_g15045_t1\|Esox_lucius_rna_XM_010898588_4\|Dallia_pectoralis_mrna_DPEC_T00177230"  | sed 's/>//g' > curr_ID.txt
+xargs samtools faidx N5.HOG0019111.prot  < curr_ID.txt > HGT_clade.prot
+xargs samtools faidx N5.HOG0019111.cds  < curr_ID.txt > HGT_clade.cds
+
+muscle5.1.linux_intel64 -align HGT_clade.prot -output HGT_clade.aln
+
+trimal -in HGT_clade.aln -backtrans HGT_clade.cds -out HGT_clade.cds.aln -gt 0.6 -cons 60
+
+iqtree -s HGT_clade.cds.aln -st DNA -nt 8 -bb 1000 --redo
+
 
 
 

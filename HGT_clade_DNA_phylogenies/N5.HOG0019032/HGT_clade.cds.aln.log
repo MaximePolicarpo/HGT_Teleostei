@@ -1,0 +1,203 @@
+IQ-TREE multicore version 2.3.6 for Linux x86 64-bit built Aug  4 2024
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor, Heiko Schmidt,
+Dominik Schrempf, Michael Woodhams, Ly Trong Nhan, Thomas Wong
+
+Host:    sca38 (AVX2, FMA3, 503 GB RAM)
+Command: iqtree -s HGT_clade.cds.aln -st DNA -nt 8 -bb 1000 --redo
+Seed:    168588 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon Feb  3 09:01:46 2025
+Kernel:  AVX+FMA - 8 threads (8 CPU cores detected)
+
+Reading alignment file HGT_clade.cds.aln ... Fasta format detected
+Reading fasta file: done in 0.00188926 secs using 99.88% CPU
+Alignment most likely contains DNA/RNA sequences
+Alignment has 30 sequences with 2148 columns, 1472 distinct patterns
+1093 parsimony-informative, 363 singleton sites, 692 constant sites
+                                                      Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 5.58e-05 secs using 96.77% CPU
+   1  Chanos_chanos_rna_XM_030792951_1                       23.74%    passed     23.20%
+   2  Misgurnus_anguillicaudatus_rna_XM_055220629_1          17.88%    passed     48.42%
+   3  Carassius_auratus_rna_XM_026232153_1                   20.11%    passed     93.65%
+   4  Neoarius_graeffei_rna_XM_060938829_1                   40.36%    passed     17.07%
+   5  Chanos_chanos_rna_XM_030788612_1                       24.58%    passed     18.04%
+   6  Triplophysa_dalaica_rna_XM_056741343_1                 22.35%    passed     38.43%
+   7  Triplophysa_tibetana_mrna_E1301_Tti016734              56.28%    passed     30.68%
+   8  Chanos_chanos_rna_XM_030788611_1                       32.54%    passed     51.02%
+   9  Danio_rerio_rna_XM_021468209_1                         26.12%    passed     95.34%
+  10  Myxocyprinus_asiaticus_rna_XM_051670420_1              14.80%    passed     33.57%
+  11  Sinocyclocheilus_rhinocerous_rna_XM_016551681_1        20.11%    passed     58.97%
+  12  Pimephales_promelas_rna_XM_039678947_1                 72.77%    passed      9.34%
+  13  Rhinichthys_klamathensis_goyatoka_rna_XM_056264219_1   51.54%    passed     83.86%
+  14  Megalobrama_amblycephala_rna_XM_048202431_1            18.30%    passed     53.17%
+  15  Chanos_chanos_rna_XM_030788616_1                       30.59%    failed      4.07%
+  16  Carassius_gibelio_rna_XM_052532612_1                   20.25%    passed     96.46%
+  17  Megalobrama_amblycephala_rna_XM_048202428_1            10.06%    passed     72.09%
+  18  Sinocyclocheilus_anshuiensis_rna_XM_016444489_1        20.11%    passed     58.78%
+  19  Neoarius_graeffei_rna_XM_060938827_1                    9.78%    passed     41.99%
+  20  Sinocyclocheilus_anshuiensis_rna_XM_016492581_1        87.71%    passed     21.99%
+  21  Triplophysa_rosa_rna_XM_057353938_1                    19.69%    passed     94.25%
+  22  Xyrauchen_texanus_rna_XM_052092374_1                   17.74%    passed     59.01%
+  23  Chanos_chanos_rna_XM_030788615_1                       36.45%    passed     62.37%
+  24  Chanos_chanos_rna_XM_030788614_1                       23.74%    passed     25.32%
+  25  Sinocyclocheilus_grahami_rna_XM_016291191_1            20.11%    passed     70.91%
+  26  Danio_aesculapii_rna_XM_056480074_1                    21.09%    passed     94.86%
+  27  Carassius_carassius_rna_XM_059509322_1                 20.67%    passed     87.23%
+  28  Neoarius_graeffei_rna_XM_060939486_1                   22.35%    passed     42.53%
+  29  Anabarilius_grahami_mrna_DPX16_11507                   22.07%    passed     63.44%
+  30  Ctenopharyngodon_idella_rna_XM_051872162_1             26.26%    passed     34.13%
+WARNING: 4 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                                                  28.34%  1 sequences failed composition chi2 test (p-value<5%; df=3)
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.005 seconds
+Perform fast likelihood tree search using GTR+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -19860.239
+Optimal log-likelihood: -19860.212
+Rate parameters:  A-C: 1.45770  A-G: 2.88466  A-T: 1.12034  C-G: 1.37534  C-T: 3.02139  G-T: 1.00000
+Base frequencies:  A: 0.317  C: 0.197  G: 0.235  T: 0.251
+Proportion of invariable sites: 0.140
+Gamma shape alpha: 2.836
+Parameters optimization took 1 rounds (0.010 sec)
+Time for fast ML tree search: 0.097 seconds
+
+NOTE: ModelFinder requires 19 MB RAM!
+ModelFinder will test up to 484 DNA models (sample size: 2148 epsilon: 0.100) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  GTR+F         20191.344    65  40512.688    40516.809    40881.387
+  2  GTR+F+I       19924.435    66  39980.869    39985.119    40355.241
+  3  GTR+F+G4      19875.597    66  39883.195    39887.445    40257.566
+  4  GTR+F+I+G4    19860.191    67  39854.382    39858.763    40234.426
+  5  GTR+F+R2      19868.966    67  39871.933    39876.314    40251.976
+  6  GTR+F+R3      19860.164    69  39858.327    39862.976    40249.715
+  7  GTR+F+R4      19858.838    71  39859.676    39864.601    40262.409
+ 14  GTR+F+I+R2    19862.052    68  39860.103    39864.617    40245.819
+ 15  GTR+F+I+R3    19860.401    70  39860.802    39865.588    40257.863
+ 26  SYM+I+G4      19909.354    64  39946.707    39950.701    40309.734
+ 48  TVM+F+I+G4    19860.492    66  39852.984    39857.234    40227.355
+ 70  TVMe+I+G4     19915.827    63  39957.655    39961.524    40315.009
+ 92  TIM3+F+I+G4   19861.303    65  39852.605    39856.726    40221.304
+114  TIM3e+I+G4    19921.261    62  39966.522    39970.268    40318.204
+136  TIM2+F+I+G4   19872.458    65  39874.916    39879.037    40243.615
+158  TIM2e+I+G4    19910.727    62  39945.453    39949.200    40297.135
+180  TIM+F+I+G4    19873.449    65  39876.898    39881.019    40245.597
+202  TIMe+I+G4     19922.495    62  39968.989    39972.736    40320.671
+224  TPM3u+F+I+G4  19861.610    64  39851.220    39855.214    40214.247
+246  TPM3+I+G4     19927.627    61  39977.254    39980.880    40323.264
+268  TPM2u+F+I+G4  19872.783    64  39873.566    39877.560    40236.592
+290  TPM2+I+G4     19917.114    61  39956.228    39959.854    40302.238
+312  K3Pu+F+I+G4   19873.746    64  39875.492    39879.486    40238.519
+334  K3P+I+G4      19928.747    61  39979.495    39983.121    40325.505
+356  TN+F+I+G4     19873.493    64  39874.986    39878.980    40238.013
+378  TNe+I+G4      19922.577    61  39967.155    39970.781    40313.164
+400  HKY+F+I+G4    19873.800    63  39873.601    39877.470    40230.955
+422  K2P+I+G4      19928.825    60  39977.651    39981.158    40317.988
+444  F81+F+I+G4    20152.131    62  40428.263    40432.009    40779.945
+466  JC+I+G4       20214.373    59  40546.747    40550.137    40881.412
+Akaike Information Criterion:           TPM3u+F+I+G4
+Corrected Akaike Information Criterion: TPM3u+F+I+G4
+Bayesian Information Criterion:         TPM3u+F+I+G4
+Best-fit model: TPM3u+F+I+G4 chosen according to BIC
+
+All model information printed to HGT_clade.cds.aln.model.gz
+CPU time for ModelFinder: 10.507 seconds (0h:0m:10s)
+Wall-clock time for ModelFinder: 1.325 seconds (0h:0m:1s)
+Generating 1000 samples for ultrafast bootstrap (seed: 168588)...
+
+NOTE: 11 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+Thoroughly optimizing +I+G parameters from 10 start values...
+Init pinv, alpha: 0.000, 2.884 / Estimate: 0.000, 1.337 / LogL: -19877.239
+Init pinv, alpha: 0.036, 2.884 / Estimate: 0.123, 2.529 / LogL: -19861.859
+Init pinv, alpha: 0.072, 2.884 / Estimate: 0.124, 2.542 / LogL: -19861.827
+Init pinv, alpha: 0.107, 2.884 / Estimate: 0.123, 2.531 / LogL: -19861.852
+Init pinv, alpha: 0.143, 2.884 / Estimate: 0.138, 2.807 / LogL: -19861.630
+Init pinv, alpha: 0.179, 2.884 / Estimate: 0.143, 2.908 / LogL: -19861.734
+Init pinv, alpha: 0.215, 2.884 / Estimate: 0.142, 2.890 / LogL: -19861.708
+Init pinv, alpha: 0.251, 2.884 / Estimate: 0.144, 2.913 / LogL: -19861.742
+Init pinv, alpha: 0.286, 2.884 / Estimate: 0.142, 2.890 / LogL: -19861.709
+Init pinv, alpha: 0.322, 2.884 / Estimate: 0.143, 2.898 / LogL: -19861.719
+Optimal pinv,alpha: 0.138, 2.807 / LogL: -19861.630
+
+Parameters optimization took 0.874 sec
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 0.000745563 secs using 2307% CPU
+Computing ML distances took 0.000903 sec (of wall-clock time) 0.017312 sec (of CPU time)
+Setting up auxiliary I and S matrices: done in 0.000729373 secs using 155.1% CPU
+Computing RapidNJ tree took 0.023121 sec (of wall-clock time) 0.019241 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -19894.933
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 0.386 second
+Computing log-likelihood of 98 initial trees ... 0.411 seconds
+Current best score: -19861.630
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -19861.622
+Iteration 10 / LogL: -19862.155 / Time: 0h:0m:3s
+Iteration 20 / LogL: -19861.647 / Time: 0h:0m:4s
+Finish initializing candidate tree set (3)
+Current best tree score: -19861.622 / CPU time: 1.997
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -19863.953 / Time: 0h:0m:5s (0h:0m:9s left)
+Iteration 40 / LogL: -19863.803 / Time: 0h:0m:5s (0h:0m:7s left)
+Iteration 50 / LogL: -19864.430 / Time: 0h:0m:6s (0h:0m:5s left)
+Log-likelihood cutoff on original alignment: -19893.128
+Iteration 60 / LogL: -19862.529 / Time: 0h:0m:7s (0h:0m:4s left)
+Iteration 70 / LogL: -19864.943 / Time: 0h:0m:8s (0h:0m:3s left)
+Iteration 80 / LogL: -19865.853 / Time: 0h:0m:8s (0h:0m:2s left)
+Iteration 90 / LogL: -19863.825 / Time: 0h:0m:9s (0h:0m:1s left)
+Iteration 100 / LogL: -19864.020 / Time: 0h:0m:10s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -19893.494
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.998
+TREE SEARCH COMPLETED AFTER 102 ITERATIONS / Time: 0h:0m:10s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -19861.622
+Optimal log-likelihood: -19861.617
+Rate parameters:  A-C: 1.33061  A-G: 2.74979  A-T: 1.00000  C-G: 1.33061  C-T: 2.74979  G-T: 1.00000
+Base frequencies:  A: 0.317  C: 0.197  G: 0.235  T: 0.251
+Proportion of invariable sites: 0.137
+Gamma shape alpha: 2.784
+Parameters optimization took 1 rounds (0.009 sec)
+BEST SCORE FOUND : -19861.617
+Creating bootstrap support values...
+Split supports printed to NEXUS file HGT_clade.cds.aln.splits.nex
+Total tree length: 3.135
+
+Total number of iterations: 102
+CPU time used for tree search: 62.335 sec (0h:1m:2s)
+Wall-clock time used for tree search: 8.257 sec (0h:0m:8s)
+Total CPU time used: 80.439 sec (0h:1m:20s)
+Total wall-clock time used: 10.643 sec (0h:0m:10s)
+
+Computing bootstrap consensus tree...
+Reading input file HGT_clade.cds.aln.splits.nex...
+30 taxa and 94 splits.
+Consensus tree written to HGT_clade.cds.aln.contree
+Reading input trees file HGT_clade.cds.aln.contree
+Log-likelihood of consensus tree: -19861.617
+
+Analysis results written to: 
+  IQ-TREE report:                HGT_clade.cds.aln.iqtree
+  Maximum-likelihood tree:       HGT_clade.cds.aln.treefile
+  Likelihood distances:          HGT_clade.cds.aln.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          HGT_clade.cds.aln.splits.nex
+  Consensus tree:                HGT_clade.cds.aln.contree
+  Screen log file:               HGT_clade.cds.aln.log
+
+Date and Time: Mon Feb  3 09:01:56 2025
