@@ -929,7 +929,7 @@ paste -d "," curr_labels curr_LB_values.txt curr_MLE_values.txt curr_UB_values.t
 #====================================================================================================================================
 ##====================================================================================================================================
 ##====================================================================================================================================
-##========================================== Remake a phylogeny with full length proteins ==============================================
+##========================================== Remake a phylogeny of the HGT clade in DNA ==============================================
 ##====================================================================================================================================
 ##====================================================================================================================================
 #====================================================================================================================================
@@ -951,5 +951,37 @@ iqtree -s only_Clupea_Osmeriformes.cds.aln -st DNA -nt 8 -bb 1000 --redo
 
 
 
+
+
+##====================================================================================================================================
+##====================================================================================================================================
+#====================================================================================================================================
+##====================================================================================================================================
+##====================================================================================================================================
+##=================================== Extract micro-synteny scores between recipient species ==========================================
+##====================================================================================================================================
+##====================================================================================================================================
+#====================================================================================================================================
+##====================================================================================================================================
+##====================================================================================================================================
+
+cat N5.HOG0013514.clade_hgt.txt
+
+grep -B10 -A10 "XM_047045767" GFF3_N5_OGGs/Hypomesus_transpacificus.gff.simplified.sorted.OGG.prez.f145.clustered.tiret | sed 's/.*N5_HOG/N5.HOG/g' | sed 's/,.*//g' | grep "[A-Z]" | grep -v "N5.HOG0013514" > Hypomesus_transpacificus.synt.1.txt
+grep -B10 -A10 "XM_047045786" GFF3_N5_OGGs/Hypomesus_transpacificus.gff.simplified.sorted.OGG.prez.f145.clustered.tiret | sed 's/.*N5_HOG/N5.HOG/g' | sed 's/,.*//g' | grep "[A-Z]" | grep -v "N5.HOG0013514" > Hypomesus_transpacificus.synt.2.txt
+
+grep -B10 -A10 "XM_062468715" GFF3_N5_OGGs/Osmerus_eperlanus.gff.simplified.sorted.OGG.prez.f145.clustered.tiret | sed 's/.*N5_HOG/N5.HOG/g' | sed 's/,.*//g' | grep "[A-Z]" | grep -v "N5.HOG0013514"  > Osmerus_eperlanus.synt.1.txt
+grep -B10 -A10 "XM_062468701" GFF3_N5_OGGs/Osmerus_eperlanus.gff.simplified.sorted.OGG.prez.f145.clustered.tiret | sed 's/.*N5_HOG/N5.HOG/g' | sed 's/,.*//g' | grep "[A-Z]" | grep -v "N5.HOG0013514"  > Osmerus_eperlanus.synt.2.txt
+grep -B10 -A10 "XM_062468699" GFF3_N5_OGGs/Osmerus_eperlanus.gff.simplified.sorted.OGG.prez.f145.clustered.tiret | sed 's/.*N5_HOG/N5.HOG/g' | sed 's/,.*//g' | grep "[A-Z]" | grep -v "N5.HOG0013514"  > Osmerus_eperlanus.synt.3.txt
+
+
+comm -12 <(sort Hypomesus_transpacificus.synt.1.txt) <(sort Osmerus_eperlanus.synt.1.txt) | wc -l
+comm -12 <(sort Hypomesus_transpacificus.synt.2.txt) <(sort Osmerus_eperlanus.synt.1.txt) | wc -l
+
+comm -12 <(sort Hypomesus_transpacificus.synt.1.txt) <(sort Osmerus_eperlanus.synt.2.txt) | wc -l
+comm -12 <(sort Hypomesus_transpacificus.synt.2.txt) <(sort Osmerus_eperlanus.synt.2.txt) | wc -l
+
+comm -12 <(sort Hypomesus_transpacificus.synt.1.txt) <(sort Osmerus_eperlanus.synt.3.txt) | wc -l
+comm -12 <(sort Hypomesus_transpacificus.synt.2.txt) <(sort Osmerus_eperlanus.synt.3.txt) | wc -l
 
 

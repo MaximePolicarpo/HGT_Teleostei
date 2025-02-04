@@ -881,3 +881,33 @@ muscle5.1.linux_intel64 -align HGT_clade.prot -output HGT_clade.aln
 trimal -in HGT_clade.aln -gt 0.6 -cons 60 -backtrans HGT_clade.cds -out HGT_clade.cds.aln
 
 iqtree -s HGT_clade.cds.aln -st DNA -nt 8 -bb 1000 --redo
+
+
+
+
+##====================================================================================================================================
+##====================================================================================================================================
+#====================================================================================================================================
+##====================================================================================================================================
+##====================================================================================================================================
+##=================================== Extract micro-synteny scores between recipient species ==========================================
+##====================================================================================================================================
+##====================================================================================================================================
+#====================================================================================================================================
+##====================================================================================================================================
+##====================================================================================================================================
+
+cat N5.HOG0001647.clade_hgt.txt
+
+grep -B10 -A10 "XM_047032478" ~/Horizontal_transfer_project/BetweenActino_HGT/GFF3_N5_OGGs/Hypomesus_transpacificus.gff.simplified.sorted.OGG.prez.f145.clustered.tiret | sed 's/.*N5_HOG/N5.HOG/g' | sed 's/,.*//g' | grep "[A-Z]" | grep -v "N5.HOG0001647" > Hypomesus_transpacificus.synt.txt
+
+
+#location of the gene in Omserus : NC_085029.1:13566838-13567757 (manually found, not annotated). Closest gene = XM_062475511.1
+grep "NC_085029.1" ~/Horizontal_transfer_project/BetweenActino_HGT/GFF3_N5_OGGs/Osmerus_eperlanus.gff.simplified.sorted.OGG.prez | awk '$2 > 13446838 && $3 < 13687757'
+grep  -B10 -A10 "XM_062475511.1" ~/Horizontal_transfer_project/BetweenActino_HGT/GFF3_N5_OGGs/Osmerus_eperlanus.gff.simplified.sorted.OGG.prez.f145.clustered.tiret | sed 's/.*N5_HOG/N5.HOG/g' | sed 's/,.*//g' | grep "[A-Z]" | grep -v "N5.HOG0001647"   > Osmerus_eperlanus.synt.txt
+
+
+comm -12 <(sort Hypomesus_transpacificus.synt.txt) <(sort Osmerus_eperlanus.synt.txt) | wc -l
+
+
+

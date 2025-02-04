@@ -1235,3 +1235,37 @@ iqtree -s HGT_clade.cds.aln -st DNA -nt 8 -bb 1000 --redo
 
 
 
+
+
+##====================================================================================================================================
+##====================================================================================================================================
+#====================================================================================================================================
+##====================================================================================================================================
+##====================================================================================================================================
+##=================================== Extract micro-synteny scores between recipient species ==========================================
+##====================================================================================================================================
+##====================================================================================================================================
+#====================================================================================================================================
+##====================================================================================================================================
+##====================================================================================================================================
+
+cat N5.HOG0034670.clade_hgt.txt
+
+
+
+grep -B10 -A10 "XM_053236680" GFF3_N5_OGGs/Pangasianodon_hypophthalmus.gff.simplified.sorted.OGG.prez.f145.clustered.tiret | sed 's/.*N5_HOG/N5.HOG/g' | sed 's/,.*//g' | grep "[A-Z]" | grep -v "N5.HOG0034670" > Pangasianodon_hypophthalmus.synt.1.txt
+grep -B10 -A10 "XM_053237209" GFF3_N5_OGGs/Pangasianodon_hypophthalmus.gff.simplified.sorted.OGG.prez.f145.clustered.tiret | sed 's/.*N5_HOG/N5.HOG/g' | sed 's/,.*//g' | grep "[A-Z]" | grep -v "N5.HOG0034670" > Pangasianodon_hypophthalmus.synt.2.txt
+grep -B10 -A10 "XM_053236679" GFF3_N5_OGGs/Pangasianodon_hypophthalmus.gff.simplified.sorted.OGG.prez.f145.clustered.tiret | sed 's/.*N5_HOG/N5.HOG/g' | sed 's/,.*//g' | grep "[A-Z]" | grep -v "N5.HOG0034670" > Pangasianodon_hypophthalmus.synt.3.txt
+grep -B10 -A10 "XM_053237136" GFF3_N5_OGGs/Pangasianodon_hypophthalmus.gff.simplified.sorted.OGG.prez.f145.clustered.tiret | sed 's/.*N5_HOG/N5.HOG/g' | sed 's/,.*//g' | grep "[A-Z]" | grep -v "N5.HOG0034670" > Pangasianodon_hypophthalmus.synt.4.txt
+
+grep -B10 -A10 "T00258610" GFF3_N5_OGGs/Pangasius_djambal.gff.simplified.sorted.OGG.prez.f145.clustered.tiret | sed 's/.*N5_HOG/N5.HOG/g' | sed 's/,.*//g' | grep "[A-Z]" | grep -v "N5.HOG0034670"  > Pangasius_djambal.synt.1.txt
+
+
+comm -12 <(sort Pangasianodon_hypophthalmus.synt.1.txt) <(sort Pangasius_djambal.synt.1.txt) | wc -l
+comm -12 <(sort Pangasianodon_hypophthalmus.synt.2.txt) <(sort Pangasius_djambal.synt.1.txt) | wc -l
+comm -12 <(sort Pangasianodon_hypophthalmus.synt.3.txt) <(sort Pangasius_djambal.synt.1.txt) | wc -l
+comm -12 <(sort Pangasianodon_hypophthalmus.synt.4.txt) <(sort Pangasius_djambal.synt.1.txt) | wc -l
+
+
+
+

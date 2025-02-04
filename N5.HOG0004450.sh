@@ -938,6 +938,41 @@ iqtree -s HGT_clade.cds.aln -st DNA -nt 8 -bb 1000 --redo
 
 
 
+##====================================================================================================================================
+##====================================================================================================================================
+#====================================================================================================================================
+##====================================================================================================================================
+##====================================================================================================================================
+##=================================== Extract micro-synteny scores between recipient species ==========================================
+##====================================================================================================================================
+##====================================================================================================================================
+#====================================================================================================================================
+##====================================================================================================================================
+##====================================================================================================================================
+
+cat N5.HOG0004450.clade_hgt.txt
+
+
+
+
+grep -B10 -A10 "XM_018686387" GFF3_N5_OGGs/Lates_calcarifer.gff.simplified.sorted.OGG.prez.f145.clustered.tiret | sed 's/.*N5_HOG/N5.HOG/g' | sed 's/,.*//g' | grep "[A-Z]" | grep -v "N5.HOG0004450" > Lates_calcarifer.synt.1.txt
+grep -B10 -A10 "XM_018688510" GFF3_N5_OGGs/Lates_calcarifer.gff.simplified.sorted.OGG.prez.f145.clustered.tiret | sed 's/.*N5_HOG/N5.HOG/g' | sed 's/,.*//g' | grep "[A-Z]" | grep -v "N5.HOG0004450" > Lates_calcarifer.synt.2.txt
+
+grep -B10 -A10 "mRNA25461" GFF3_N5_OGGs/Caranx_melampygus.gff.simplified.sorted.OGG.prez.f145.clustered.tiret | sed 's/.*N5_HOG/N5.HOG/g' | sed 's/,.*//g' | grep "[A-Z]" | grep -v "N5.HOG0004450"  > Caranx_melampygus.synt.1.txt
+grep -B10 -A10 "mRNA11584" GFF3_N5_OGGs/Caranx_melampygus.gff.simplified.sorted.OGG.prez.f145.clustered.tiret | sed 's/.*N5_HOG/N5.HOG/g' | sed 's/,.*//g' | grep "[A-Z]" | grep -v "N5.HOG0004450"  > Caranx_melampygus.synt.2.txt
+grep -B10 -A10 "mRNA27263" GFF3_N5_OGGs/Caranx_melampygus.gff.simplified.sorted.OGG.prez.f145.clustered.tiret | sed 's/.*N5_HOG/N5.HOG/g' | sed 's/,.*//g' | grep "[A-Z]" | grep -v "N5.HOG0004450"  > Caranx_melampygus.synt.3.txt
+
+
+comm -12 <(sort Lates_calcarifer.synt.1.txt) <(sort Caranx_melampygus.synt.1.txt) | wc -l
+comm -12 <(sort Lates_calcarifer.synt.2.txt) <(sort Caranx_melampygus.synt.1.txt) | wc -l
+
+comm -12 <(sort Lates_calcarifer.synt.1.txt) <(sort Caranx_melampygus.synt.2.txt) | wc -l
+comm -12 <(sort Lates_calcarifer.synt.2.txt) <(sort Caranx_melampygus.synt.2.txt) | wc -l
+
+comm -12 <(sort Lates_calcarifer.synt.1.txt) <(sort Caranx_melampygus.synt.3.txt) | wc -l
+comm -12 <(sort Lates_calcarifer.synt.2.txt) <(sort Caranx_melampygus.synt.3.txt) | wc -l
+
+
 
 
 

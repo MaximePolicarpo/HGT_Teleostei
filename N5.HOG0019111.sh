@@ -1847,3 +1847,39 @@ iqtree -s HGT_clade.cds.aln -st DNA -nt 8 -bb 1000 --redo
 
 
 
+##====================================================================================================================================
+##====================================================================================================================================
+#====================================================================================================================================
+##====================================================================================================================================
+##====================================================================================================================================
+##=================================== Extract micro-synteny scores between recipient species ==========================================
+##====================================================================================================================================
+##====================================================================================================================================
+#====================================================================================================================================
+##====================================================================================================================================
+##====================================================================================================================================
+
+cat N5.HOG0019111.clade_hgt.txt
+
+
+
+grep -B10 -A10 "XM_048231371" GFF3_N5_OGGs/Alosa_alosa.gff.simplified.sorted.OGG.prez.f145.clustered.tiret | sed 's/.*N5_HOG/N5.HOG/g' | sed 's/,.*//g' | grep "[A-Z]" | grep -v "N5.HOG0019111" > Alosa_alosa.synt.1.txt
+grep -B10 -A10 "XM_062535392" GFF3_N5_OGGs/Sardina_pilchardus.gff.simplified.sorted.OGG.prez.f145.clustered.tiret | sed 's/.*N5_HOG/N5.HOG/g' | sed 's/,.*//g' | grep "[A-Z]" | grep -v "N5.HOG0019111" > Sardina_pilchardus.synt.1.txt
+grep -B10 -A10 "XM_031577667" GFF3_N5_OGGs/Clupea_harengus.gff.simplified.sorted.OGG.prez.f145.clustered.tiret | sed 's/.*N5_HOG/N5.HOG/g' | sed 's/,.*//g' | grep "[A-Z]" | grep -v "N5.HOG0019111" > Clupea_harengus.synt.1.txt
+grep -B10 -A10 "XM_031577666" GFF3_N5_OGGs/Clupea_harengus.gff.simplified.sorted.OGG.prez.f145.clustered.tiret | sed 's/.*N5_HOG/N5.HOG/g' | sed 's/,.*//g' | grep "[A-Z]" | grep -v "N5.HOG0019111" > Clupea_harengus.synt.2.txt
+grep -B10 -A10 "XM_031578285" GFF3_N5_OGGs/Clupea_harengus.gff.simplified.sorted.OGG.prez.f145.clustered.tiret | sed 's/.*N5_HOG/N5.HOG/g' | sed 's/,.*//g' | grep "[A-Z]" | grep -v "N5.HOG0019111" > Clupea_harengus.synt.3.txt
+
+
+
+comm -12 <(sort Alosa_alosa.synt.1.txt) <(sort Sardina_pilchardus.synt.1.txt) | wc -l
+
+comm -12 <(sort Alosa_alosa.synt.1.txt) <(sort Clupea_harengus.synt.1.txt) | wc -l
+comm -12 <(sort Alosa_alosa.synt.1.txt) <(sort Clupea_harengus.synt.2.txt) | wc -l
+comm -12 <(sort Alosa_alosa.synt.1.txt) <(sort Clupea_harengus.synt.3.txt) | wc -l
+
+comm -12 <(sort Sardina_pilchardus.synt.1.txt) <(sort Clupea_harengus.synt.1.txt) | wc -l
+comm -12 <(sort Sardina_pilchardus.synt.1.txt) <(sort Clupea_harengus.synt.2.txt) | wc -l
+comm -12 <(sort Sardina_pilchardus.synt.1.txt) <(sort Clupea_harengus.synt.3.txt) | wc -l
+
+
+
