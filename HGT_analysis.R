@@ -1992,6 +1992,68 @@ summary_common_nb_df %>%
 
 
 
+### Review P1 - What about the scaffold N50 ?
+
+#Add the minimum scaffold N50 or the mean N50 to each comparison
+
+scaffold_N50_df <- 
+  Genome_busco_df %>%
+  dplyr::select(species, Scaff_N50_Mb)
+
+summary_common_nb_df_n50 <- 
+  summary_common_nb_df %>%
+  left_join(scaffold_N50_df, by = c("species1" = "species")) %>%
+  rename(N50_species1 = Scaff_N50_Mb) %>%
+  left_join(scaffold_N50_df, by = c("species2" = "species")) %>%
+  rename(N50_species2 = Scaff_N50_Mb) %>%
+  mutate(
+    mean_N50 = (N50_species1 + N50_species2) / 2,
+    min_N50 = pmin(N50_species1, N50_species2, na.rm = TRUE)
+  )
+
+
+mean_vs_time_lm_simple <- 
+  lm(weighted_mean ~ divergence_time,
+     data = summary_common_nb_df_n50)
+summary(mean_vs_time_lm_simple)
+
+
+mean_vs_time_lm_mult_1 <- 
+  lm(weighted_mean ~ divergence_time + Refseq_comp,
+     data = summary_common_nb_df_n50)
+summary(mean_vs_time_lm_mult_1)
+
+
+mean_vs_time_lm_mult_2 <- 
+  lm(weighted_mean ~ divergence_time + Refseq_comp + mean_N50,
+     data = summary_common_nb_df_n50)
+summary(mean_vs_time_lm_mult_2)
+
+
+mean_vs_time_lm_mult_3 <- 
+  lm(weighted_mean ~ divergence_time + Refseq_comp + min_N50,
+     data = summary_common_nb_df_n50)
+summary(mean_vs_time_lm_mult_3)
+
+AIC(mean_vs_time_lm_simple, mean_vs_time_lm_mult_1, mean_vs_time_lm_mult_2, mean_vs_time_lm_mult_3)
+
+#Make a graphic to show that
+
+
+
+summary_common_nb_df_n50 %>%
+  ggplot(., aes(x=(divergence_time), y=proportion_above_0, color=mean_N50)) +
+  geom_point() + 
+  #scale_color_manual(values = c("other" = "black", "refseq" = "#E69F00")) + 
+  stat_function(fun = curr_function_lm, color="black") +
+  theme_classic() +
+  xlab("Divergence time (Mya)") +
+  ylab("Proportion of syntent blocks (>0)") +
+  theme(axis.text=element_text(size=16),
+        axis.title=element_text(size=18),
+        plot.subtitle=element_text(size=16),
+        legend.position="none")
+  
 
 #### Circos plot - Hypomesus vs Clupea   ---------------------------------
 
