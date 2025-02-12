@@ -43,7 +43,6 @@ This scripts allows to :
 - Compute ENCprime values for all teleost species
 - Compute RSCU values for a subset of species
 - Compute GC3 distributions for a subset of species
-- Results of GO terms assignment to horizontally transfered genes. Four methods were used: eggNOG-mapper ; InterProScan ; Zfin and zebrafish representative sequence in the same orthogroup ; GeneCards annotations of the human orthologous genes
 
 
 ## IV - Compute maximum likelihood phylogenies
@@ -73,8 +72,25 @@ Alignments of the genes in HGT clades (in DNA), and associated maximum likelihoo
 
 All the other files needed to run these scripts are available on Zenodo.
 
+## VI - Mitochondrial genome analysis (check for contamination)
 
-## VI - Map the geographical distributions of species involved in HGTs
+[Mitochondrial_genome_analysis.sh](Mitochondrial_genome_analysis.sh) : Script to make a maximum likelihood phylogeny of mitochondrial genes, to map raw reads of 11 species to their own mitochondrial genome and to the mitochondrial genome of C. harengus, and to compute the number of mapped reads and the mean read depth. 
+
+Associated files are in the folder "Mitochondrial_analysis"
+
+## VII - Long reads analysis
+
+[Long_reads_analysis.sh](Long_reads_analysis.sh) : Script to (i) map long reads to the genome of C. harnegus and H. transpacificus, and to compute the number of long reads entirely spanning transferred genes and (ii) extract long reads spanning the genes and predict exons locations on those reads using EXONERATE (associated files in the folder "Long_reads_files"). 
+
+
+## VIII - Go term analysis
+
+[GOterm_analysis.sh](GOterm_analysis.sh) : Script to extract the longest sequence per HOG and BLAST it against the UniProt database
+[GOterm_analysis.R](GOterm_analysis.R) : Script to extract GO terms from the UniProt database and run the over-representation enrichment anlysis
+
+Associated files are in the folder "GO_term_analysis"
+
+## IX - Map the geographical distributions of species involved in HGTs
 
 [Geographical_distributions.R](Geographical_distributions.R) 
 
