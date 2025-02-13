@@ -83,6 +83,9 @@ uniprot_ontology_df_GO <-
 colnames(uniprot_ontology_df_GO) <- c("uniprot_gene", "GO")
 
 
+#uniprot_ontology_df_GO %>%
+#  filter(uniprot_gene == "Q98989")
+
 
 #Load parent go terms
 
@@ -124,13 +127,14 @@ temp_parent_GO <-
 
 colnames(temp_parent_GO) <- c("HOG", "GO")
 
-HOG_uniprot_GO <- rbind(HOG_uniprot_GO , temp_parent_GO)
+HOG_uniprot_GO <- rbind(HOG_uniprot_GO , temp_parent_GO) %>% distinct()
 
 
 #Import background list
 
 OGG_good_ks_bad_synt <- scan("OGG_good_ks_bad_synt.txt", what="character")
-
+all_OGG <- diamond_df$HOG %>% unique()
+  
 #Keep only biological processes goterms
 
 GO_BP <- 
@@ -149,7 +153,8 @@ GO_BP <- unique(GO_BP)
 HOG_uniprot_GO_BP <- 
   HOG_uniprot_GO %>%
   filter(GO %in% GO_BP) %>%
-  filter(! is.na(GO))
+  filter(! is.na(GO)) %>%
+  distinct()
 
 #Make a Fisher test to test the enrichment of goterms among HGT genes
 
@@ -163,6 +168,9 @@ HOG_uniprot_GO_BP %>%
 
 length(HGT_HOG[HGT_HOG %in% HOG_uniprot_GO_BP$HOG])
 length(OGG_good_ks_bad_synt[OGG_good_ks_bad_synt %in% HOG_uniprot_GO_BP$HOG])
+length(OGG_good_ks_whatever_synt[OGG_good_ks_whatever_synt %in% HOG_uniprot_GO_BP$HOG])
+length(OGG_good_ks_good_synt[OGG_good_ks_good_synt %in% HOG_uniprot_GO_BP$HOG])
+length(all_OGG[all_OGG %in% HOG_uniprot_GO_BP$HOG])
 
 
 GO_term_prez_subset <- 
@@ -178,6 +186,10 @@ HGT_HOG_subset.badsynt <-
   filter(GO %in% GO_term_prez_subset)
   
 
+HGT_HOG_subset.ALL <- 
+  HOG_uniprot_GO_BP %>%
+  filter(HOG %in% c(HGT_HOG, all_OGG)) %>%
+  filter(GO %in% GO_term_prez_subset)
 
 
 go_counts.badsynt <- 
@@ -188,9 +200,18 @@ go_counts.badsynt <-
     count_InTest = sum(InTestSet),
     count_InBackground = n() - sum(InTestSet),
     count_TotalTest = 11,
-    count_TotalBackground = 4641)
+    count_TotalBackground = 4641) %>% distinct(GO, .keep_all = TRUE)
 
 
+go_counts.ALL <- 
+  HGT_HOG_subset.ALL %>%
+  mutate(InTestSet = HOG %in% HGT_HOG) %>%
+  group_by(GO) %>%
+  summarise(
+    count_InTest = sum(InTestSet),
+    count_InBackground = n() - sum(InTestSet),
+    count_TotalTest = 11,
+    count_TotalBackground = 46676) %>% distinct(GO, .keep_all = TRUE)
 
 go_counts.badsynt <- 
   go_counts.badsynt %>%
@@ -204,14 +225,36 @@ go_counts.badsynt <-
 
 
 
+go_counts.ALL <- 
+  go_counts.ALL %>%
+  rowwise() %>%
+  mutate(p_value =
+           fisher.test(matrix(c(count_InTest, count_InBackground, 
+                                count_TotalTest - count_InTest,
+                                count_TotalBackground - count_InBackground), 
+                              nrow = 2))$p.value) %>%
+  ungroup() 
+
+
 
 
 
 go_counts.badsynt <-
   as.data.frame(
     go_counts.badsynt %>%
+      filter(count_InTest >= 2) %>%
   mutate(p_adjusted = p.adjust(p_value, method = "fdr")) %>%
   arrange(p_value)
+  )
+
+
+
+go_counts.ALL <-
+  as.data.frame(
+    go_counts.ALL %>%
+      filter(count_InTest >= 2) %>%
+      mutate(p_adjusted = p.adjust(p_value, method = "fdr")) %>%
+      arrange(p_value)
   )
 
 
@@ -227,7 +270,9 @@ HOG_per_GO <-
 
 
 go_counts.badsynt <- left_join(go_counts.badsynt, HOG_per_GO, by="GO")
+go_counts.ALL <- left_join(go_counts.ALL, HOG_per_GO, by="GO")
 
+  
 
 #Add the description of goterms to the fisher table
 
@@ -258,10 +303,29 @@ colnames(desc_GO_df) <- c("description", "GO")
 parent_desc <- go_parent_df %>% dplyr::select(desc, par_GO) %>% distinct()
 colnames(parent_desc) <- c("description", "GO")
 
-desc_GO_df <- rbind(desc_GO_df, parent_desc)
+desc_GO_df <- rbind(desc_GO_df, parent_desc) %>% distinct(GO, .keep_all = TRUE)
 
 
 go_counts.badsynt <- left_join(go_counts.badsynt, desc_GO_df, by="GO")
+go_counts.ALL <- left_join(go_counts.ALL, desc_GO_df, by="GO")
+
+
+
+write.table(go_counts.badsynt %>% arrange(p_adjusted),
+            "go_counts.badsynt.tsv",
+            sep="\t",
+            col.names=TRUE,
+            row.names=FALSE,
+            quote=FALSE)
+
+
+
+write.table(go_counts.ALL %>% arrange(p_adjusted),
+            "go_counts.ALL.tsv",
+            sep="\t",
+            col.names=TRUE,
+            row.names=FALSE,
+            quote=FALSE)
 
 
 
@@ -273,7 +337,8 @@ go_counts.badsynt <-
   arrange(desc(count_InTest))
 
 
-Final_GO_df <- 
-  go_counts.badsynt %>%
-  filter(count_InTest >= 2)
+go_counts.ALL <- 
+  go_counts.ALL %>%
+  filter(p_adjusted < 0.05) %>%
+  arrange(desc(count_InTest))
 
