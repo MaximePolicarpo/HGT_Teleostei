@@ -10,72 +10,74 @@
 #####====================================================================================================================================
 #####====================================================================================================================================
 
-#Extract/Download mitochondrial genomes
+
+
+#Extract or download mitochondrial genomes
 
 #Clupea_harengus
-mt_scaff=`grep "^MT	" GCF_900700415.2_Ch_v2.0.2_assembly_report.txt | cut -f7`
-samtools faidx GCF_900700415.2_Ch_v2.0.2_genomic.fna $mt_scaff > Mitochondrial_Genomes/Clupea_harengus.mt.fa
+mt_scaff=`grep "^MT	" Clupea_harengus/GCF_900700415.2_Ch_v2.0.2_assembly_report.txt | cut -f7`
+samtools faidx Clupea_harengus/GCF_900700415.2_Ch_v2.0.2_genomic.fna $mt_scaff > Mitochondrial_Genomes/Clupea_harengus.mt.fa
 
 #Hypomesus_transpacificus
 https://www.ncbi.nlm.nih.gov/nuccore/NC_072210.1
 
+
 #Anoplopoma_fimbria
+
 https://www.ncbi.nlm.nih.gov/nuccore/NC_018119
+
+
 
 #Channa_striata
 https://www.ncbi.nlm.nih.gov/nuccore/NC_032037
 
 
-#Electrona_antarctica
-mt_scaff=`grep "^scaffold_MT_1" GCA_951216825.1_fEleAnt2.1_assembly_report.txt | cut -f5`
-samtools faidx .GCA_951216825.1_fEleAnt2.1_genomic.fna $mt_scaff > Mitochondrial_Genomes/Electrona_antarctica.mt.fa
-
 #Oncorhynchus_mykiss
-mt_scaff=`grep "^MT	" GCF_013265735.2_USDA_OmykA_1.1_assembly_report.txt | cut -f7`
-samtools faidx GCF_013265735.2_USDA_OmykA_1.1_genomic.fna $mt_scaff > Mitochondrial_Genomes/Oncorhynchus_mykiss.mt.fa
+mt_scaff=`grep "^MT	" Oncorhynchus_mykiss/GCF_013265735.2_USDA_OmykA_1.1_assembly_report.txt | cut -f7`
+samtools faidx Oncorhynchus_mykiss/GCF_013265735.2_USDA_OmykA_1.1_genomic.fna $mt_scaff > Mitochondrial_Genomes/Oncorhynchus_mykiss.mt.fa
 
 
 #Oryzias_melastigma
 
-mt_scaff=`grep "^MT	" GCF_002922805.2_ASM292280v2_assembly_report.txt | cut -f7`
-samtools faidx GCF_002922805.2_ASM292280v2_genomic.fna  $mt_scaff > Mitochondrial_Genomes/Oryzias_melastigma.mt.fa
+mt_scaff=`grep "^MT	" Oryzias_melastigma/GCF_002922805.2_ASM292280v2_assembly_report.txt | cut -f7`
+samtools faidx Oryzias_melastigma/GCF_002922805.2_ASM292280v2_genomic.fna  $mt_scaff > Mitochondrial_Genomes/Oryzias_melastigma.mt.fa
 
 
 #Salarias_fasciatus
 
-mt_scaff=`grep "^MT	" GCF_902148845.1_fSalaFa1.1_assembly_report.txt | cut -f7`
-samtools faidx GCF_902148845.1_fSalaFa1.1_genomic.fna  $mt_scaff > Mitochondrial_Genomes/Salarias_fasciatus.mt.fa
+mt_scaff=`grep "^MT	" Salarias_fasciatus/GCF_902148845.1_fSalaFa1.1_assembly_report.txt | cut -f7`
+samtools faidx Salarias_fasciatus/GCF_902148845.1_fSalaFa1.1_genomic.fna  $mt_scaff > Mitochondrial_Genomes/Salarias_fasciatus.mt.fa
 
 
 #Borostomias_antarcticus
-mt_scaff=`grep "^scaffold_MT_1" GCA_949987555.1_fBorAnt1.1_assembly_report.txt | cut -f5`
-samtools faidx GCA_949987555.1_fBorAnt1.1_genomic.fna $mt_scaff > Mitochondrial_Genomes/Borostomias_antarcticus.mt.fa
+mt_scaff=`grep "^scaffold_MT_1" Borostomias_antarcticus/GCA_949987555.1_fBorAnt1.1_assembly_report.txt | cut -f5`
+samtools faidx Borostomias_antarcticus/GCA_949987555.1_fBorAnt1.1_genomic.fna $mt_scaff > Mitochondrial_Genomes/Borostomias_antarcticus.mt.fa
 
 
 
 #Siniperca_chuatsi
 
-mt_scaff=`grep "^MT	" GCF_020085105.1_ASM2008510v1_assembly_report.txt | cut -f7`
-samtools faidx GCF_020085105.1_ASM2008510v1_genomic.fna  $mt_scaff > Mitochondrial_Genomes/Siniperca_chuatsi.mt.fa
+mt_scaff=`grep "^MT	" Siniperca_chuatsi/GCF_020085105.1_ASM2008510v1_assembly_report.txt | cut -f7`
+samtools faidx Siniperca_chuatsi/GCF_020085105.1_ASM2008510v1_genomic.fna  $mt_scaff > Mitochondrial_Genomes/Siniperca_chuatsi.mt.fa
 
 
 
 #Takifugu_flavidus
 
-mt_scaff=`grep "^MT	" GCF_003711565.1_ASM371156v2_assembly_report.txt  | cut -f7`
-samtools faidx GCF_003711565.1_ASM371156v2_genomic.fna $mt_scaff > Mitochondrial_Genomes/Takifugu_flavidus.mt.fa
+mt_scaff=`grep "^MT	" Takifugu_flavidus/GCF_003711565.1_ASM371156v2_assembly_report.txt  | cut -f7`
+samtools faidx Takifugu_flavidus/GCF_003711565.1_ASM371156v2_genomic.fna $mt_scaff > Mitochondrial_Genomes/Takifugu_flavidus.mt.fa
 
 
 
 #Xiphophorus_couchianus
 
-mt_scaff=`grep "^MT	" GCF_001444195.1_X_couchianus-1.0_assembly_report.txt | cut -f7`
-samtools faidx GCF_001444195.1_X_couchianus-1.0_genomic.fna $mt_scaff > Mitochondrial_Genomes/Xiphophorus_couchianus.mt.fa
+mt_scaff=`grep "^MT	" Xiphophorus_couchianus/GCF_001444195.1_X_couchianus-1.0_assembly_report.txt | cut -f7`
+samtools faidx Xiphophorus_couchianus/GCF_001444195.1_X_couchianus-1.0_genomic.fna $mt_scaff > Mitochondrial_Genomes/Xiphophorus_couchianus.mt.fa
 
 
 
 
-#Now create bwamem index for every mitochondrial genomes
+## Now create bwamem index for every mitochondrial genomes
 
 
 module purge ; module load bwa-mem2
@@ -92,6 +94,23 @@ bwa-mem2 index Mitochondrial_Genomes/Siniperca_chuatsi.mt.fa
 bwa-mem2 index Mitochondrial_Genomes/Takifugu_flavidus.mt.fa
 bwa-mem2 index Mitochondrial_Genomes/Xiphophorus_couchianus.mt.fa
 
+
+cd Mitochondrial_Genomes/
+
+for file in *.fa ; do 
+	species=`echo "$file" | sed 's/.mt.fa//g'`
+	sed "s/>.*/>$species/g" $file >> Combined_all_species.fa
+done
+bwa-mem2 index Combined_all_species.fa
+
+cd ../
+
+
+
+cut -f1 Mitochondrial_Genomes/Combined_all_species.fa.fai > names
+cut -f2 Mitochondrial_Genomes/Combined_all_species.fa.fai | sed 's/^/1,/g' | tr ',' '\t' > lengths
+paste -d '\t' names lengths > mitochondrial_genomes.bed
+
 #####====================================================================================================================================
 #####====================================================================================================================================
 ####====================================================================================================================================
@@ -106,20 +125,56 @@ bwa-mem2 index Mitochondrial_Genomes/Xiphophorus_couchianus.mt.fa
 
 
 
-./download_and_launch_map.clupea.sh Hypomesus_transpacificus
-./download_and_launch_map.clupea.sh Anoplopoma_fimbria
-./download_and_launch_map.clupea.sh Borostomias_antarcticus
-./download_and_launch_map.clupea.sh Channa_striata
-./download_and_launch_map.clupea.sh Electrona_antarctica
-./download_and_launch_map.clupea.sh Oncorhynchus_mykiss
-./download_and_launch_map.clupea.sh Oryzias_melastigma
-./download_and_launch_map.clupea.sh Salarias_fasciatus
-./download_and_launch_map.clupea.sh Siniperca_chuatsi
-./download_and_launch_map.clupea.sh Takifugu_flavidus
-./download_and_launch_map.clupea.sh Xiphophorus_couchianus
+
+module purge ; module load SRA-Toolkit ; fastq-dump --gzip --skip-technical --read-filter pass --dumpbase --split-3 --clip SRR26322996 ; sbatch --qos=6hours -c 16 --mem=50G map_reads.mitochondria.sh SRR26322996 long
+module purge ; module load SRA-Toolkit ; fastq-dump --gzip --skip-technical --read-filter pass --dumpbase --split-3 --clip SRR26322995 ; sbatch --qos=6hours -c 16 --mem=50G map_reads.mitochondria.sh SRR26322995 long
+module purge ; module load SRA-Toolkit ; fastq-dump --gzip --skip-technical --read-filter pass --dumpbase --split-3 --clip SRR30009981 ; sbatch --qos=6hours -c 16 --mem=50G map_reads.mitochondria.sh SRR30009981 short
+module purge ; module load SRA-Toolkit ; fastq-dump --gzip --skip-technical --read-filter pass --dumpbase --split-3 --clip SRR30009984 ; sbatch --qos=6hours -c 16 --mem=50G map_reads.mitochondria.sh SRR30009984 short
+module purge ; module load SRA-Toolkit ; fastq-dump --gzip --skip-technical --read-filter pass --dumpbase --split-3 --clip SRR17921806 ; sbatch --qos=6hours -c 16 --mem=50G map_reads.mitochondria.sh SRR17921806 long
+module purge ; module load SRA-Toolkit ; fastq-dump --gzip --skip-technical --read-filter pass --dumpbase --split-3 --clip SRR17921807 ; sbatch --qos=6hours -c 16 --mem=50G map_reads.mitochondria.sh SRR17921807 short
+module purge ; module load SRA-Toolkit ; fastq-dump --gzip --skip-technical --read-filter pass --dumpbase --split-3 --clip SRR17799534 ; sbatch --qos=6hours -c 16 --mem=50G map_reads.mitochondria.sh SRR17799534 long
+module purge ; module load SRA-Toolkit ; fastq-dump --gzip --skip-technical --read-filter pass --dumpbase --split-3 --clip SRR17799535 ; sbatch --qos=6hours -c 16 --mem=50G map_reads.mitochondria.sh SRR17799535 short
+module purge ; module load SRA-Toolkit ; fastq-dump --gzip --skip-technical --read-filter pass --dumpbase --split-3 --clip SRR27482199 ; sbatch --qos=6hours -c 16 --mem=50G map_reads.mitochondria.sh SRR27482199 short
+module purge ; module load SRA-Toolkit ; fastq-dump --gzip --skip-technical --read-filter pass --dumpbase --split-3 --clip SRR27482200 ; sbatch --qos=6hours -c 16 --mem=50G map_reads.mitochondria.sh SRR27482200 short
+module purge ; module load SRA-Toolkit ; fastq-dump --gzip --skip-technical --read-filter pass --dumpbase --split-3 --clip ERR3566168 ; sbatch --qos=6hours -c 16 --mem=50G map_reads.mitochondria.sh ERR3566168 short
+module purge ; module load SRA-Toolkit ; fastq-dump --gzip --skip-technical --read-filter pass --dumpbase --split-3 --clip ERR3566167 ; sbatch --qos=6hours -c 16 --mem=50G map_reads.mitochondria.sh ERR3566167 short
+module purge ; module load SRA-Toolkit ; fastq-dump --gzip --skip-technical --read-filter pass --dumpbase --split-3 --clip ERR3629070 ; sbatch --qos=6hours -c 16 --mem=50G map_reads.mitochondria.sh ERR3629070 long
+module purge ; module load SRA-Toolkit ; fastq-dump --gzip --skip-technical --read-filter pass --dumpbase --split-3 --clip SRR2131027 ; sbatch --qos=6hours -c 16 --mem=50G map_reads.mitochondria.sh SRR2131027 short
+module purge ; module load SRA-Toolkit ; fastq-dump --gzip --skip-technical --read-filter pass --dumpbase --split-3 --clip SRR2131118 ; sbatch --qos=6hours -c 16 --mem=50G map_reads.mitochondria.sh SRR2131118 short
+module purge ; module load SRA-Toolkit ; fastq-dump --gzip --skip-technical --read-filter pass --dumpbase --split-3 --clip SRR7464412 ; sbatch --qos=6hours -c 16 --mem=50G map_reads.mitochondria.sh SRR7464412 long
+module purge ; module load SRA-Toolkit ; fastq-dump --gzip --skip-technical --read-filter pass --dumpbase --split-3 --clip SRR7464416 ; sbatch --qos=6hours -c 16 --mem=50G map_reads.mitochondria.sh SRR7464416 long
+module purge ; module load SRA-Toolkit ; fastq-dump --gzip --skip-technical --read-filter pass --dumpbase --split-3 --clip SRR29199351 ; sbatch --qos=6hours -c 16 --mem=50G map_reads.mitochondria.sh SRR29199351 short
+module purge ; module load SRA-Toolkit ; fastq-dump --gzip --skip-technical --read-filter pass --dumpbase --split-3 --clip SRR29199350 ; sbatch --qos=6hours -c 16 --mem=50G map_reads.mitochondria.sh SRR29199350 short
+module purge ; module load SRA-Toolkit ; fastq-dump --gzip --skip-technical --read-filter pass --dumpbase --split-3 --clip SRR29199348 ; sbatch --qos=6hours -c 16 --mem=50G map_reads.mitochondria.sh SRR29199348 long
+module purge ; module load SRA-Toolkit ; fastq-dump --gzip --skip-technical --read-filter pass --dumpbase --split-3 --clip SRR15111159 ; sbatch --qos=6hours -c 16 --mem=50G map_reads.mitochondria.sh SRR15111159 short
+module purge ; module load SRA-Toolkit ; fastq-dump --gzip --skip-technical --read-filter pass --dumpbase --split-3 --clip SRR7881547 ; sbatch --qos=6hours -c 16 --mem=50G map_reads.mitochondria.sh SRR7881547 long
+module purge ; module load SRA-Toolkit ; fastq-dump --gzip --skip-technical --read-filter pass --dumpbase --split-3 --clip ERR10936409 ; sbatch --qos=6hours -c 16 --mem=50G map_reads.mitochondria.sh ERR10936409 short
+module purge ; module load SRA-Toolkit ; fastq-dump --gzip --skip-technical --read-filter pass --dumpbase --split-3 --clip ERR10934070 ; sbatch --qos=6hours -c 16 --mem=50G map_reads.mitochondria.sh ERR10934070 long
+module purge ; module load SRA-Toolkit ; fastq-dump --gzip --skip-technical --read-filter pass --dumpbase --split-3 --clip ERR3629069 ; sbatch --qos=6hours -c 16 --mem=50G map_reads.mitochondria.sh ERR3629069 long
+module purge ; module load SRA-Toolkit ; fastq-dump --gzip --skip-technical --read-filter pass --dumpbase --split-3 --clip ERR3629068 ; sbatch --qos=6hours -c 16 --mem=50G map_reads.mitochondria.sh ERR3629068 long
+module purge ; module load SRA-Toolkit ; fastq-dump --gzip --skip-technical --read-filter pass --dumpbase --split-3 --clip SRR6002358 ; sbatch --qos=6hours -c 16 --mem=50G map_reads.mitochondria.sh SRR6002358 short
+module purge ; module load SRA-Toolkit ; fastq-dump --gzip --skip-technical --read-filter pass --dumpbase --split-3 --clip SRR6002359 ; sbatch --qos=6hours -c 16 --mem=50G map_reads.mitochondria.sh SRR6002359 short
+module purge ; module load SRA-Toolkit ; fastq-dump --gzip --skip-technical --read-filter pass --dumpbase --split-3 --clip SRR6002363 ; sbatch --qos=6hours -c 16 --mem=50G map_reads.mitochondria.sh SRR6002363 short
+module purge ; module load SRA-Toolkit ; fastq-dump --gzip --skip-technical --read-filter pass --dumpbase --split-3 --clip SRR2127225 ; sbatch --qos=6hours -c 16 --mem=50G map_reads.mitochondria.sh SRR2127225 short
+module purge ; module load SRA-Toolkit ; fastq-dump --gzip --skip-technical --read-filter pass --dumpbase --split-3 --clip SRR7881551 ; sbatch --qos=6hours -c 16 --mem=50G map_reads.mitochondria.sh SRR7881551 short
+module purge ; module load SRA-Toolkit ; fastq-dump --gzip --skip-technical --read-filter pass --dumpbase --split-3 --clip SRR7881549 ; sbatch --qos=6hours -c 16 --mem=50G map_reads.mitochondria.sh SRR7881549 long
+module purge ; module load SRA-Toolkit ; fastq-dump --gzip --skip-technical --read-filter pass --dumpbase --split-3 --clip SRR7881546 ; sbatch --qos=6hours -c 16 --mem=50G map_reads.mitochondria.sh SRR7881546 long
+module purge ; module load SRA-Toolkit ; fastq-dump --gzip --skip-technical --read-filter pass --dumpbase --split-3 --clip SRR21199007 ; sbatch --qos=6hours -c 16 --mem=50G map_reads.mitochondria.sh SRR21199007 short
+module purge ; module load SRA-Toolkit ; fastq-dump --gzip --skip-technical --read-filter pass --dumpbase --split-3 --clip SRR21199008 ; sbatch --qos=6hours -c 16 --mem=50G map_reads.mitochondria.sh SRR21199008 long
+module purge ; module load SRA-Toolkit ; fastq-dump --gzip --skip-technical --read-filter pass --dumpbase --split-3 --clip SRR21199004 ; sbatch --qos=6hours -c 16 --mem=50G map_reads.mitochondria.sh SRR21199004 long
+module purge ; module load SRA-Toolkit ; fastq-dump --gzip --skip-technical --read-filter pass --dumpbase --split-3 --clip ERR10936410 ; sbatch --qos=6hours -c 16 --mem=50G map_reads.mitochondria.sh ERR10936410 short
+module purge ; module load SRA-Toolkit ; fastq-dump --gzip --skip-technical --read-filter pass --dumpbase --split-3 --clip ERR10934071 ; sbatch --qos=6hours -c 16 --mem=50G map_reads.mitochondria.sh ERR10934071 long
+module purge ; module load SRA-Toolkit ; fastq-dump --gzip --skip-technical --read-filter pass --dumpbase --split-3 --clip ERR10934069 ; sbatch --qos=6hours -c 16 --mem=50G map_reads.mitochondria.sh ERR10934069 long
 
 
-sed 's/Average =  //g' Mapping.*.csv > Summary_mapping.csv
+
+
+rm Compet_mapping_results.tsv ; for file in *.idxstats ; do SRA_ID=`echo "$file" | cut -f1 -d "."` ; sed "s/^/$SRA_ID,/g" $file | tr ',' '\t' | grep -v "^\*"  >> Compet_mapping_results.tsv ; done
+
+#sed 's/Average =  //g' Mapping.*.csv > Summary_mapping.csv
+
+
+
 
 
 
@@ -141,6 +196,8 @@ cd Mitochondrial_genes/
 
 #Extract mito genes from already annotated mitochondrial genomes
 
+
+
 grep ">" Clupea_harengus.fa  | sed 's/.*gene=//g' | sed 's/].*//g'  > list_genes_mito.txt
 
 mkdir Alignments
@@ -157,28 +214,24 @@ transeq Mito_DB.fa Mito_DB.prot -table 2 ; sed -i 's/_1$//g' Mito_DB.prot
 makeblastdb -in Mito_DB.prot -dbtype prot
 
 
-#Annotate mito genes for non-annotated mitochondria 
+#to annotate:
 
-getorf -sequence ../Mitochondrial_Genomes/Electrona_antarctica.mt.fa -outseq Electrona_antarctica.orf -minsize 168 -find 3 -table 2
 getorf -sequence ../Mitochondrial_Genomes/Borostomias_antarcticus.mt.fa -outseq Borostomias_antarcticus.orf -minsize 168 -find 3 -table 2
 
-transeq Electrona_antarctica.orf Electrona_antarctica.orf.prot -table 2 ; sed -i 's/_1 / /g' Electrona_antarctica.orf.prot
 transeq Borostomias_antarcticus.orf Borostomias_antarcticus.orf.prot -table 2 ; sed -i 's/_1 / /g' Borostomias_antarcticus.orf.prot
 
 
-blastp -query Electrona_antarctica.orf.prot -db Mito_DB.prot -outfmt 6 -max_target_seqs 1 -num_threads 8 -out Electrona_antarctica.vs.MitoDb.blastp
 blastp -query Borostomias_antarcticus.orf.prot -db Mito_DB.prot -outfmt 6 -max_target_seqs 1 -num_threads 8 -out Borostomias_antarcticus.vs.MitoDb.blastp
 
 for gene in `cat list_genes_mito.txt` ; do
-	good_ID=`grep "$gene\." Electrona_antarctica.vs.MitoDb.blastp | sort -k12 | tail -1 | cut -f1` 
-	samtools faidx Electrona_antarctica.orf $good_ID | sed "s/>.*/>Electrona_antarctica/g" >> Alignments/$gene.fa
-
 	good_ID_sec=`grep "$gene\." Borostomias_antarcticus.vs.MitoDb.blastp | sort -k12 | tail -1 | cut -f1` 
 	samtools faidx Borostomias_antarcticus.orf $good_ID_sec | sed "s/>.*/>Borostomias_antarcticus/g" >> Alignments/$gene.fa
 done
 
+#Finally, add lepisosteus as outgroup
 
-#Finally, Add Lepisosteus mito genes to be used outgroup
+
+
 
 
 cd Alignments/
@@ -189,9 +242,10 @@ for file in *.aln ; do trimal -in $file -gt 0.8 -cons 70 -out $file.trimal ; don
 
 cd ../
 
-python3 AMAS.py concat -f fasta -d aa -i Alignments/*.trimal --part-format nexus
+python3 AMAS/amas/AMAS.py concat -f fasta -d aa -i Alignments/*.trimal --part-format nexus
 sed -i 's/?/-/g' concatenated.out
 mv concatenated.out Concatenated_mitochondrial_genes.aln
+
 
 iqtree -s Concatenated_mitochondrial_genes.aln --seqtype AA -m mtVer+F+G4 -nt 8 -bb 1000
 
@@ -210,48 +264,10 @@ iqtree -s Concatenated_mitochondrial_genes.aln --seqtype AA -m mtVer+F+G4 -nt 8 
 
 ================================================================================
 ================================================================================
-========== download_and_launch_map.clupea.sh  ==================================
+========== map_reads.mitochondria.sh  ==================================
 ================================================================================
 ================================================================================
 
-#!/bin/bash
-
-module load SRA-Toolkit
-
-curr_species=$1
-
-IFS=$'\n'
-
-grep "$curr_species" Table_reads.tsv > $curr_species.reads.tsv
-
-for line in `cat $curr_species.reads.tsv` ; do
-	SRA_accession=`echo "$line" | cut -f2`
-	read_type=`echo "$line" | cut -f3`
-
-	fastq-dump --gzip --skip-technical --read-filter pass --dumpbase --split-3 --clip $SRA_accession
-
-	if [[ $curr_species == "Clupea_harengus" ]] ; then 
-		sbatch --qos=1week -c 16 --mem=50G map_reads.clupea.clupea.sh $curr_species $SRA_accession $read_type
-	else
-		sbatch --qos=1week -c 16 --mem=50G map_reads.clupea.sh $curr_species $SRA_accession $read_type
-
-	fi
-
-done
-
-================================================================================
-================================================================================
-================================================================================
-================================================================================
-
-
-
-
-================================================================================
-================================================================================
-========== map_reads.clupea.sh  ==================================
-================================================================================
-================================================================================
 
 
 #!/bin/bash
@@ -261,9 +277,8 @@ done
 
 eval "$(conda shell.bash hook)"
 
-curr_species=$1
-SRA_accession=$2
-read_type=$3
+SRA_accession=$1
+read_type=$2
 
 if [[ $read_type == "short" ]] ; then 
 
@@ -275,28 +290,17 @@ if [[ $read_type == "short" ]] ; then
 
 	module purge ; module load bwa-mem2
 
-	bwa-mem2 mem -t 16 Mitochondrial_Genomes/Clupea_harengus.mt.fa "${SRA_accession}_pass_1.fastp.fastq.gz" "${SRA_accession}_pass_2.fastp.fastq.gz" > "${SRA_accession}.Clupea_harengus.sam"
-	samtools sort "${SRA_accession}.Clupea_harengus.sam" -o "${SRA_accession}.Clupea_harengus.sorted.bam" -@ 16  ; samtools index "${SRA_accession}.Clupea_harengus.sorted.bam" -@ 16 ; rm "${SRA_accession}.Clupea_harengus.sam"
-
-	total_reads=`samtools view -c $SRA_accession.Clupea_harengus.sorted.bam`
-	mapped_reads=`samtools view -c -F 260 $SRA_accession.Clupea_harengus.sorted.bam`
-	mean_depth=`samtools depth -a $SRA_accession.Clupea_harengus.sorted.bam -q 0 | awk '{sum+=$3} END { print "Average = ",sum/NR}'`
-	echo "Clupea_harengus,$SRA_accession,$total_reads,$mapped_reads,$mean_depth" > Mapping.$SRA_accession.Clupea_harengus.csv
-	rm $SRA_accession.Clupea_harengus*
-
-	bwa-mem2 mem -t 16 Mitochondrial_Genomes/$curr_species.mt.fa "${SRA_accession}_pass_1.fastp.fastq.gz" "${SRA_accession}_pass_2.fastp.fastq.gz" > $SRA_accession.$curr_species.sam
-	samtools sort $SRA_accession.$curr_species.sam -o $SRA_accession.$curr_species.sorted.bam -@ 16  ; samtools index $SRA_accession.$curr_species.sorted.bam -@ 16 ; rm $SRA_accession.$curr_species.sam
-
-	total_reads=`samtools view -c $SRA_accession.$curr_species.sorted.bam`
-	mapped_reads=`samtools view -c -F 260 $SRA_accession.$curr_species.sorted.bam`
-	mean_depth=`samtools depth -a $SRA_accession.$curr_species.sorted.bam -q 0 | awk '{sum+=$3} END { print "Average = ",sum/NR}'`
-	echo "$curr_species,$SRA_accession,$total_reads,$mapped_reads,$mean_depth" > Mapping.$SRA_accession.$curr_species.csv
-	rm $SRA_accession.$curr_species*
-
-
+	bwa-mem2 mem -t 16 Mitochondrial_Genomes/Combined_all_species.fa "${SRA_accession}_pass_1.fastp.fastq.gz" "${SRA_accession}_pass_2.fastp.fastq.gz" > $SRA_accession.sam
 	rm "${SRA_accession}_pass_1.fastp.fastq.gz" "${SRA_accession}_pass_2.fastp.fastq.gz"
 
+	samtools sort $SRA_accession.sam  -o $SRA_accession.sorted.bam  -@ 16  ; samtools index $SRA_accession.sorted.bam -@ 16
+	rm $SRA_accession.sam
 
+	samtools idxstats $SRA_accession.sorted.bam > $SRA_accession.idxstats
+	for species in `cat species_list.txt` ; do samtools depth -a $SRA_accession.sorted.bam -q 0 -r $species | awk '{sum+=$3} END { print "Average = ",sum/NR}' | sed "s/^/$species,/g" ; done > $SRA_accession.depth
+
+	rm $SRA_accession.sorted.bam
+	
 
 else 
 
@@ -306,38 +310,20 @@ else
 	fastplong -i "${SRA_accession}_pass.fastq.gz" -o "${SRA_accession}_pass.fastp.fastq.gz" --thread 16
 	rm "${SRA_accession}_pass.fastq.gz"
 
-	minimap2 -t 16 -a Mitochondrial_Genomes/Clupea_harengus.mt.fa "${SRA_accession}_pass.fastp.fastq.gz" > $SRA_accession.Clupea_harengus.sam 
-	minimap2 -t 16 -a Mitochondrial_Genomes/$curr_species.mt.fa "${SRA_accession}_pass.fastp.fastq.gz" > $SRA_accession.$curr_species.sam 
+	minimap2 -t 16 -a Mitochondrial_Genomes/Combined_all_species.fa "${SRA_accession}_pass.fastp.fastq.gz" > $SRA_accession.sam
+	rm "${SRA_accession}_pass.fastp.fastq.gz"
 
 	conda deactivate ; conda activate miniprot
 
-	samtools sort $SRA_accession.Clupea_harengus.sam -o $SRA_accession.Clupea_harengus.sorted.bam -@ 16  ; samtools index $SRA_accession.Clupea_harengus.sorted.bam -@ 16 ; rm $SRA_accession.Clupea_harengus.sam
-	samtools sort $SRA_accession.$curr_species.sam -o $SRA_accession.$curr_species.sorted.bam -@ 16  ; samtools index $SRA_accession.$curr_species.sorted.bam -@ 16 ; rm $SRA_accession.$curr_species.sam
+	samtools sort $SRA_accession.sam  -o $SRA_accession.sorted.bam  -@ 16  ; samtools index $SRA_accession.sorted.bam -@ 16
+	rm $SRA_accession.sam
+	
+	samtools idxstats $SRA_accession.sorted.bam > $SRA_accession.idxstats
+	for species in `cat species_list.txt` ; do samtools depth -a $SRA_accession.sorted.bam -q 0 -r $species | awk '{sum+=$3} END { print "Average = ",sum/NR}' | sed "s/^/$species,/g" ; done > $SRA_accession.depth
 
-
-	total_reads=`samtools view -c $SRA_accession.Clupea_harengus.sorted.bam`
-	mapped_reads=`samtools view -c -F 260 $SRA_accession.Clupea_harengus.sorted.bam`
-	mean_depth=`samtools depth -a $SRA_accession.Clupea_harengus.sorted.bam -q 0 | awk '{sum+=$3} END { print "Average = ",sum/NR}'`
-	echo "Clupea_harengus,$SRA_accession,$total_reads,$mapped_reads,$mean_depth" > Mapping.$SRA_accession.Clupea_harengus.csv
-	rm $SRA_accession.Clupea_harengus*
-
-
-	total_reads=`samtools view -c $SRA_accession.$curr_species.sorted.bam`
-	mapped_reads=`samtools view -c -F 260 $SRA_accession.$curr_species.sorted.bam`
-	mean_depth=`samtools depth -a $SRA_accession.$curr_species.sorted.bam -q 0 | awk '{sum+=$3} END { print "Average = ",sum/NR}'`
-	echo "$curr_species,$SRA_accession,$total_reads,$mapped_reads,$mean_depth" > Mapping.$SRA_accession.$curr_species.csv
-	rm $SRA_accession.$curr_species*
-
-
-	rm "${SRA_accession}_pass.fastp.fastq.gz"
+	rm $SRA_accession.sorted.bam
+	
 
 
 
 fi
-
-
-================================================================================
-================================================================================
-================================================================================
-================================================================================
-

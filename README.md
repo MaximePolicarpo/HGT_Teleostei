@@ -74,9 +74,7 @@ All the other files needed to run these scripts are available on Zenodo.
 
 ## VI - Mitochondrial genome analysis (check for contamination)
 
-[Mitochondrial_genome_analysis.sh](Mitochondrial_genome_analysis.sh) : Script to make a maximum likelihood phylogeny of mitochondrial genes, to map raw reads of 11 species to their own mitochondrial genome and to the mitochondrial genome of C. harengus, and to compute the number of mapped reads and the mean read depth. 
-
-Associated files are in the folder "Mitochondrial_analysis"
+[Mitochondrial_genome_analysis.sh](Mitochondrial_genome_analysis.sh) : Script to make a maximum likelihood phylogeny of mitochondrial genes, to map raw reads of 11 species to mitochondrial genomes and to compute the number of reads mapped to each mitochondrial genome.  
 
 ## VII - Long reads analysis
 
